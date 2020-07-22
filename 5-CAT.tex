@@ -1,0 +1,348 @@
+\documentclass{article}
+\usepackage{quad}
+
+\begin{document}
+
+
+\title{Five points in a CAT(0) space after  Tetsu Toyoda}
+\author{Nina Lebedeva and Anton Petrunin}
+%\address{Anton Petrunin, Math. Dept., PSU,University Park, PA 16802, USA.}\address{petrunin@math.psu.edu}
+\date{}
+\maketitle
+\begin{abstract}
+We give another proof of Toyoda's theorem that gives a nessesary and sufficient condition for the existance of a distance preserving map from a given 5-point metric space to a $\CAT(0)$ space. 
+\end{abstract}
+
+\section{Introduction}
+
+The $\CAT(0)$ comparison is a certain inequality for 6 distances between 4 points in a metric space 
+that can be defined the following way.
+
+\begin{thm}{Definition}
+A quadruple of points $(p_1,p_2,x_1,x_2)$ in a metric space $X$ satisfies $\CAT(0)$ comparison
+if there is quadruple of points $(\~p_1,\~p_2,\~x_1,\~x_2)$ in the Euclidean space $\EE^3$ such that 
+\begin{align*}
+|p_1-p_2|_{X}&\le|\~p_1-\~p_2|_{\EE^3},
+\\ 
+|x_1-x_2|_{X}&\le|\~x_1-\~x_2|_{\EE^3},
+\\ 
+|p_i-x_j|_{X}&\ge|\~p_i-\~x_j|_{\EE^3},
+\end{align*}
+for any $i$ and $j$.
+
+A metric space $X$ is called $\CAT(0)$ if every quadruple of points in $X$ satisfies $\CAT(0)$ comparison.
+\end{thm}
+
+The definition above is equivalent to the (2+2)-point comparison in \cite{alexander-kapovitch-petrunin}
+where other definitions and their equivalence are discussed as well.
+Note that we do not assume that $\CAT(0)$ is a length space;
+for example any 3 point metric space is $\CAT(0)$.
+
+
+It is not hard to check that if a quadruple of points satisfies $\CAT(0)$ comparison for all relabeling,
+then it admits a distance-preserving inclusion into a length $\CAT(0)$ space.
+The following theorem generalizes this statement to 5 point metric spaces.
+
+\begin{thm}{Theorem}
+Let $P$ be a 5 point metric space that satisfies $\CAT(0)$ comparison.
+Then $P$ admits a distance-preserving inclusion into a $\CAT(0)$ length space $X$.
+
+Moreover,
+$X$ can be chosen to be a subcomplex of a 4-simplex such that (1) each simplex in $X$ has Euclidean metric and (2) the inclusion maps the 5 points on $P$ to the vertexes of the 4-simplex.
+\end{thm}
+
+This theorem was proved by Tetsu Toyoda \cite{toyoda};
+we present a shorter and more conceptual proof of this statement.
+The proof uses the fact that convex space-like hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces.
+We construct a distance-preserving inclusion $\iota$ of $P$ into $\RR^4$ or $\RR^{3,1}$.
+In the case of $\RR^4$ the convex hull of $\iota(P)$ can be taken as $X$;
+in the case of $\RR^{3,1}$ we take as $X$ a certain convex space-like hypersurface in $\RR^{3,1}$.
+
+
+
+
+
+\section{Convex surfaces in spacetime}
+
+Consider the spacetime $\RR^{3,1}$;
+let us denote by $C^+$ and $C^-$ its future and past cones;
+that is
+\[C^\pm=\set{(x,y,z,t)\in\RR^{3,1}}{t^2<x^2+y^2+z^2,\ 0<\pm t}.\]
+
+Let $K$ be a convex body in $\RR^{3,1}$;
+denote by $\Sigma$ the surface of $K$. 
+We say that $p\in \Sigma$ lies on the upper side of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a space-like hyperplane in $\RR^{3,1}$ that supports $\Sigma$ at $p$ from above;
+equivalently if $p+C^+$ does not intersect $K$.
+
+Similarly we define lower side of $\Sigma$ denoted by $\Sigma^-$.
+Note that $\Sigma^+$ and $\Sigma^-$ might have common points.
+The subsets $\Sigma^+$ and $\Sigma^-$ are weakly spacelike;
+in particular the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic metrics on $\Sigma^+$ and $\Sigma^-$. 
+
+\begin{thm}{Lemma}\label{lem:sides}
+Let $\Sigma$ be the surface of a convex body $K$ in $\RR^{3,1}$.
+Then its upper and lower sides $\Sigma^+$ and $\Sigma^-$ equipped with induced intrinsic metric are a $\CAT(0)$ length spaces. 
+\end{thm}
+
+\parit{Proof.}
+Applying Gauss formula, we see that a smooth convex space-like hypersurface in $\RR^{3,1}$ has nonpositive curvature.
+Therefore any complete smooth convex space-like hypersurface in $\RR^{3,1}$ is $\CAT(0)$.
+
+Note that $K^-=K+C^+$ a convex set and its boundary $\partial K^-$ is weakly space-like.
+The surface $\partial K^-$ contains $\Sigma^-$ as a subset.
+Moreover the induced length pseudometric on $\partial K^-$ is isometric to $\Sigma^-$.
+Indeed every point of $\partial K^-$ either belongs to  $\Sigma^-$, or lies on a light ray emerging from $\Sigma^-$.
+The statement follows since light rays have zero length.
+
+Observe that $\partial K^-$ can be approximated by smooth space-like convex hypersurfaces.
+In particular any 4-point subspace in $\partial K^-$ can be approximated by 4 -point subspaces in $\CAT(0)$ space.
+Whence the $\CAT(0)$ comparison holds for all quadruples.
+\qeds
+
+
+
+
+Assume $v$ is a nonzero vector in $\RR^{3,1}$ and $p\in\Sigma$.
+We say that $p$ lies on upper side of $\Sigma$ with respect to $v$ (briefly $p\in \Sigma^+(v)$) if $p+t\cdot v\notin K$ for any $t>0$.
+Correspondingly, $p$ lies on lower side of $\Sigma$ with respect to $v$ (briefly $p\in \Sigma^-(v)$) if $p+t\cdot v\notin K$ for any $t<0$.
+
+Note that 
+\[\Sigma^\pm=\bigcap_{v\in C^+}\Sigma^\pm(v).\leqno({*})\]
+
+\section{Projections of simplex}
+
+Consider one-parameter family of affine maps $f_t$ from 4-simplex $K$ to $\RR^3$.
+Suppose that the for any $t$ the images of edges of the simplex intersect only at their common vertexes.
+Let us write $+1$, $0$, or $-1$ at each facet of $K$,
+
+Consider the sum $\#(t)$ of orientations of the 5 facets 
+
+
+Consider 4 planes in $\RR^3$ in general position.
+They divide the space into 14 open cones --- 4 of them are cones over open triangles and 10 over 
+
+Consider 5 hyperplanes in general position in $\RR^4$;
+they divide the space into open cones 
+
+If $K$ is a simplex in $\RR^4$ and $\Sigma$ be its boundary.
+Choose a nonzero vector $v$.
+Let $\Pi$ be a hyperplane transveral to $v$;
+if we fix a Euclidean metric on $\RR^4$, then we may assume that $\Pi$ is perpendicular to $v$.
+
+A facet $F$ of $K$ will be called \emph{upper} (\emph{lower}) with respect to $v$ if its projection to $\Pi$ along $v$ is orientation preserving (respectively orientation reversing).
+If a facet is neither upper or lower, then it is called \emph{vertical} with respect to $v$.
+(We assume that $\Sigma$ and $\Pi$ come with a natural choice of orientations so if we choose $(x,y,z,t)$-coordinates with $t$-axis in the direction of $v$, then the definition will agree with its intuitive meaning.)
+
+
+Assume $v$ is generic, that is $v$ is not parallel to any facet of $K$.
+In this case $K$ has either $1$, $2$, $3$, or $4$ upper facets; denote this number by $\#(v)$.
+
+Assume $w$ is another generic vector that is connected to $v$ by a one-parameter family of nonzero vectors $v_t$.
+Suppose that $\#(v)\le 2$ and $\#(w)\le 2$ then for some time moment $t_0$,
+$K$ has 2 upper, 2 lower and 1 vertical facet, or 
+
+Further we will be interested in the case when $K$ is a 4-simplex in $\RR^{3,1}$.
+Note that for each vector $v\ne 0$, there is at least one upper and one lower facet. 
+
+
+
+
+\begin{thm}{Observation}
+Suppose $\Sigma$ is the surface of a convex polyhedron $K$ in $\RR^{3,1}$ and $p\in\Sigma$.
+Then $p\in\Sigma^\pm$ if for any $v\in C^+$ there is a facet $F\ni p$ of $K$ such that $F\subset \Sigma^\pm(v)$.
+\end{thm}
+
+
+
+Note that $p\in\Sigma^+$ if and only if $p$ lies on upper side of $\Sigma$ with respect to any future oriented time-like vector $v$.
+
+Let $K$ be a simplex in $\RR^{3,1}$
+and $v$ is a generic time-like vector;
+that is $v$ is not parallel to any facet of $K$.
+Then for each facet $F$ of $P$ is upper or lower with respect to $v$;
+that is, for a point $x$ in the interior of $F$ the line $x+v\cdot t\notin K$ for $t>0$ or $t<0$ respectively.
+
+
+
+
+\section{Associated form}
+
+Let us construct a quadratic form $W_{\bm{x}}$ on $\RR^{n-1}$ 
+for given $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in a metric space $X$.
+
+Fix a nondegenerate simplex $\triangle$ in $\RR^{n-1}$.
+Denote by $v_1,\dots,v_n$ its vertices.
+If $(e_1,\dots,e_{n-1})$ is the standard basis on $\RR^{n-1}$,
+we may assume that $v_i=e_i$ for $i<n$ and $v_n=0$.
+
+Let us denote by $|a-b|_X$ the distance between points $a$ and $b$ in the metric space $X$.
+Set
+\[W_{\bm{x}}(v_i-v_j)=|x_i-x_j|^2_X\] 
+for all $i$ and $j$.
+Note that this identity define $W_{\bm{x}}$ uniquely.
+
+
+The constructed quadratic form $W_{\bm{x}}$ will be called \emph{form of the point array $\bm{x}$ with respect to the simplex $\triangle$}.
+
+Note that an array $\bm{x}=(x_1,\dots,x_n)$ in a metric space $X$ is isometric to an array in Euclidean space if and only if 
+$W_{\bm{x}}(v)\ge 0$
+for any $v\in \RR^{n-1}$.
+
+In particular,  the
+condition $W_{\bm{x}}\ge 0$ for triples of points means that 
+all three triangle inequalities hold.
+The following statement is an equivalent reformulation:
+
+\begin{thm}{Observation}\label{triangle-inq}
+Suppose $L$ be a subspace of $\RR^{n-1}$ such that
+$W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
+Then in the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ form a nondegenerate triangle.
+\end{thm}
+
+\section{Alexandrov's 4-point comparison}
+
+Now let us discuss the relation between form of quadruples
+and geometry of the space.
+In this case $\triangle$ is a tetrahedron on $\RR^3$.
+
+From the $3$-point case, 
+it follows that $W_{\bm{x}}$ 
+is nonnegative on every plane parallel to a face of the tetrahedron $\triangle$.
+In particular, $W_{\bm{x}}$ can have at most one negative eigenvalue.
+
+Assume $W_{\bm{x}}(w)<0$ for some $w\in\RR^3$.
+From \ref{triangle-inq},
+$w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
+
+Consider the projection of $\triangle$ along $w$ to a transversal plane. 
+Note that in the projection the 4 vertices of $\triangle$ lie in general position; 
+that is, no three of them lie on one line.
+Therefore  we can see one of two combinatorial pictures shown on the diagram.
+It is easy to see that the combinatorics of the picture does not depend on the choice of $w$.
+
+
++PIC
+
+If we see the diagram on the left we say that $\bm{x}$ is 
+of type $\quadra(4)$ and otherwise we say that it is of type $\quadra(3)$.
+
+
+\begin{thm}{Observation}\label{triangle-inq}
+Suppose a metric on $\bm{x}=(x_1,\dots,x_n)$ satisfies $\CAT(0)$ condition
+and $W_{\bm{x}}$ is its asociated form on $\RR^{n-1}$.
+Suppose $L$ be a subspace of $\RR^{n-1}$ such that
+$W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
+Then if the projections of 4 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ lies in one plane, then one of the points lies in the triangle formed by the remaining three points.
+\end{thm}
+
+The following statements give a connection between the forms $W_{\bm{x}}$ of the quadruple $\bm{x}$
+and the curvature bounds in the sense of Alexandrov.
+Their proofs are left to the reader.
+
+Assume $X$ is a complete space with intrinsic metric.
+Then
+\begin{itemize}
+\item If $W_{\bm{x}}\ge 0$ 
+for any quadrilateral $\bm{x}=(x_1,\dots,x_4)$ 
+then $X$ is isometric to a closed convex set in a Hilbert space. 
+\item $X$ has no quadruples of type $\quadra(3)$ if and only if 
+$X$ has nonnegative curvature in the sense of Alexandrov, further we say ``$\Alex[0]$ space''.
+\item $X$ has no quadruples of type $\quadra(4)$ if and only if 
+$X$ is a $\CAT[0]$ space which is also called Hadamard space
+\end{itemize}
+
+We will need one corollary of this statement.
+
+\begin{thm}{Corollary}
+Any 5-point metric space $\spc{X}$ admits a distance preserving embedding into $\RR^{4}$, $\RR^{3,1}$, or $\RR^{2,2}$.
+Moreover, if $\spc{X}$ satisfies the $\CAT(0)$ comparison, then only the first two cases can appear; that is, $\spc{X}$ admits a distance preserving embedding into $\RR^{4}$ or $\RR^{3,1}$.
+\end{thm}
+
+\parit{Proof.}
+\qeds
+
+\begin{thm}{Lemma}
+Suppose that quadruple of points $a,b,c,d\in \RR^{3,1}$ with induced distances form a $\CAT(0)$ metric space.
+Assume the extensions of two opposide edges of $ab$ and $cd$ can be connected by a time-like curve.
+Then if $(a,b,c,d)$ satisfy $\CAT(0)$ condition if one cannot connect two opposite sides by a time like-curve.
+  
+\end{thm}
+
+
+\section{???}
+
+Consider the space $\mathcal{A}$ of all $5$ point array in $\RR^3$ will be such that all 5 points do not lie on one plane and no three points lie on one line.
+Note that the space $\mathcal{A}$ is connected.
+
+The space $\mathcal{A}$ can be subdivided into the following 7 subsets $\mathcal{A}_{-3},\dots \mathcal{A}_{3}$
+depending on the orientation of simplexes formed by 4 points.
+More precisely, a $5$ point array  $(x_1,x_2,x_3,x_4,x_5)$ defines an affine map from a 4-simplex to $\RR^3$.
+The 4-simplex has 5 faces, and each facet may be mapped in an orientation-preserving, degenerate, or orientation-reversing way.
+Denote by $n_+$, $n_0$ and $n_-$ the number of orientation-preserving, degenerate, or orientation-reversing facets.
+Since all 5 points would lie in one plane we have $n_0$ is at most 1, otherwise.
+Therefore the value $m=n_--n_+$ can take an integer value between $-3$ and $3$, in this case we say that an array belong so $\mathcal{A}_m$.
+
+Every two quadraliterals in the array have 3 common points that define a plane.
+If the remaing points lie on the opposite sides from the plane then the corresponding facets have same orientation, if they lie on one side then the orientations are opposite.
+Therefore the 7 subsets $\mathcal{A}_{-3},\dots \mathcal{A}_{3}$ can be described the following way:
+
+
+$\mathcal{A}_{-3}$ --- a tetrahedron with reversed orientation and one point inside.
+
+$\mathcal{A}_{-2}$ --- a tetrahedron with reversed orientation and one point on a facet.
+
+$\mathcal{A}_{-1}$ --- double triangular pyramid formed by two tetrahedrons with reversed orientation.
+
+$\mathcal{A}_{0}$ --- a pyramid over a convex quadraliteral 
+
+$\mathcal{A}_{1}$ --- double triangular pyramid formed by two tetrahedrons with preserved orientation.
+
+$\mathcal{A}_{2}$ --- a tetrahedron with preserve orientation and one point on a facet.
+
+$\mathcal{A}_{3}$ --- a tetrahedron with preserved orientation and one point inside.
+
+Note that the complement $\spc{A}\backslash \spc{A}_0$ has two connected components formed by $\mathcal{A}_{-}=\mathcal{A}_{-3}\cup \mathcal{A}_{-2}\cup\mathcal{A}_{-1}$ and $\mathcal{A}_{+}=\mathcal{A}_{3}\cup \mathcal{A}_{2}\cup\mathcal{A}_{1}$.
+Observe that each array in $\mathcal{A}_{-}$ has at least 3 positively oriented facets and each array in $\mathcal{A}_{+}$ has at least 3 negatively oriented facets.
+
+
+\section{Proof}
+
+
+\begin{thm}{Key lemma}
+Let $K$ a 4-simplex in $\RR^{3,1}$.
+Suppose that the distances between the 5 vertexes of $K$ defines a metric that satisfies $\CAT(0)$ comparison.
+Then we can choose a time-like orientation on $\RR^{3,1}$ so that $K$ has at most 2 upper facets with respect to any positive time-like direction.
+\end{thm}
+
+\parit{Proof.}
+Choose a generic time like direction $v$, note that each of 5 factes of $K$ is either lower or upper with respect to $v$;
+without loss of generality we can assume that it has at least 3 lower facets.
+Since there is at least one upper facet, $K$ has 3 or 4 lower facets with respact to $v$.
+
+Choose the time-like orientation on $\RR^{3,1}$ so that $v$ positive; that is, it points into the future.
+Choose another generic time-like positive vector $w$.
+Let us connect $v$ to $w$ by a \emph{generic} one-parameter family of time-like vectors $v_t$;
+that is, for any time $t$ except finite number of values all facets of $K$ are either lower nor upper and at each exceptional time $t_i$ there is only one facet $F_i$ of $K$ that is \emph{vertical} with respect to $v_i$; that is, $F\parallel v_{t_i}$.
+
+Note that at each exceptional times the number of lower triangles may be changed one of two ways $4\leftrightarrow 3$ or $1\leftrightarrow 2$.
+Indeed ...
+
+Since at the beginning $v_0=v$, we have 4 or 3 lower facets,
+all the time we will keep having 4 or 3.
+In particular $K$ has  4 or 3 lower facets with respect to~$w$.
+
+Finally note that any 3 facets contain all the edges of $K$.
+Since for any generic time-like positive vector $w$ at least 3 facets are lower,
+every edge is lower with respect to $w$.
+Whence every edge is lower with respect to any positive time-like vector $w$;
+equivalently every edge lies in the lower side $\Sigma_-$ of the surface of $K$.
+
+By \ref{lem:sides}, $\Sigma_-$ is $\CAT(0)$ length space.
+Since every edge of $K$ lies in $\Sigma_-$, we have that 
+\qeds
+
+{\sloppy
+\printbibliography[heading=bibintoc]
+\fussy
+}
+\end{document}

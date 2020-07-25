@@ -1,0 +1,28 @@
+settings.render=32;
+import three;
+size(2cm);
+currentprojection=orthographic(2,3,4);
+currentlight=light(10,10,3);
+
+path3[] faces;
+
+triple A3=(0,0,0);
+triple B3=(1,0,0);
+triple C3=(.5,sqrt(1-.5**2),0);
+triple D3=(.5,sqrt(1-.5**2)/3,sqrt(1-.5**2-(1-.5**2)/9));
+triple E3=(A+B+C+D)/4;
+
+
+faces.push(A--B--C--C--cycle);
+faces.push(A--B--D--D--cycle);
+faces.push(A--B--E--E--cycle);
+faces.push(A--C--D--D--cycle);
+faces.push(A--C--E--E--cycle);
+faces.push(A--D--E--E--cycle);
+faces.push(B--C--D--D--cycle);
+faces.push(B--C--E--E--cycle);
+faces.push(B--D--E--E--cycle);
+faces.push(C--D--E--E--cycle);
+
+draw(faces,.5bp+black+opacity(1));
+draw(surface(faces),white+opacity(.5),light=nolight);

@@ -1,42 +1,24 @@
 \documentclass{article}
 \usepackage{quad}
 
+\hypersetup{pdftitle={5 points in CAT(0) spaces after  Tetsu Toyoda},pdfauthor={Nina Lebedeva and Anton Petrunin}}
+
 \begin{document}
 
 
-\title{Five points in a CAT(0) space after  Tetsu Toyoda}
+\title{5 points in CAT(0) spaces after  Tetsu Toyoda}
 \author{Nina Lebedeva and Anton Petrunin}
 %\address{Anton Petrunin, Math. Dept., PSU,University Park, PA 16802, USA.}\address{petrunin@math.psu.edu}
 \date{}
 \maketitle
 \begin{abstract}
-We give another proof of Toyoda's theorem that gives a nessesary and sufficient condition for the existance of a distance preserving map from a given 5-point metric space to a $\CAT(0)$ space. 
+We give another proof of Toyoda's theorem that describes 5-point subpaces in $\CAT(0)$ length spaces.
 \end{abstract}
 
 \section{Introduction}
 
-The $\CAT(0)$ comparison is a certain inequality for 6 distances between 4 points in a metric space; here is one way to define it:
-
-\begin{thm}{Definition}
-A quadruple of points $(p_1,p_2,x_1,x_2)$ in a metric space $X$ satisfies $\CAT(0)$ comparison
-if there is quadruple of points $(\~p_1,\~p_2,\~x_1,\~x_2)$ in the Euclidean space $\EE^3$ such that 
-\begin{align*}
-|p_1-p_2|_{X}&\le|\~p_1-\~p_2|_{\EE^3},
-\\ 
-|x_1-x_2|_{X}&\le|\~x_1-\~x_2|_{\EE^3},
-\\ 
-|p_i-x_j|_{X}&\ge|\~p_i-\~x_j|_{\EE^3},
-\end{align*}
-for any $i$ and $j$.
-
-A metric space $X$ is called $\CAT(0)$ if every quadruple of points in $X$ satisfies $\CAT(0)$ comparison.
-\end{thm}
-
-The definition above is equivalent to the (2+2)-point comparison in \cite{alexander-kapovitch-petrunin}
-where other definitions and their equivalence are discussed as well.
-Note that we do not assume that $\CAT(0)$ is a length space;
-for example any 3 point metric space is $\CAT(0)$.
-
+The $\CAT(0)$ comparison is a certain inequality for 6 distances between 4 points in a metric space.
+We refer to \cite{alexander-kapovitch-petrunin} for definitions.
 
 It is not hard to check that if a quadruple of points satisfies $\CAT(0)$ comparison for all relabeling,
 then it admits a distance-preserving inclusion into a length $\CAT(0)$ space.
@@ -44,14 +26,14 @@ The following theorem generalizes this statement to 5 point metric spaces.
 
 \begin{thm}{Toyoda's theorem}
 Let $P$ be a 5 point metric space that satisfies $\CAT(0)$ comparison.
-Then $P$ admits a distance-preserving inclusion into a $\CAT(0)$ length space $X$.
+Then $P$ admits a distance-preserving inclusion into a length $\CAT(0)$ space $X$.
 
 Moreover,
-$X$ can be chosen to be a subcomplex of a 4-simplex such that (1) each simplex in $X$ has Euclidean metric and (2) the inclusion maps the 5 points on $P$ to the vertexes of the 4-simplex.
+$X$ can be chosen to be a subcomplex of a 4-simplex such that (1) each simplex in $X$ has Euclidean metric and (2) the inclusion maps the 5 points on $P$ to the vertexes of the simplex.
 \end{thm}
 
 This theorem was proved by Tetsu Toyoda \cite{toyoda};
-we present a shorter and more conceptual proof.
+we present a shorter proof.
 The proof uses the fact that convex space-like hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces.
 We construct a distance-preserving inclusion $\iota$ of $P$ into $\RR^4$ or $\RR^{3,1}$.
 In the case of $\RR^4$ the convex hull of $\iota(P)$ can be taken as $X$;
@@ -115,15 +97,14 @@ Then either $Q\subset \spc{A}_+$ or $Q\subset \spc{A}_-$
 
 \section{Associated form}
 
-In this section we recall some facts \cite{petrunin-2017} about the so called \emph{asociated} form;
+In this section we recall some facts about the so called \emph{asociated} form introduced in \cite{petrunin-2017};
 it is a quadratic form 
 $W_{\bm{x}}$ on $\RR^{n-1}$ associated
 to a given $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in a metric space $X$.
 
-Fix a nondegenerate simplex $\triangle$ in $\RR^{n-1}$.
-Denote by $v_1,\dots,v_n$ its vertices.
-If $(e_1,\dots,e_{n-1})$ is the standard basis on $\RR^{n-1}$,
-we may assume that $v_i=e_i$ for $i<n$ and $v_n=0$.
+\parbf{Construction.}
+Let $\triangle$ be the standard simplex $\triangle$ in $\RR^{n-1}$; that is, first $(n-1)$ of its vertexes $v_1,\dots,v_n$ form the standard basis on $\RR^{n-1}$,
+ and $v_n=0$.
 
 Let us denote by $|a-b|_X$ the distance between points $a$ and $b$ in the metric space $X$.
 Set
@@ -132,28 +113,27 @@ for all $i$ and $j$.
 Note that this identity define $W_{\bm{x}}$ uniquely.
 
 
-The constructed quadratic form $W_{\bm{x}}$ will be called \emph{form of the point array $\bm{x}$ with respect to the simplex $\triangle$}.
+The constructed quadratic form $W_{\bm{x}}$ will be called \emph{form associated to the point array $\bm{x}$}.
 
 Note that an array $\bm{x}=(x_1,\dots,x_n)$ in a metric space $X$ is isometric to an array in Euclidean space if and only if 
 $W_{\bm{x}}(v)\ge 0$
 for any $v\in \RR^{n-1}$.
 
 In particular,  the
-condition $W_{\bm{x}}\ge 0$ for triples of points means that 
-all three triangle inequalities hold.
+condition $W_{\bm{x}}\ge 0$ for a triple $\bm{x}=(x_1,x_2,x_3)$ means that 
+all three triangle inequalities for the distances between $x_1$, $x_2$, and $x_3$ hold.
 The following statement is an equivalent reformulation:
 
 \begin{thm}{Observation}\label{triangle-inq}
+Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
 Suppose $L$ be a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then in the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ form a nondegenerate triangle.
 \end{thm}
 
-Now let us discuss the relation between form of quadruples
-and geometry of the space.
-In this case $\triangle$ is a tetrahedron on $\RR^3$.
-
-From the $3$-point case, 
+\parbf{CAT(0) condition.}
+Consider a point array $\bm{x}$ with 4 points.
+From \ref{triangle-inq}, 
 it follows that $W_{\bm{x}}$ 
 is nonnegative on every plane parallel to a face of the tetrahedron $\triangle$.
 In particular, $W_{\bm{x}}$ can have at most one negative eigenvalue.
@@ -162,22 +142,28 @@ Assume $W_{\bm{x}}(w)<0$ for some $w\in\RR^3$.
 From \ref{triangle-inq},
 $w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
 
-Consider the projection of $\triangle$ along $w$ to a transversal plane. 
-Note that in the projection the 4 vertices of $\triangle$ lie in general position; 
-that is, no three of them lie on one line.
-Therefore  we can see one of two combinatorial pictures shown on the diagram.
-It is easy to see that the combinatorics of the picture does not depend on the choice of $w$.
-
 \begin{wrapfigure}{r}{33mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-10}
 \end{wrapfigure}
 
+Consider the projection of $\triangle$ along $w$ to a transversal plane. 
+Note that in the projection the 4 vertices of $\triangle$ lie in general position; 
+that is, no three of them lie on one line.
+Therefore  we can see one of two combinatorial pictures shown on the diagram.
+It is easy to see that the combinatorics of the picture does not depend on the choice of $w$.
+
+Moreover $\CAT(0)$ comparison is equivalent to the fact that the diagram on the right cannot appear.
+This fact can be deduced from a definition of $\CAT(0)$ comparison,
+say from the (2+2)-point comparison used in \cite{alexander-kapovitch-petrunin} as the main definition;
+or it can be used as a definiton of $\CAT(0)$ comparison.
+Either way, it implies the following statement.
+
 
 \begin{thm}{Observation}\label{cat0-proj}
-Suppose a metric on $\bm{x}\z=(x_1,\dots,x_n)$ satisfies $\CAT(0)$ condition
-and $W_{\bm{x}}$ is its asociated form on $\RR^{n-1}$.
+Suppose a metric on $\bm{x}\z=(x_1,\dots,x_n)$ satisfies $\CAT(0)$ comparison
+and $W_{\bm{x}}$ is its associated form on $\RR^{n-1}$.
 Assume that $L$ is a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then if the projections of 4 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ lies in one plane, then its projection looks like the picture on the left;
@@ -185,17 +171,17 @@ that is, one of the points lies in the triangle formed by the remaining three po
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:3+2}
-Suppose a metric on $\bm{x}=(x_1,\dots,x_5)$ satisfies $\CAT(0)$ condition
+Suppose a metric on $\bm{x}=(x_1,\dots,x_5)$ satisfies $\CAT(0)$ comaparison
 and $W_{\bm{x}}$ is its asociated form on $\RR^{4}$.
 Assume that $L$ is a subspace of $\RR^{4}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then $\dim L\le 1$.
 
-Moreover, if $\dim L= 1$, then the projections of $\bm{x}=(x_1,\dots,x_5)$ vertexes of $\triangle$ to the quotient space $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$. 
+Moreover, if $\dim L= 1$, then the projections of the vertexes of $\triangle$ to the quotient space $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$. 
 \end{thm}
 
 \parit{Proof.}
-If $\dim L\ge 2$, then the space $\dim \RR^4/L\le 2$, so the projections of $x_1,\dots,x_5$.
+If $\dim L\ge 2$, then the space $\dim \RR^4/L\le 2$.
 By \ref{triangle-inq}, these 5 projections lie in a general position; that is, non three of theses projections lie on one line. 
 Therefore $\dim \RR^4/L$ is the plane.
 
@@ -206,7 +192,7 @@ The latter contradicts \ref{cat0-proj}.
 \section{Convex spacelike surfaces}
 
 Let $W$ be a quadratic form on $\RR^3$.
-Suppose that the diagonalization of $W$ has exactly one negative value on the diagonal.
+Suppose that  $W$ has exactly one negative eigenvalue.
 
 Choose future and past cones $C^+$ and $C^-$ for $W$;
 that is $C^+$ and $C^-$ are connceted components of the set
@@ -235,8 +221,8 @@ Then its upper and lower sides $\Sigma^+$ and $\Sigma^-$ equipped with induced i
 \end{thm}
 
 \parit{Proof.}
-Applying Gauss formula, we see that a smooth convex space-like hypersurface in $\RR^4$ has nonpositive curvature.
-Therefore any complete smooth convex space-like hypersurface in $\RR^4$ is $\CAT(0)$.
+Applying Gauss formula, we see that a smooth convex strictly spacelike hypersurface in $\RR^4$ has nonpositive curvature.
+Therefore any complete smooth convex strictly spacelike hypersurface in $\RR^4$ is $\CAT(0)$.
 
 Note that $K^-=K+C^+$ a convex set and its boundary $\partial K^-$ is weakly space-like.
 The surface $\partial K^-$ contains $\Sigma^-$ as a subset.
@@ -244,9 +230,9 @@ Moreover the induced length pseudometric on $\partial K^-$ is isometric to $\Sig
 Indeed every point of $\partial K^-$ either belongs to  $\Sigma^-$, or lies on a light ray emerging from $\Sigma^-$.
 The statement follows since light rays have zero length.
 
-Observe that $\partial K^-$ can be approximated by smooth space-like convex hypersurfaces.
-In particular any 4-point subspace in $\partial K^-$ can be approximated by 4 -point subspaces in $\CAT(0)$ space.
-Whence the $\CAT(0)$ comparison holds for all quadruples.
+Observe that $\partial K^-$ can be approximated by smooth strictly spacelike convex hypersurfaces.
+In particular any 4-point subspace in $\partial K^-$ can be approximated by 4 -point subspaces in a $\CAT(0)$ space.
+Whence the $\CAT(0)$ comparison holds for all quadruples in $\partial K^-$ and therefore in $\Sigma^-$.
 \qeds
 
 
@@ -272,7 +258,7 @@ Choose a 5-simplex $\triangle$ in $\RR^4$; denote by $W$ the form associated to 
 If $W\ge0$, then $P$ admits a distance preserving embedding into euclidean 4-space, so one can take the convex hull of its image as $X$.
 
 Suppose $W(v)<0$ for some $v\in\RR^4$.
-Since $P$ is $\CAT(0)$, \ref{cor:3+2} implies that $W$ has at most one negative value in its diagonalization.
+Since $P$ is $\CAT(0)$, \ref{cor:3+2} implies that $W$ has at most one negative eigenvalue.
 Moreover if a line $L$ is spanned by a vector $v$ such that $W(v)<0$, then the projection of the vertexes of the simplex to $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$.
 
 The space of such lines $L$ is connected.
@@ -286,6 +272,67 @@ By \ref{lem:sides}, $\Sigma^-$ with induced (pseudo)metric is a length $\CAT(0)$
 Since all edges of $\triangle$ lie in $\Sigma^-$, the inclusion $P\hookrightarrow \Sigma^-$ is distance preserving.
 Whence we can take $X=\Sigma^-$.
 \qeds
+
+\section{Remarks}
+
+An analog of the Toyoda's theorem does not hold for 6-point sets.
+It can be seen by using the so called $(4{+}2)$-comparison introduced in \cite{alexander-kapovitch-petrunin-2011};
+this comparison holds for any length $\CAT(0)$ space, but may not hold for a space with $\CAT(0)$ comparison (if it is not a length space).
+
+The $(4{+}2)$-comparison is not a sufficient condition for $6$-point spaces;
+that is, there are 6-point metric spaces that satisfies $(4{+}2)$ and $(2{+}2)$-comparisons, but do not admit a distance-preserving embedding into a length $\CAT(0)$ space.
+An example was constructed by the first author; it is described in \cite{alexander-kapovitch-petrunin-2011}.
+
+Let us recall the definition of graph comparison given Vlaidimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov} and use it to formulate few related questions.
+
+Let $\Gamma$ be a graph with vertexes $v_1,\dots,v_n$.
+A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertexes of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
+if $v_j$ is adjacent to $v_j$, then
+\[|\tilde v_i-\tilde v_j|_{\HH}\le | v_i-v_j|_{X}\]
+and
+if $v_j$ is nonadjacent to $v_j$, then
+\[|\tilde v_i-\tilde v_j|_{\HH}\ge | v_i-v_j|_{X}.\]
+
+For the comparison for the 4-cycle (left side of the diagram) defines $\CAT(0)$ comparison.
+The octahedron graph (right side of the diagram) defines another comparison.
+
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-30}
+\end{figure}
+
+\begin{thm}{Question}
+Is it true that octahedron-comparison holds in any 6 points in a length $\CAT(0)$ space?
+
+And, assuming the answer is affirmative, what about the converse? That is, is it true that any 6-point metric space that satisfies octahedron-comparison admits a distance preserving embedding in a length $\CAT(0)$ space?
+\end{thm}
+
+
+The analogous questions for  spaces with nonnegative curvature in the sense of Alexandrov (briefly $\CBB(0)$) are open as well.
+The $\CBB(0)$ comparison can be defined by the graph comparison for the tripod-tree shown first on the following diagram.
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-40}
+\end{figure}
+It turns out that any length $\CBB(0)$ spaces satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertexes \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
+
+The second tree on the diagram defines the so called $(4{+}1)$ or $4$-tree comparison (in terminoplogy of \cite{alexander-kapovitch-petrunin-2011} or \cite{lebedeva-petrunin-zolotov} respectively).
+We expect that this comparison provides a necessary and sufficient condition; moreover we expect an affirmative answer to the following stronger question.
+
+
+\begin{thm}{Question}
+Suppose a 5-point metric space $P$ satisfies $(4{+}1)$-point comparison.
+Is it true that $P$ admits a distance preserving embedding into a product of circles?
+\end{thm}
+
+Finally let us mention a related question about a 6-point condition. 
+
+\begin{thm}{Question}
+Suppose a 6-point metric space $P$ satisfies the comparisons for all three 6-vertex trees on the diagram.
+Is it true that $P$ admits a distance preserving embedding into a length $\CBB(0)$ space?
+\end{thm}
 
 {\sloppy
 \printbibliography[heading=bibintoc]

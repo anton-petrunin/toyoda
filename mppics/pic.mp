@@ -54,7 +54,7 @@ p0=(0,0)*u{1.4,-1}..(1,0)*u{.1,1}..(0,0)*u{-1.4,-1};
 x1= directiontime (-1,1) of p0 ;
 x0=directiontime (1,1) of p0;
 
-z.o=(-.3,0)*u;
+z.o=(-.6,0)*u;
 
 
 hatchfill p0--cycle  withcolor (20, 1mm, -.5bp);
@@ -73,6 +73,38 @@ label.bot (btex $\Sigma^-$ etex, point x0/2 of p0);
 label.top (btex $\Sigma^+$ etex, point (x1+2)/2 of p0);
 label.bot (btex $C^-$ etex,  z.o-(0,8));
 label.top (btex $C^+$ etex,  z.o+(0,8));
+endfig;
+
+beginfig(25) 
+save u,p;
+path p[];
+u:=2.8cm;
+
+p0=(0,0)*u{1.4,-1}..(1,0)*u{.1,1}..(0,0)*u{-1.4,-1};
+
+x1= directiontime (-1,1) of p0 ;
+x0=directiontime (1,1) of p0;
+
+z.o=(-.3,0)*u;
+
+p1=point x0 of p0--(1,1)*u+point x0 of p0--(0,0)*u+(-1,1)*u--(0,0)*u;
+
+
+hatchfill p0--cycle  withcolor (20, 1mm, -.5bp);
+draw p0;
+draw p1;
+draw subpath (0,x0) of p0 penbold;
+
+hatchfill subpath (0,x0) of p0--p1--cycle  withcolor (80, 1mm, -.5bp);
+
+dOt (0,0)*u, point x0 of p0;
+
+clip currentpicture to (-.5,-1)*u--(1.5,-1)*u--(1.5,.4)*u--(-.5,.4)*u--cycle;
+
+
+whitelabel (btex $K$ etex, (.5,0)*u);
+whitelabel (btex $K^-$ etex, (0,.2)*u);
+label.bot (btex $\Sigma^-$ etex, point x0/2 of p0);
 endfig;
 
 beginfig(30) 
@@ -106,6 +138,9 @@ draw z2..z3..z5..z0..cycle;
 
 dOt z0,z1,z2,z3,z4,z5;
 dOt z.s0,z.s1,z.s2,z.s3;
+
+label.bot (btex $C_4$ etex,  z3+z.shift+(0,-2));
+label.bot (btex $O_3$ etex,  z3+(0,-2));
 endfig;
 
 beginfig(40) 

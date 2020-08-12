@@ -17,7 +17,7 @@ We give another proof of Toyoda's theorem that describes 5-point subpaces in $\C
 
 \section{Introduction}
 
-The $\CAT(0)$ comparison is a certain inequality for 6 distances between 4 points in a metric space.
+The $\CAT(0)$ comparison is a certain inequality in terms 6 distances between 4 points in a metric space.
 We refer to \cite{alexander-kapovitch-petrunin} for definitions.
 
 It is not hard to check that if a quadruple of points satisfies $\CAT(0)$ comparison for all relabeling,
@@ -36,8 +36,8 @@ This theorem was proved by Tetsu Toyoda \cite{toyoda};
 we present a shorter proof.
 The proof uses the fact that convex space-like hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces.
 We construct a distance-preserving inclusion $\iota$ of $P$ into $\RR^4$ or $\RR^{3,1}$.
-In the case of $\RR^4$ the convex hull of $\iota(P)$ can be taken as $X$;
-in the case of $\RR^{3,1}$ we take as $X$ a certain convex space-like hypersurface in $\RR^{3,1}$.
+In the case of $\RR^4$ the convex hull $K$ of $\iota(P)$ can be taken as $X$;
+in the case of $\RR^{3,1}$ we take as $X$ a space-like part of the boundary of $K$.
 
 \section{5-point arrays in 3-space}
 
@@ -46,19 +46,6 @@ Note that $\mathcal{A}$ is connected.
 
 The space $\mathcal{A}$ can be subdivided into 7 subsets with combinatoric configuration as on the diagram;
 quadruples in one plane are marked in gray.
-
-\begin{figure}[h!]
-\centering
-\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{asy/A}
-\lbl[t]{6,0;$\mathcal{A}_{-3}$} 
-\lbl[t]{24,0;$\mathcal{A}_{-2}$} 
-\lbl[t]{42,0;$\mathcal{A}_{-1}$} 
-\lbl[t]{60,0;$\mathcal{A}_{0}$} 
-\lbl[t]{78,0;$\mathcal{A}_{1}$} 
-\lbl[t]{96,0;$\mathcal{A}_{2}$} 
-\lbl[t]{114,0;$\mathcal{A}_{3}$} 
-\end{lpic}
-\end{figure}
 
 Namely, a $5$ point array  $(x_1,x_2,x_3,x_4,x_5)$ defines an affine map from a 4-simplex to $\RR^3$.
 The 4-simplex has 5 facets, and each facet may be mapped in an orientation-preserving, degenerate, or orientation-reversing way.
@@ -85,6 +72,19 @@ $\mathcal{A}_{1}$ --- double triangular pyramid formed by two tetrahedrons with 
 $\mathcal{A}_{2}$ --- a tetrahedron with preserve orientation and one point on a facet.
 
 $\mathcal{A}_{3}$ --- a tetrahedron with preserved orientation and one point inside.
+
+\begin{figure}[h!]
+\centering
+\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{asy/A}
+\lbl[t]{6,0;$\mathcal{A}_{-3}$} 
+\lbl[t]{24,0;$\mathcal{A}_{-2}$} 
+\lbl[t]{42,0;$\mathcal{A}_{-1}$} 
+\lbl[t]{60,0;$\mathcal{A}_{0}$} 
+\lbl[t]{78,0;$\mathcal{A}_{1}$} 
+\lbl[t]{96,0;$\mathcal{A}_{2}$} 
+\lbl[t]{114,0;$\mathcal{A}_{3}$} 
+\end{lpic}
+\end{figure}
 
 Note that the complement $\spc{A}\backslash \spc{A}_0$ has two connected components formed by $\mathcal{A}_{-}=\mathcal{A}_{-3}\cup \mathcal{A}_{-2}\cup\mathcal{A}_{-1}$ and $\mathcal{A}_{+}=\mathcal{A}_{3}\cup \mathcal{A}_{2}\cup\mathcal{A}_{1}$.
 Observe that each array in $\mathcal{A}_{-}$ has at least 3 positively oriented facets and each array in $\mathcal{A}_{+}$ has at least 3 negatively oriented facets.
@@ -139,7 +139,7 @@ is nonnegative on every plane parallel to a face of the tetrahedron $\triangle$.
 In particular, $W_{\bm{x}}$ can have at most one negative eigenvalue.
 
 Assume $W_{\bm{x}}(w)<0$ for some $w\in\RR^3$.
-From \ref{triangle-inq},
+From \ref{triangle-inq}, the line $L_w$ spanned by
 $w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
 
 \begin{wrapfigure}{r}{33mm}
@@ -149,12 +149,13 @@ $w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
 \end{wrapfigure}
 
 Consider the projection of $\triangle$ along $w$ to a transversal plane. 
-Note that in the projection the 4 vertices of $\triangle$ lie in general position; 
+The projection of the 4 vertices of $\triangle$ lie in general position; 
 that is, no three of them lie on one line.
 Therefore  we can see one of two combinatorial pictures shown on the diagram.
-It is easy to see that the combinatorics of the picture does not depend on the choice of $w$.
+Sine the set of lines $L_w$ with $W_{\bm{x}}(w)<0$ is connected,
+the combinatorics of the picture does not depend on the choice of $w$.
 
-Moreover $\CAT(0)$ comparison is equivalent to the fact that the diagram on the right cannot appear.
+The $\CAT(0)$ comparison is equivalent to the fact that the diagram on the right cannot appear.
 This fact can be deduced from a definition of $\CAT(0)$ comparison,
 say from the (2+2)-point comparison used in \cite{alexander-kapovitch-petrunin} as the main definition;
 or it can be used as a definiton of $\CAT(0)$ comparison.
@@ -177,7 +178,7 @@ Assume that $L$ is a subspace of $\RR^{4}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then $\dim L\le 1$.
 
-Moreover, if $\dim L= 1$, then the projections of the vertexes of $\triangle$ to the quotient space $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$. 
+Moreover, if $\dim L= 1$, then the projections of the vertexes of $\triangle$ to the quotient space $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$ (defined in the previous section). 
 \end{thm}
 
 \parit{Proof.}
@@ -185,21 +186,21 @@ If $\dim L\ge 2$, then the space $\dim \RR^4/L\le 2$.
 By \ref{triangle-inq}, these 5 projections lie in a general position; that is, non three of theses projections lie on one line. 
 Therefore $\dim \RR^4/L$ is the plane.
 
-Note that from 5 points in a general position on the plane one can choose 4 that form a convex quadrangle.
+Any 5 points in a general position on the plane have 4 forming a convex quadrangle.
 The latter contradicts \ref{cat0-proj}.
 \qeds
 
 \section{Convex spacelike surfaces}
 
-Let $W$ be a quadratic form on $\RR^3$.
+Let $W$ be a quadratic form on $\RR^4$.
 Suppose that  $W$ has exactly one negative eigenvalue.
 
 Choose future and past cones $C^+$ and $C^-$ for $W$;
 that is $C^+$ and $C^-$ are connceted components of the set
-$\set{v\in\RR^3}{W(v)< 0}$.
-A subsset $S$ in $\RR^3$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any $x,y\in S$.
+$\set{v\in\RR^4}{W(v)< 0}$.
+A subsset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any $x,y\in S$.
 
-\begin{wrapfigure}{r}{53mm}
+\begin{wrapfigure}{r}{60mm}
 \vskip-4mm
 \centering
 \includegraphics{mppics/pic-20}
@@ -216,19 +217,25 @@ The subsets $\Sigma^+$ and $\Sigma^-$ are spacelike;
 in particular the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic (pseudo)metric on $\Sigma^+$ and $\Sigma^-$. 
 
 \begin{thm}{Lemma}\label{lem:sides}
-Let $\Sigma$ be the surface of a convex body $K$ in $\RR^4$.
-Then its upper and lower sides $\Sigma^+$ and $\Sigma^-$ equipped with induced intrinsic metric are a $\CAT(0)$ length spaces. 
+Let $\Sigma$ be the surface of a convex body $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
+Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with induced intrinsic metric are a $\CAT(0)$ length spaces. 
 \end{thm}
 
 \parit{Proof.}
 Applying Gauss formula, we see that a smooth convex strictly spacelike hypersurface in $\RR^4$ has nonpositive curvature.
 Therefore any complete smooth convex strictly spacelike hypersurface in $\RR^4$ is $\CAT(0)$.
 
+\begin{wrapfigure}{r}{60mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-25}
+\end{wrapfigure}
+
 Note that $K^-=K+C^+$ a convex set and its boundary $\partial K^-$ is weakly space-like.
 The surface $\partial K^-$ contains $\Sigma^-$ as a subset.
 Moreover the induced length pseudometric on $\partial K^-$ is isometric to $\Sigma^-$.
 Indeed every point of $\partial K^-$ either belongs to  $\Sigma^-$, or lies on a light ray emerging from $\Sigma^-$.
-The statement follows since light rays have zero length.
+It remains to note that light rays have zero length.
 
 Observe that $\partial K^-$ can be approximated by smooth strictly spacelike convex hypersurfaces.
 In particular any 4-point subspace in $\partial K^-$ can be approximated by 4 -point subspaces in a $\CAT(0)$ space.
@@ -255,7 +262,7 @@ that is,
 Let $\{x_1,\dots,x_5\}$ be the points in $P$.
 Choose a 5-simplex $\triangle$ in $\RR^4$; denote by $W$ the form associated to the point array $(x_1,\dots,x_5)$.
 
-If $W\ge0$, then $P$ admits a distance preserving embedding into euclidean 4-space, so one can take the convex hull of its image as $X$.
+If $W\ge0$, then $P$ admits a distance preserving embedding into Euclidean 4-space, so one can take the convex hull of its image as $X$.
 
 Suppose $W(v)<0$ for some $v\in\RR^4$.
 Since $P$ is $\CAT(0)$, \ref{cor:3+2} implies that $W$ has at most one negative eigenvalue.
@@ -279,11 +286,15 @@ An analog of the Toyoda's theorem does not hold for 6-point sets.
 It can be seen by using the so called $(4{+}2)$-comparison introduced in \cite{alexander-kapovitch-petrunin-2011};
 this comparison holds for any length $\CAT(0)$ space, but may not hold for a space with $\CAT(0)$ comparison (if it is not a length space).
 
-The $(4{+}2)$-comparison is not a sufficient condition for $6$-point spaces;
-that is, there are 6-point metric spaces that satisfies $(4{+}2)$ and $(2{+}2)$-comparisons, but do not admit a distance-preserving embedding into a length $\CAT(0)$ space.
+{\sloppy
+
+The $(4{+}2)$-comparison is not a sufficient condition for $6$-point spaces.
+More precisely, there are 6-point metric spaces that satisfies $(4{+}2)$ and $(2{+}2)$-comparisons, but do not admit a distance-preserving embedding into a length $\CAT(0)$ space.
 An example was constructed by the first author; it is described in \cite{alexander-kapovitch-petrunin-2011}.
 
-Let us recall the definition of graph comparison given Vlaidimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov} and use it to formulate few related questions.
+}
+
+Further let us recall the definition of \emph{graph comparison} given Vlaidimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov} and use it to formulate few related questions.
 
 Let $\Gamma$ be a graph with vertexes $v_1,\dots,v_n$.
 A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertexes of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
@@ -293,24 +304,24 @@ and
 if $v_j$ is nonadjacent to $v_j$, then
 \[|\tilde v_i-\tilde v_j|_{\HH}\ge | v_i-v_j|_{X}.\]
 
-For the comparison for the 4-cycle (left side of the diagram) defines $\CAT(0)$ comparison.
-The octahedron graph (right side of the diagram) defines another comparison.
-
+The $C_4$-comparison (for the 4-cycle left side of the diagram) defines $\CAT(0)$ comparison.
 \begin{figure}[h!]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-30}
 \end{figure}
+The $O_3$-comparison (for the octahedron graph right side of the diagram) defines another comparison.
+Since $O_3$ contains $C_4$ as an induced subgraph, we get that $O_3$-comparison is stronger than $C_4$-comparison.
 
-\begin{thm}{Question}
+\begin{thm}{Open question}
 Is it true that octahedron-comparison holds in any 6 points in a length $\CAT(0)$ space?
 
-And, assuming the answer is affirmative, what about the converse? That is, is it true that any 6-point metric space that satisfies octahedron-comparison admits a distance preserving embedding in a length $\CAT(0)$ space?
+And, assuming the answer is affirmative, what about the converse: is it true that any 6-point metric space that satisfies octahedron-comparison admits a distance preserving embedding in a length $\CAT(0)$ space?
 \end{thm}
 
 
 The analogous questions for  spaces with nonnegative curvature in the sense of Alexandrov (briefly $\CBB(0)$) are open as well.
-The $\CBB(0)$ comparison can be defined by the graph comparison for the tripod-tree shown first on the following diagram.
+The $\CBB(0)$ comparison is equivalent to the $3$-tree comparison (for the tripod-tree shown first on the following diagram).
 \begin{figure}[h!]
 \vskip-0mm
 \centering
@@ -318,7 +329,7 @@ The $\CBB(0)$ comparison can be defined by the graph comparison for the tripod-t
 \end{figure}
 It turns out that any length $\CBB(0)$ spaces satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertexes \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
 
-The second tree on the diagram defines the so called $(4{+}1)$ or $4$-tree comparison (in terminoplogy of \cite{alexander-kapovitch-petrunin-2011} or \cite{lebedeva-petrunin-zolotov} respectively).
+The 4-tree comparison (the second tree on the diagram) is equivalent to the so called $(4{+}1)$ in terminoplogy of \cite{alexander-kapovitch-petrunin-2011}.
 We expect that this comparison provides a necessary and sufficient condition; moreover we expect an affirmative answer to the following stronger question.
 
 

@@ -68,7 +68,7 @@ draw z.o+(1,-1)*u/3-- z.o-(1,-1)*u/3;
 dOt (0,0)*u, point x0 of p0, point x1 of p0;
 
 
-whitelabel (btex $K$ etex, (.5,0)*u);
+whitelabel (btex $K$ etex, (.6,0)*u);
 label.bot (btex $\Sigma^-$ etex, point x0/2 of p0);
 label.top (btex $\Sigma^+$ etex, point (x1+2)/2 of p0);
 label.bot (btex $C^-$ etex,  z.o-(0,8));
@@ -102,7 +102,7 @@ dOt (0,0)*u, point x0 of p0;
 clip currentpicture to (-.5,-1)*u--(1.5,-1)*u--(1.5,.4)*u--(-.5,.4)*u--cycle;
 
 
-whitelabel (btex $K$ etex, (.5,0)*u);
+whitelabel (btex $K$ etex, (.6,0)*u);
 whitelabel (btex $K^-$ etex, (0,.2)*u);
 label.bot (btex $\Sigma^-$ etex, point x0/2 of p0);
 endfig;

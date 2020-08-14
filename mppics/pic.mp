@@ -86,20 +86,22 @@ x1= directiontime (-1,1) of p0 ;
 x0=directiontime (1,1) of p0;
 
 z.o=(-.3,0)*u;
+y.top=.4*u;
+z.r=whatever*(1,1)+point x0 of p0=(whatever,y.top);
+z.l=whatever*(-1,1)=(whatever,y.top);
 
-p1=point x0 of p0--(1,1)*u+point x0 of p0--(0,0)*u+(-1,1)*u--(0,0)*u;
+p1=point x0 of p0--z.r--z.l--(0,0)*u;
 
 
 hatchfill p0--cycle  withcolor (20, 1mm, -.5bp);
 draw p0;
-draw p1;
+draw subpath (0,1) of p1;
+draw subpath (2,3) of p1;
 draw subpath (0,x0) of p0 penbold;
 
 hatchfill subpath (0,x0) of p0--p1--cycle  withcolor (80, 1mm, -.5bp);
 
 dOt (0,0)*u, point x0 of p0;
-
-clip currentpicture to (-.5,-1)*u--(1.5,-1)*u--(1.5,.4)*u--(-.5,.4)*u--cycle;
 
 
 whitelabel (btex $K$ etex, (.6,0)*u);

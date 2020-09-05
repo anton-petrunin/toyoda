@@ -112,7 +112,7 @@ endfig;
 beginfig(30) 
 save u,p,k,a;
 path p[];
-u:=.5cm;
+u:=.4cm;
 k:=1.6;
 a:=1.3*u;
 
@@ -148,10 +148,10 @@ endfig;
 beginfig(40) 
 save u,p;
 path p[];
-u:=.7cm;
+u:=.5cm;
 
 z.shift=(3,0)*u;
-z.vert=(1.5,-4)*u;
+z.vert=(1.5,-3.7)*u;
 
 z.o=origin;
 z0=(0,1)*u;

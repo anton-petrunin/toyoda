@@ -151,7 +151,7 @@ path p[];
 u:=.7cm;
 
 z.shift=(3,0)*u;
-z.vert=(0,-3)*u;
+z.vert=(1.5,-4)*u;
 
 z.o=origin;
 z0=(0,1)*u;
@@ -235,5 +235,36 @@ draw z.vert+1.5*z.shift+z.o--z.313--z.313+z0;
 
 dOt z.vert+1.5*z.shift,z.314,z.311,z.312,z.313,z.313+z0;
 
+
+label.bot (btex $3$-tree etex,  z.o+(0,-1.1)*u);
+label.bot (btex $4$-tree etex,  z.shift+(0,-1.1)*u);
+label.bot (btex $5$-tree etex,  2*z.shift+(0,-1.1)*u);
+label.bot (btex $6$-tree etex,  3*z.shift+(0,-1.1)*u);
+label.bot (btex $2(2)$-tree etex,  .5[z.vert,z.220]+(0,-1.1)*u);
+label.bot (btex $3(1)$-tree etex,  z.vert+1.5*z.shift+(0,-1.1)*u);
 endfig;
+
+beginfig(720) 
+save u;
+u:=1cm;
+
+z.p=(0,0)*u;
+z.q=(1.5,1.3)*u;
+z.x=(1,0)*u;
+z.y=(-.2,1)*u;
+z.z=.6[z.x,z.y];
+
+draw z.p--z.x--z.q--z.y--cycle;
+draw z.x--z.y;
+draw z.p--z.z--z.q dashed evenly;
+
+dOt z.x,z.y,z.z,z.p,z.q;
+
+label.lrt(btex $\tilde x$ etex, z.x);
+label.ulft(btex $\tilde y$ etex, z.y);
+label.top(btex $\tilde z$ etex, z.z);
+label.llft(btex $\tilde p$ etex, z.p);
+label.urt(btex $\tilde q$ etex, z.q);
+endfig;
+
 end

@@ -172,7 +172,8 @@ for any $v\in \RR^{n-1}$.
 In particular,  the
 condition $W_{\bm{x}}\ge 0$ for a triple $\bm{x}=(x_1,x_2,x_3)$ means that 
 all three triangle inequalities for the distances between $x_1$, $x_2$, and $x_3$ hold.
-The following statement is an equivalent reformulation:
+For $n$-point array, it means that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple $x_i,x_j,x_k$.
+In particular we get the following:
 
 \begin{thm}{Observation}\label{triangle-inq}
 Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
@@ -188,12 +189,6 @@ it follows that $W_{\bm{x}}$
 is nonnegative on every plane parallel to a face of the tetrahedron $\triangle$.
 In particular, $W_{\bm{x}}$ can have at most one negative eigenvalue.
 
-\begin{wrapfigure}{r}{33mm}
-\vskip-2mm
-\centering
-\includegraphics{mppics/pic-10}
-\end{wrapfigure}
-
 Assume $W_{\bm{x}}(w)<0$ for some $w\in\RR^3$.
 From \ref{triangle-inq}, the line $L_w$ spanned by
 $w$ is transversal to each of 4 planes parallel to a faces of $\triangle$.
@@ -202,8 +197,14 @@ Consider the projection of $\triangle$ along $L_w$ to a transversal plane.
 The projection of the 4 vertices of $\triangle$ lie in general position; 
 that is, no three of them lie on one line.
 Therefore  we can see one of two combinatorial pictures shown on the diagram.
-Sine the set of lines $L_w$ with $W_{\bm{x}}(w)<0$ is connected,
+Since the set of lines $L_w$ with $W_{\bm{x}}(w)<0$ is connected,
 the combinatorics of the picture does not depend on the choice of $w$.
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-10}
+\end{wrapfigure}
 
 The $\CAT(0)$ comparison is equivalent to the fact that the diagram on the right cannot appear.
 This statement can be used as a definiton of $\CAT(0)$ comparison.

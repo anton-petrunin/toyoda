@@ -57,10 +57,10 @@ $X$ can be chosen to be a subcomplex of a 4-simplex such that (1) each simplex i
 
 A slightly weaker version of this theorem was proved by Tetsu Toyoda \cite{toyoda};
 we present a shorter proof.
-The proof uses the fact that convex space-like hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces.
+The proof uses the fact that convex spacelike hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces.
 We construct a distance-preserving inclusion $\iota$ of $P$ into $\RR^4$ or $\RR^{3,1}$.
 In the case of $\RR^4$ the convex hull $K$ of $\iota(P)$ can be taken as $X$;
-in the case of $\RR^{3,1}$ we take as $X$ a space-like part of the boundary of $K$.
+in the case of $\RR^{3,1}$ we take as $X$ a spacelike part of the boundary of $K$.
 
 We expect that \emph{any 5 point metric space $P$ as in the theorem admits a distance-preserving inclusion in a product of trees}.
 
@@ -179,7 +179,7 @@ In particular we get the following:
 Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
 Suppose $L$ be a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
-Then in the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ form a nondegenerate triangle.
+Then in the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
 \end{thm}
 
 \parbf{CAT(0) condition.}
@@ -264,7 +264,7 @@ A subsset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for an
 
 Let $K$ be a convex body in $\RR^4$;
 denote by $\Sigma$ the surface of $K$. 
-We say that $p\in \Sigma$ lies on the upper side of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a space-like hyperplane in $\RR^4$ that supports $\Sigma$ at $p$ from above;
+We say that $p\in \Sigma$ lies on the upper side of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a spacelike hyperplane in $\RR^4$ that supports $\Sigma$ at $p$ from above;
 equivalently if $p+C^+$ does not intersect~$K$.
 
 Similarly we define the lower side of $\Sigma$ denoted by $\Sigma^-$.
@@ -276,8 +276,8 @@ in particular the length of any Lipschitz curve in these subsets can be defined 
 Let $\Sigma$ be the surface of a convex body $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
 Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with induced intrinsic metric are a $\CAT(0)$ length spaces.
 
-Moreover, if a line segment $[pq]$ lies in $\Sigma^\pm$,
-then 
+Moreover, if a \emph{line segment} $[pq]$ 
+lies in $\Sigma^\pm$, then 
 \[|p-q|_{\Sigma^\pm}^2=W(p-q).\]
 
 \end{thm}
@@ -293,17 +293,24 @@ Therefore any complete smooth convex strictly spacelike hypersurface in $\RR^4$ 
 \includegraphics{mppics/pic-25}
 \end{wrapfigure}
 
-Note that $K^-=K+C^+$ a convex set and its boundary $\partial K^-$ is weakly space-like.
+Note that $K^-=K+C^+$ a convex set and its boundary $\partial K^-$ is weakly spacelike.
 The surface $\partial K^-$ contains $\Sigma^-$ as a subset.
 Moreover the induced length pseudometric on $\partial K^-$ is isometric to $\Sigma^-$.
 Indeed every point of $\partial K^-$ either belongs to  $\Sigma^-$, or lies on a light ray emerging from $\Sigma^-$.
 It remains to note that light rays have zero length.
 
 Observe that $\partial K^-$ can be approximated by smooth strictly spacelike convex hypersurfaces.
-In particular any 4-point subspace in $\partial K^-$ can be approximated by 4-point subspaces $S_n$ in a $\CAT(0)$ space.
-Whence the $\CAT(0)$ comparison holds for all quadruples in $\partial K^-$ and therefore in $\Sigma^-$.
+In particular any 4-point subspace $Q\subset\partial K^-$ can be approximated by 4-point subspaces $Q'_n\subset S_n$ in a $\CAT(0)$ space.
+Whence $\partial K^-$ as well as $\Sigma^-$ are $\CAT(0)$.
 
-To prove the last statement, observe that if $[pq]\subset \Sigma^-$,
+(More precisely, observe that orthogonal projection of the subgraph of a convex spacelike surface to the surface is $W$-nondecreasing.
+By moving $S_n$ slightly up and down,
+we can produce two of its copies $S'_n$ and $S''_n$ above and below $Q$.
+Consider the orthogonal projections to $K^-$ and to $S''_n$ of its subgraphs.
+Note that we can choose a quadruple $Q'_n\subset S_n'$ that projects sufficiently close to $Q$ and the projection $Q''_n$ of $Q$ in $S''_n$ is sufficiently close to $Q'_n$.
+It follows that $Q$ can be approximated arbitrary well by a quadruple in a $\CAT(0)$ space; whence $\partial K^-$ as well as $\Sigma^-$ are $\CAT(0)$.)
+
+To prove the last statement, observe that if the line segment $[pq]$ lies in $\Sigma^-$,
 then the sequence of smooth hypersurfaces $S_n$ can be chosen so that each contains the line segment $[pq]$.
 Note that in this case $[pq]$ is a geodesic in each $S_n$.
 Since $S_n$ are simply connected and have nonpositive curvature, we get that this geodesic is minimizing.

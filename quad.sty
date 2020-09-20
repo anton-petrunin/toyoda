@@ -35,6 +35,9 @@ isbn=false]{biblatex}
 \DeclareFieldFormat{multipostnote}{#1}
 \DeclareFieldFormat{pages}{#1}
 
+\newcommand{\nofootnote}[1]{%
+\begingroup\def\thefootnote{}\footnotetext{#1}\endgroup}
+
 % Fix latex
 \def\smallskip{\vskip\smallskipamount}
 \def\medskip{\vskip\medskipamount}

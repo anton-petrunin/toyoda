@@ -82,9 +82,6 @@ See the final section for related questions.
 Denote by $\mathcal{A}$ the space of all $5$ point arrays in $\RR^3$ such that all 5 points do not lie on one plane and no three points lie on one line.
 Note that $\mathcal{A}$ is connected.
 
-The space $\mathcal{A}$ can be subdivided into 7 subsets with combinatoric configuration as on the diagram;
-quadruples in one plane are marked in gray.
-
 Namely, a $5$ point array  $x_1,\dots,x_5\in \RR^3$ defines an affine map from a 4-simplex to $\RR^3$.
 Fix an orientation of a the 4-simplex and consider the induced orientations on its 5 facets.
 Each facet may be mapped in an orientation-preserving, degenerate, or orientation-reversing way.
@@ -92,28 +89,7 @@ For each array consider triple of integers $(n_+, n_0,n_-)$,
 where $n_+$, $n_0$ and $n_-$ denote the number of orientation-preserving, degenerate, or orientation-reversing facets respectively.
 
 Clearly $n_++n_0+n_-=5$ and since all 5 points cannot lie in one plane, we have that $n_+\ge 1$, $n_-\ge 1$, and $n_0\le1$.
-Therefore the value $m=n_- - n_+$ can take an integer value between $-3$ and $3$   in this case we say that an array belongs to $\mathcal{A}_m$.
-
-
-Every two quadraliterals in the array have 3 common points that define a plane.
-If the remaining two points lie on opposite sides from the plane,
-then the corresponding facets have the same orientation;
-if they lie on one side, then the orientations are opposite.
-Therefore the 7 subsets $\mathcal{A}_{-3},\dots \mathcal{A}_{3}$ can be described the following way:
-
-$\mathcal{A}_{-3}$ --- a tetrahedron with preserved orientation and one point inside.
-
-$\mathcal{A}_{-2}$ --- a tetrahedron with preserved orientation and one point on a facet.
-
-$\mathcal{A}_{-1}$ --- double triangular pyramid formed by two tetrahedrons with preserved orientation.
-
-$\mathcal{A}_{0}$ --- a pyramid over a convex quadrilateral 
-
-$\mathcal{A}_{1}$ --- double triangular pyramid formed by two tetrahedrons with reversed orientation.
-
-$\mathcal{A}_{2}$ --- a tetrahedron with reversed orientation and one point on a facet.
-
-$\mathcal{A}_{3}$ --- a tetrahedron with reversed orientation and one point inside.
+Therefore the value $m=n_- - n_+$ can take an integer value between $-3$ and $3$ in this case we say that an array belongs to $\mathcal{A}_m$.
 
 \begin{figure}[h!]
 \centering
@@ -136,11 +112,34 @@ $\mathcal{A}_{3}$ --- a tetrahedron with reversed orientation and one point insi
 \vskip 3mm
 \end{figure}
 
+It defines a subdivision of  $\mathcal{A}$ into 7 subsets $\mathcal{A}_{-3},\dots, \mathcal{A}_{3}$ with combinatoric configuration as on the diagram;
+quadruples in one plane are marked in gray and the triple $(n_+, n_0,n_-)$ is written below.
+
+Every two quadraliterals in the array have 3 common points that define a plane.
+If the remaining two points lie on opposite sides from the plane,
+then the corresponding facets have the same orientation;
+if they lie on one side, then the orientations are opposite.
+Therefore the 7 subsets $\mathcal{A}_{-3},\dots \mathcal{A}_{3}$ can be described the following way.
+
+$\mathcal{A}_{-3}$ --- a tetrahedron with preserved orientation and one point inside.
+
+$\mathcal{A}_{-2}$ --- a tetrahedron with preserved orientation and one point on a facet.
+
+$\mathcal{A}_{-1}$ --- double triangular pyramid formed by two tetrahedrons with preserved orientation.
+
+$\mathcal{A}_{0}$ --- a pyramid over a convex quadrilateral 
+
+$\mathcal{A}_{1}$ --- double triangular pyramid formed by two tetrahedrons with reversed orientation.
+
+$\mathcal{A}_{2}$ --- a tetrahedron with reversed orientation and one point on a facet.
+
+$\mathcal{A}_{3}$ --- a tetrahedron with reversed orientation and one point inside.
+
 Note that the complement $\spc{A}\backslash \spc{A}_0$ has two connected components formed by $\mathcal{A}_{-}=\mathcal{A}_{-3}\cup \mathcal{A}_{-2}\cup\mathcal{A}_{-1}$ and $\mathcal{A}_{+}=\mathcal{A}_{3}\cup \mathcal{A}_{2}\cup\mathcal{A}_{1}$.
 Observe that each array in $\mathcal{A}_{-}$ has at least 3 positively oriented facets and each array in $\mathcal{A}_{+}$ has at least 3 negatively oriented facets.
 
 \begin{thm}{Observation}\label{obs:connectedA}
-If a connected subset $Q$ of $\spc{A}$ does not inersect $\spc{A}_0$.
+Let $Q$ be a connected subset of $\spc{A}$ that does not intersect~$\spc{A}_0$.
 Then either $Q\subset \spc{A}_+$ or $Q\subset \spc{A}_-$
 \end{thm}
 
@@ -179,7 +178,7 @@ In particular we get the following:
 Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
 Suppose $L$ be a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
-Then in the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
+Then the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
 \end{thm}
 
 \parbf{CAT(0) condition.}
@@ -251,8 +250,10 @@ The latter contradicts \ref{cat0-proj}.
 Let $W$ be a quadratic form on $\RR^4$.
 Suppose that  $W$ has exactly one negative eigenvalue.
 
+{
+
 \begin{wrapfigure}{r}{55mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-20}
 \end{wrapfigure}
@@ -261,6 +262,8 @@ Choose future and past cones $C^+$ and $C^-$ for $W$;
 that is, $C^+$ and $C^-$ are connected components of the set
 $\set{v\in\RR^4}{W(v)< 0}$.
 A subsset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any distinct $x,y\in S$.
+
+}
 
 Let $K$ be a convex body in $\RR^4$;
 denote by $\Sigma$ the surface of $K$. 
@@ -303,9 +306,9 @@ Observe that $\partial K^-$ can be approximated by smooth strictly spacelike con
 In particular any 4-point subspace $Q\subset\partial K^-$ can be approximated by 4-point subspaces $Q'_n\subset S_n$ in a $\CAT(0)$ space.
 Whence $\partial K^-$ as well as $\Sigma^-$ are $\CAT(0)$.
 
-(More precisely, observe that orthogonal projection of the subgraph of a convex spacelike surface to the surface is $W$-nondecreasing.
-By moving $S_n$ slightly up and down,
-we can produce two of its copies $S'_n$ and $S''_n$ above and below $Q$.
+(Formally speaking, observe that orthogonal projection of the subgraph of a convex spacelike surface to the surface is $W$-nondecreasing.
+Move $S_n$ slightly up and down,
+and obtain two of its copies $S'_n$ and $S''_n$ above a compact set containing all the geodesics between $Q$.
 Consider the orthogonal projections to $K^-$ and to $S''_n$ of its subgraphs.
 Note that we can choose a quadruple $Q'_n\subset S_n'$ that projects sufficiently close to $Q$ and the projection $Q''_n$ of $Q$ in $S''_n$ is sufficiently close to $Q'_n$.
 It follows that $Q$ can be approximated arbitrary well by a quadruple in a $\CAT(0)$ space; whence $\partial K^-$ as well as $\Sigma^-$ are $\CAT(0)$.)

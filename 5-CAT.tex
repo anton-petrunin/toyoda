@@ -25,6 +25,7 @@
 }}
 
 \begin{document}
+%\pagestyle{empty}
 
 
 \title{5-point CAT(0) spaces after Tetsu Toyoda}
@@ -42,7 +43,7 @@ the second author was partially supported by NSF grant DMS-2005279.}
 \section{Introduction}
 
 The $\CAT(0)$ comparison is a certain inequality in terms 6 distances between 4 points in a metric space.
-The following descriptions, the so called \emph{(2+2)-comparison}, is one of the most standard,
+The following descriptions, the so-called \emph{(2+2)-comparison}, is one of the most standard,
 we refer to \cite{alexander-kapovitch-petrunin} for other definitions and their equivalences.
 
 Given a quadruple of points $p,q,x,y$ in a metric space $X$,
@@ -89,7 +90,7 @@ in the case of $\RR^{3,1}$ we take as $X$ a spacelike part of the boundary of $K
 We expect that \emph{any 5 point metric space $P$ as in the theorem admits a distance-preserving inclusion in a product of trees}.
 
 An analog of Toyoda's theorem does not hold for 6-point sets.
-It can be seen by using the so called $(4{+}2)$-comparison introduced in \cite{alexander-kapovitch-petrunin-2011};
+It can be seen by using the so-called $(4{+}2)$-comparison introduced in \cite{alexander-kapovitch-petrunin-2011};
 this comparison holds for any length $\CAT(0)$ space, but may not hold for a space with $\CAT(0)$ comparison (if it is not a length space).
 
 {\sloppy
@@ -102,7 +103,7 @@ See the final section for related questions.
 }
 
 \parbf{Acknowledgment.}
-We want to thank Stephanie Alexander and Yuri Burago for help.
+We want to thank Stephanie Alexander, Yuri Burago and the anonymous referee for help.
 
 \section{5-point arrays in 3-space}
 
@@ -112,7 +113,7 @@ Note that $\mathcal{A}$ is connected.
 Namely, a $5$ point array  $x_1,\dots,x_5\in \RR^3$ defines an affine map from a 4-simplex to $\RR^3$.
 Fix an orientation of the 4-simplex and consider the induced orientations on its 5 facets.
 Each facet may be mapped in an orientation-preserving, degenerate, or orientation-reversing way.
-For each array consider triple of integers $(n_+, n_0,n_-)$,
+For each array consider the triple of integers $(n_+, n_0,n_-)$,
 where $n_+$, $n_0$ and $n_-$ denote the number of orientation-preserving, degenerate, or orientation-reversing facets respectively.
 
 Clearly $n_++n_0+n_-=5$ and since all 5 points cannot lie in one plane, we have that $n_+\ge 1$, $n_-\ge 1$, and $n_0\le1$.
@@ -139,7 +140,7 @@ Therefore, the value $m=n_- - n_+$ can take an integer value between $-3$ and $3
 \vskip 3mm
 \end{figure}
 
-It defines a subdivision of  $\mathcal{A}$ into 7 subsets $\mathcal{A}_{-3},\dots, \mathcal{A}_{3}$ with combinatoric configuration as on the diagram;
+It defines a subdivision of  $\mathcal{A}$ into 7 subsets $\mathcal{A}_{-3},\dots, \mathcal{A}_{3}$ with combinatorial configuration as on the diagram;
 quadruples in one plane are marked in gray and the triple $(n_+, n_0,n_-)$ is written below.
 
 Every two quadrilaterals in the array have 3 common points that define a plane.
@@ -173,13 +174,13 @@ Then either $Q\subset \spc{A}_+$ or $Q\subset \spc{A}_-$
 
 \section{Associated form}
 
-In this section we recall some facts about the so called \emph{associated} form introduced in \cite{petrunin-2017};
+In this section we recall some facts about the so-called \emph{associated} form introduced in \cite{petrunin-2017};
 it is a quadratic form 
 $W_{\bm{x}}$ on $\RR^{n-1}$ associated
 to a given $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in a metric space $X$.
 
 \parbf{Construction.}
-Let $\triangle$ be the standard simplex $\triangle$ in $\RR^{n-1}$; that is, the first $(n-1)$ of its vertexes $v_1,\dots,v_n$ form the standard basis on $\RR^{n-1}$,
+Let $\triangle$ be the standard simplex $\triangle$ in $\RR^{n-1}$; that is, the first $(n-1)$ of its vertices $v_1,\dots,v_n$ form the standard basis on $\RR^{n-1}$,
  and $v_n=0$.
 
 Let us denote by $|a-b|_X$ the distance between points $a$ and $b$ in the metric space $X$.
@@ -195,17 +196,16 @@ Note that an array $\bm{x}=(x_1,\dots,x_n)$ in a metric space $X$ is isometric t
 $W_{\bm{x}}(v)\ge 0$
 for any $v\in \RR^{n-1}$.
 
-In particular,  the
-condition $W_{\bm{x}}\ge 0$ for a triple $\bm{x}=(x_1,x_2,x_3)$ means that 
+In particular, the condition $W_{\bm{x}}\ge 0$ for a triple $\bm{x}=(x_1,x_2,x_3)$ means that 
 all three triangle inequalities for the distances between $x_1$, $x_2$, and $x_3$ hold.
-For $n$-point array, it means that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple $x_i,x_j,x_k$.
+For an $n$-point array, it means that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple $x_i,x_j,x_k$.
 In particular, we get the following:
 
 \begin{thm}{Observation}\label{triangle-inq}
 Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
 Suppose $L$ be a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
-Then the projections of any 3 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
+Then the projections of any 3 vertices of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
 \end{thm}
 
 \parbf{CAT(0) condition.}
@@ -226,22 +226,38 @@ Therefore, we can see one of two combinatorial pictures shown on the diagram.
 Since the set of lines $L_w$ with $W_{\bm{x}}(w)<0$ is connected,
 the combinatorics of the picture does not depend on the choice of $w$.
 
+{
+
 \begin{wrapfigure}{r}{33mm}
-\vskip-2mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-10}
 \end{wrapfigure}
 
-The $\CAT(0)$ comparison is equivalent to the fact that the diagram on the right cannot appear.
-This statement can be used as a definition of $\CAT(0)$ comparison.
-It also can be deduced from the (2+2)-point comparison.
-Indeed, suppose we see the picture on the right.
-Choose one of the diagonals and rotate  around it a triangle with its base until it moves into the plane of the other triangle forming a convex quadrangle.
-Observe that this rotation is hyperbolic, in particular it decreases the other diagonal while keeping the rest of the distances fixed.
-The latter contradicts the (2+2)-comparison.
+\begin{thm}{Claim}
+If $\CAT(0)$ comparison holds in $X$, then the diagram on the right cannot appear. 
+\end{thm}
+
+In fact the converse holds as well, but we will not need it.
+
+}
+
+\parit{Proof.}
+Suppose we see the picture on the right.
+
+Let $[v_1,v_3]$ and $[v_2,v_4]$ be the line segments of $\triangle$ that correspond to the diagonals on the picture.
+Denote by $m$ the point of $[v_1,v_3]$ that corresponds to the point of intersection.
+In the plane spanned by $[v_2,v_4]$ and $w$, the vector $w$ is timelike.
+Therefore we have the following reversed triangle inequality:
+\[|v_2-m|+|v_4-m|<|v_2-v_4|;\]
+here we use shortcut $|a-b|=\sqrt{W(a-b)}$.
+
+Note that the triangles $[v_1v_2v_3]$ and $[v_1v_3v_4]$ with metric induced by $W$ are isometric to model triangles of $[x_1x_2x_3]$ and $[x_1x_3x_4]$.
+Whence (2+2)-point comparison does not hold.
+\qeds
 
 
-Either way, we get the following statement.
+The claim implies the following statement.
 
 
 \begin{thm}{Observation}\label{cat0-proj}
@@ -249,7 +265,7 @@ Suppose a metric on $\bm{x}\z=(x_1,\dots,x_n)$ satisfies $\CAT(0)$ comparison
 and $W_{\bm{x}}$ is its associated form on $\RR^{n-1}$.
 Assume that $L$ is a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
-Then if the projections of 4 vertexes of $\triangle$ to the quotient space $\RR^{n-1}/L$ lies in one plane, then its projection looks like the picture on the left;
+Then if the projections of 4 vertices of $\triangle$ to the quotient space $\RR^{n-1}/L$ lies in one plane, then its projection looks like the picture on the left;
 that is, one of the points lies in the triangle formed by the remaining three points.
 \end{thm}
 
@@ -260,7 +276,7 @@ Assume that $L$ is a subspace of $\RR^{4}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then $\dim L\le 1$.
 
-Moreover, if $\dim L= 1$, then the projections of the vertexes of $\triangle$ to the quotient space $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$ (defined in the previous section). 
+Moreover, if $\dim L= 1$, then the projections of the vertices of $\triangle$ to the quotient space $\RR^3=\RR^4/L$ belong to $\spc{A}\backslash\spc{A}_0$ (defined in the previous section). 
 \end{thm}
 
 \parit{Proof.}
@@ -268,7 +284,7 @@ If $\dim L\ge 2$, then the space $\dim \RR^4/L\le 2$.
 By \ref{triangle-inq}, these 5 projections lie in a general position; that is, no three of these projections lie on one line. 
 Therefore, $\dim \RR^4/L$ is the plane.
 
-Any 5 points in a general position include 4 vertexes of a convex quadrangle.
+Any 5 points in a general position include 4 vertices of a convex quadrangle.
 The latter contradicts \ref{cat0-proj}.
 \qeds
 
@@ -302,45 +318,26 @@ in particular the length of any Lipschitz curve in these subsets can be defined 
 Let $\Sigma$ be the surface of a convex body $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
 Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with induced intrinsic metric are a $\CAT(0)$ length spaces.
 
-Moreover, if a \emph{line segment} $[pq]$ 
-lies in $\Sigma^\pm$, then 
+Moreover, if a \emph{line segment} $[pq]$ in $\RR^4$ 
+lies on $\Sigma^\pm$, then 
 \[|p-q|_{\Sigma^\pm}^2=W(p-q).\]
 
 \end{thm}
 
+In the proof we use pseudo-Euclidean analogs of two theorems about convex surfaces in the Eulidean space.
+The needed theorems are stated by Anatoly Milka in \cite{milka}:
+Theorem~3 is an analog of Liberman's lemma and Theorem~4 is an analog of Alexandrov's theorem on curvature of convex hypersurface.
+The proofs differ only slightly; instead of giving complete proofs he lists the necessary changes.
+
 
 \parit{Proof.}
-By the Gauss formula, we see that a smooth convex strictly spacelike hypersurface in $\RR^4$ has nonpositive curvature.
-Therefore, any complete smooth convex strictly spacelike hypersurface in $\RR^4$ is $\CAT(0)$.
+The main part follows from Theorem~4 in \cite[Theorem~4]{milka}.
 
-\begin{wrapfigure}{r}{55mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-25}
-\end{wrapfigure}
+The second part follows from the Liberman's lemma \cite[Theorem~3]{milka}.
 
-Note that $K^-=K+C^+$ a convex set and its boundary $\partial K^-$ is weakly spacelike.
-The surface $\partial K^-$ contains $\Sigma^-$ as a subset.
-Moreover, the induced length pseudometric on $\partial K^-$ is isometric to $\Sigma^-$.
-Indeed, every point of $\partial K^-$ either belongs to  $\Sigma^-$, or lies on a light ray emerging from $\Sigma^-$.
-It remains to note that light rays have zero length.
-
-Observe that $\partial K^-$ can be approximated by smooth strictly spacelike convex hypersurfaces.
-In particular any 4-point subspace $Q\subset\partial K^-$ can be approximated by 4-point subspaces $Q'_n\subset S_n$ in a $\CAT(0)$ space.
-Whence $\partial K^-$ as well as $\Sigma^-$ are $\CAT(0)$.
-
-(Formally speaking, observe that orthogonal projection of the subgraph of a convex spacelike surface to the surface is $W$-nondecreasing.
-Move $S_n$ slightly up and down,
-and obtain two of its copies $S'_n$ and $S''_n$ above a compact set containing all the geodesics between $Q$.
-Consider the orthogonal projections to $K^-$ and to $S''_n$ of its subgraphs.
-Note that we can choose a quadruple $Q'_n\subset S_n'$ that projects sufficiently close to $Q$ and the projection $Q''_n$ of $Q$ in $S''_n$ is sufficiently close to $Q'_n$.
-It follows that $Q$ can be approximated arbitrary well by a quadruple in a $\CAT(0)$ space; whence $\partial K^-$ as well as $\Sigma^-$ are $\CAT(0)$.)
-
-To prove the last statement, observe that if the line segment $[pq]$ lies in $\Sigma^-$,
-then the sequence of smooth hypersurfaces $S_n$ can be chosen so that each contains the line segment $[pq]$.
-Note that in this case $[pq]$ is a geodesic in each $S_n$.
-Since $S_n$ are simply connected and have nonpositive curvature, we get that this geodesic is minimizing.
-Whence the second statement follows.
+Namely, choose a supporting hyperplane $\Pi$ at the midpoint of $[pq]$. 
+Let us apply the theorem to a cylindrical surface in a timelike direction that is normal to $\Pi$.
+By the theorem every shortest in $\Sigma^\pm$ between $p$ and $q$ have to lie on $\Pi$ which implies the second statement.
 \qeds
 
 Assume $v$ is a nonzero vector in $\RR^4$ and $p\in\Sigma$.
@@ -358,13 +355,13 @@ that is,
 
 \parit{Proof of Toyoda's theorem.}
 Let $\{x_1,\dots,x_5\}$ be the points in $P$.
-Choose a 5-simplex $\triangle$ in $\RR^4$; denote by $W$ the form associated to the point array $(x_1,\dots,x_5)$.
+Choose a 5-simplex $\triangle$ in $\RR^4$; denote by $W$ the form associated to the point array $(x_1,\z\dots,x_5)$.
 
 If $W\ge0$, then $P$ admits a distance preserving embedding into Euclidean 4-space, so one can take the convex hull of its image as $X$.
 
 Suppose $W(v)<0$ for some $v\in\RR^4$.
 Since $P$ is $\CAT(0)$, \ref{cor:3+2} implies that $W$ has exactly one negative eigenvalue.
-Moreover, if a line $L$ is spanned by a vector $v$ such that $W(v)<0$, then the projection of the vertexes of the simplex to $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$.
+Moreover, if a line $L$ is spanned by a vector $v$ such that $W(v)<0$, then the projection of the vertices of the simplex to $\RR^3=\RR^4/L$ belongs to $\spc{A}\backslash\spc{A}_0$.
 
 The space of such lines $L$ is connected.
 By \ref{obs:connectedA}, we can assume that all the projections belong to $\spc{A}_-$.
@@ -376,14 +373,16 @@ By \ref{lem:sides}, $\Sigma^-$ with induced (pseudo)metric is a length $\CAT(0)$
 
 Since all edges of $\triangle$ lie in $\Sigma^-$, the inclusion $P\hookrightarrow \Sigma^-$ is distance preserving.
 Whence we can take $X=\Sigma^-$.
+
+Finally observe that in each case $X$ is a subcomplex of $\triangle$ that includes all edges and has a model metric on each simplex.
 \qeds
 
 \section{Remarks}
 
 Let us recall the definition of \emph{graph comparison} given Vladimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov} and use it to formulate a few related questions.
 
-Let $\Gamma$ be a graph with vertexes $v_1,\dots,v_n$.
-A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertexes of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
+Let $\Gamma$ be a graph with vertices $v_1,\dots,v_n$.
+A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 
 if $v_j$ is adjacent to $v_j$, then
 \[|\tilde v_i-\tilde v_j|_{\HH}\le | v_i-v_j|_{X}\]
 and
@@ -413,8 +412,8 @@ The $\CBB(0)$ comparison is equivalent to the $3$-tree comparison (for the tripo
 \centering
 \includegraphics{mppics/pic-40}
 \end{figure}
-It turns out that any length $\CBB(0)$ spaces satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertexes \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
-(The 4-tree comparison (the second tree on the diagram) is equivalent to the so called $(4{+}1)$-point comparison in terminology of \cite{alexander-kapovitch-petrunin-2011}.)
+It turns out that any length $\CBB(0)$ spaces satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertices \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
+(The 4-tree comparison (the second tree on the diagram) is equivalent to the so-called $(4{+}1)$-point comparison in terminology of \cite{alexander-kapovitch-petrunin-2011}.)
 
 We expect that this comparison provides a necessary and sufficient condition; moreover, we expect an affirmative answer to the following stronger question.
 

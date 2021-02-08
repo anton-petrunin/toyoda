@@ -42,7 +42,7 @@ the second author was partially supported by NSF grant DMS-2005279.}
 
 \section{Introduction}
 
-The $\CAT(0)$ comparison is a certain inequality in terms 6 distances between 4 points in a metric space.
+The $\CAT(0)$ comparison is a certain inequality in terms of the 6 distances between 4 points in a metric space.
 The following descriptions, the so-called \emph{(2+2)-comparison}, is one of the most standard,
 we refer to \cite{alexander-kapovitch-petrunin} for other definitions and their equivalences.
 
@@ -97,7 +97,7 @@ this comparison holds for any length $\CAT(0)$ space, but may not hold for a spa
 
 The $(4{+}2)$-comparison is not a sufficient condition for $6$-point spaces.
 More precisely, there are 6-point metric spaces that satisfy $(4{+}2)$ and $(2{+}2)$-comparisons, but do not admit a distance-preserving embedding into a length $\CAT(0)$ space.
-An example was constructed by the first author; it is described in \cite{alexander-kapovitch-petrunin-2011}.
+An example was constructed by the first author; it is described in \cite{alexander-kapovitch-petrunin-2011} right after 7.2.
 See the final section for related questions.
 
 }
@@ -117,7 +117,8 @@ For each array consider the triple of integers $(n_+, n_0,n_-)$,
 where $n_+$, $n_0$ and $n_-$ denote the number of orientation-preserving, degenerate, or orientation-reversing facets respectively.
 
 Clearly $n_++n_0+n_-=5$ and since all 5 points cannot lie in one plane, we have that $n_+\ge 1$, $n_-\ge 1$, and $n_0\le1$.
-Therefore, the value $m=n_- - n_+$ can take an integer value between $-3$ and $3$ in this case we say that an array belongs to $\mathcal{A}_m$.
+Therefore, the value $m=n_- - n_+$ can take an integer value between $-3$ and $3$;
+in this case we say that an array belongs to $\mathcal{A}_m$.
 
 \begin{figure}[h!]
 \centering
@@ -168,7 +169,7 @@ Observe that each array in $\mathcal{A}_{-}$ has at least 3 positively oriented 
 
 \begin{thm}{Observation}\label{obs:connectedA}
 Let $Q$ be a connected subset of $\spc{A}$ that does not intersect~$\spc{A}_0$.
-Then either $Q\subset \spc{A}_+$ or $Q\subset \spc{A}_-$
+Then either $Q\subset \spc{A}_+$ or $Q\subset \spc{A}_-$.
 \end{thm}
 
 
@@ -316,7 +317,7 @@ in particular the length of any Lipschitz curve in these subsets can be defined 
 
 \begin{thm}{Lemma}\label{lem:sides}
 Let $\Sigma$ be the surface of a convex body $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
-Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with induced intrinsic metric are a $\CAT(0)$ length spaces.
+Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with the induced intrinsic metric are a $\CAT(0)$ length spaces.
 
 Moreover, if a \emph{line segment} $[pq]$ in $\RR^4$ 
 lies on $\Sigma^\pm$, then 
@@ -337,16 +338,16 @@ The second part follows from the Liberman's lemma \cite[Theorem~3]{milka}.
 
 Namely, choose a supporting hyperplane $\Pi$ at the midpoint of $[pq]$. 
 Let us apply the theorem to a cylindrical surface in a timelike direction that is normal to $\Pi$.
-By the theorem every shortest in $\Sigma^\pm$ between $p$ and $q$ have to lie on $\Pi$ which implies the second statement.
+By the theorem every shortest path in $\Sigma^\pm$ between $p$ and $q$ have to lie on $\Pi$ which implies the second statement.
 \qeds
 
 Assume $v$ is a nonzero vector in $\RR^4$ and $p\in\Sigma$.
-We say that $p$ lies on \emph{upper side of $\Sigma$ with respect to $v$} (briefly $p\in \Sigma^+(v)$) if $p+t\cdot v\notin K$ for any $t>0$.
-Correspondingly, $p$ lies on \emph{lower side of $\Sigma$ with respect to $v$} (briefly $p\in \Sigma^-(v)$) if $p+t\cdot v\notin K$ for any $t<0$.
+We say that $p$ lies on the \emph{upper side of $\Sigma$ with respect to $v$} (briefly $p\in \Sigma^+(v)$) if $p+t\cdot v\notin K$ for any $t>0$.
+Correspondingly, $p$ lies on the \emph{lower side of $\Sigma$ with respect to $v$} (briefly $p\in \Sigma^-(v)$) if $p+t\cdot v\notin K$ for any $t<0$.
 
 \begin{thm}{Observation}\label{obs:Sigma(v)}
 Let $K$ be a compact convex set in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
-Then the upper and lower side of the boundary surface $\Sigma$ of $K$ can be described as intersection of upper and lower sides of $\Sigma$ with respect to all vectors $v\in C^+$;
+Then the upper (lower) side of the boundary surface $\Sigma$ of $K$ can be described as the intersection of the upper (respectively the lower) sides of $\Sigma$ with respect to all vectors $v\in C^+$;
 that is,
 \[\Sigma^\pm=\bigcap_{v\in C^+}\Sigma^\pm(v).\]
 \end{thm}
@@ -379,7 +380,7 @@ Finally observe that in each case $X$ is a subcomplex of $\triangle$ that includ
 
 \section{Remarks}
 
-Let us recall the definition of \emph{graph comparison} given Vladimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov} and use it to formulate a few related questions.
+Let us recall the definition of \emph{graph comparison} given by Vladimir Zolotov and the authors \cite{lebedeva-petrunin-zolotov} and use it to formulate a few related questions.
 
 Let $\Gamma$ be a graph with vertices $v_1,\dots,v_n$.
 A metric space $X$ is said to meet the $\Gamma$-comparison if for any set of points in $X$ labeled by vertices of $\Gamma$ there is a model configuration $\tilde v_1,\dots,\tilde v_n$ in the Hilbert space $\HH$ such that 

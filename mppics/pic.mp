@@ -57,7 +57,7 @@ x0=directiontime (1,1) of p0;
 z.o=(-.6,0)*u;
 
 
-hatchfill p0--cycle  withcolor (20, 1mm, -.5bp);
+hatchfill p0--cycle  withcolor (20, 2mm, -.5bp);
 draw p0;
 draw subpath (0,x0) of p0 penbold;
 draw subpath (x1,2) of p0 penbold;
@@ -86,27 +86,32 @@ x1= directiontime (-1,1) of p0 ;
 x0=directiontime (1,1) of p0;
 
 z.o=(-.3,0)*u;
-y.top=.4*u;
+y.top=.5*u;
 z.r=whatever*(1,1)+point x0 of p0=(whatever,y.top);
 z.l=whatever*(-1,1)=(whatever,y.top);
 
 p1=point x0 of p0--z.r--z.l--(0,0)*u;
 
 
-hatchfill p0--cycle  withcolor (20, 1mm, -.5bp);
+hatchfill p0--cycle  withcolor (20, 2mm, -.5bp);
 draw p0;
 draw subpath (0,1) of p1;
 draw subpath (2,3) of p1;
 draw subpath (0,x0) of p0 penbold;
 
-hatchfill subpath (0,x0) of p0--p1--cycle  withcolor (80, 1mm, -.5bp);
+hatchfill subpath (0,x0) of p0--p1--cycle  withcolor (80, 2mm, -.5bp);
+
+z.shift=(0,-.2)*u;
+draw z.r+z.shift--z.l+z.shift;
 
 dOt (0,0)*u, point x0 of p0;
 
 
 whitelabel (btex $K$ etex, (.6,0)*u);
 whitelabel (btex $K^-$ etex, (0,.2)*u);
+whitelabel.top (btex $\Pi$ etex, .5[z.r,z.l]+z.shift);
 label.bot (btex $\Sigma^-$ etex, point x0/2 of p0);
+label.bot (btex $\Lambda^-$ etex, point .5 of p1 +(2,0));
 endfig;
 
 beginfig(30) 

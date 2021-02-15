@@ -44,7 +44,7 @@ the second author was partially supported by NSF grant DMS-2005279.}
 
 The $\CAT(0)$ comparison is a certain inequality in terms of the 6 distances between 4 points in a metric space.
 The following descriptions, the so-called \emph{(2+2)-comparison}, is one of the most standard,
-we refer to \cite{alexander-kapovitch-petrunin} for other definitions and their equivalences.
+we refer to \cite{alexander-kapovitch-petrunin-2019,alexander-kapovitch-petrunin-2021} for other definitions and their equivalences.
 
 Given a quadruple of points $p,q,x,y$ in a metric space $X$,
 consider two \emph{model triangles}\footnote{that is, a plane triangle with the same sides}
@@ -80,14 +80,13 @@ Moreover,
 $X$ can be chosen to be a subcomplex of a 4-simplex such that (1) each simplex in $X$ has Euclidean metric and (2) the inclusion maps the 5 points on $P$ to the vertexes of the simplex.
 \end{thm}
 
-A slightly weaker version of this theorem was proved by Tetsu Toyoda \cite{toyoda};
-we present a shorter proof.
-The proof uses the fact that convex spacelike hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces.
+A slightly weaker version of this theorem was proved by Tetsu Toyoda \cite{toyoda}.
+Our proof is shorter; it uses the fact that convex spacelike hypersurfaces in $\RR^{3,1}$ equipped with the induced length metrics are $\CAT(0)$ spaces \cite{milka}.
 We construct a distance-preserving inclusion $\iota$ of $P$ into $\RR^4$ or $\RR^{3,1}$.
 In the case of $\RR^4$ the convex hull $K$ of $\iota(P)$ can be taken as $X$;
 in the case of $\RR^{3,1}$ we take as $X$ a spacelike part of the boundary of $K$.
 
-We expect that \emph{any 5 point metric space $P$ as in the theorem admits a distance-preserving inclusion in a product of trees}.
+It is expected that \emph{any 5 point metric space $P$ as in the theorem admits a distance-preserving inclusion in a product of trees}.
 
 An analog of Toyoda's theorem does not hold for 6-point sets.
 It can be seen by using the so-called $(4{+}2)$-comparison introduced in \cite{alexander-kapovitch-petrunin-2011};
@@ -107,10 +106,10 @@ We want to thank Stephanie Alexander, Yuri Burago and the anonymous referee for 
 
 \section{5-point arrays in 3-space}
 
-Denote by $\mathcal{A}$ the space of all $5$ point arrays in $\RR^3$ such that all 5 points do not lie on one plane and no three points lie on one line.
+Denote by $\mathcal{A}$ the space of all $5$ point arrays in $\RR^3$ that is nondegenerate in the following sense: (1) all 5 points do not lie on one plane and (2) no three points lie on one line.
 Note that $\mathcal{A}$ is connected.
 
-Namely, a $5$ point array  $x_1,\dots,x_5\in \RR^3$ defines an affine map from a 4-simplex to $\RR^3$.
+A $5$ point array  $x_1,\dots,x_5\in \RR^3$ defines an affine map from a 4-simplex to~$\RR^3$.
 Fix an orientation of the 4-simplex and consider the induced orientations on its 5 facets.
 Each facet may be mapped in an orientation-preserving, degenerate, or orientation-reversing way.
 For each array consider the triple of integers $(n_+, n_0,n_-)$,
@@ -120,7 +119,10 @@ Clearly $n_++n_0+n_-=5$ and since all 5 points cannot lie in one plane, we have 
 Therefore, the value $m=n_- - n_+$ can take an integer value between $-3$ and $3$;
 in this case we say that an array belongs to $\mathcal{A}_m$.
 
-\begin{figure}[h!]
+It defines a subdivision of  $\mathcal{A}$ into 7 subsets $\mathcal{A}_{-3},\dots, \mathcal{A}_{3}$ with combinatorial configuration as on the diagram;
+quadruples in one plane are marked in gray and the triple $(n_+, n_0,n_-)$ is written below.
+
+\begin{figure}[ht!]
 \centering
 \begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{asy/A}
 \lbl[t]{6,0;$\mathcal{A}_{-3}$} 
@@ -141,9 +143,6 @@ in this case we say that an array belongs to $\mathcal{A}_m$.
 \vskip 3mm
 \end{figure}
 
-It defines a subdivision of  $\mathcal{A}$ into 7 subsets $\mathcal{A}_{-3},\dots, \mathcal{A}_{3}$ with combinatorial configuration as on the diagram;
-quadruples in one plane are marked in gray and the triple $(n_+, n_0,n_-)$ is written below.
-
 Every two quadrilaterals in the array have 3 common points that define a plane.
 If the remaining two points lie on opposite sides from the plane,
 then the corresponding facets have the same orientation;
@@ -154,11 +153,11 @@ $\mathcal{A}_{-3}$ --- a tetrahedron with preserved orientation and one point in
 
 $\mathcal{A}_{-2}$ --- a tetrahedron with preserved orientation and one point on a facet.
 
-$\mathcal{A}_{-1}$ --- double triangular pyramid formed by two tetrahedrons with preserved orientation.
+$\mathcal{A}_{-1}$ --- a double triangular pyramid formed by two tetrahedrons with preserved orientation.
 
 $\mathcal{A}_{0}$ --- a pyramid over a convex quadrilateral 
 
-$\mathcal{A}_{1}$ --- double triangular pyramid formed by two tetrahedrons with reversed orientation.
+$\mathcal{A}_{1}$ --- a double triangular pyramid formed by two tetrahedrons with reversed orientation.
 
 $\mathcal{A}_{2}$ --- a tetrahedron with reversed orientation and one point on a facet.
 
@@ -184,7 +183,7 @@ to a given $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in a metric space $X$.
 Let $\triangle$ be the standard simplex $\triangle$ in $\RR^{n-1}$; that is, the first $(n-1)$ of its vertices $v_1,\dots,v_n$ form the standard basis on $\RR^{n-1}$,
  and $v_n=0$.
 
-Let us denote by $|a-b|_X$ the distance between points $a$ and $b$ in the metric space $X$.
+Recall that $|a-b|_X$ denotes the distance between points $a$ and $b$ in the metric space $X$.
 Set
 \[W_{\bm{x}}(v_i-v_j)=|x_i-x_j|^2_X\] 
 for all $i$ and $j$.
@@ -204,7 +203,7 @@ In particular, we get the following:
 
 \begin{thm}{Observation}\label{triangle-inq}
 Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
-Suppose $L$ be a subspace of $\RR^{n-1}$ such that
+Suppose that $L$ is a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then the projections of any 3 vertices of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
 \end{thm}
@@ -248,6 +247,13 @@ Suppose we see the picture on the right.
 
 Let $[v_1,v_3]$ and $[v_2,v_4]$ be the line segments of $\triangle$ that correspond to the diagonals on the picture.
 Denote by $m$ the point of $[v_1,v_3]$ that corresponds to the point of intersection.
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-15}
+\end{wrapfigure}
+
 In the plane spanned by $[v_2,v_4]$ and $w$, the vector $w$ is timelike.
 Therefore we have the following reversed triangle inequality:
 \[|v_2-m|+|v_4-m|<|v_2-v_4|;\]
@@ -283,19 +289,20 @@ Moreover, if $\dim L= 1$, then the projections of the vertices of $\triangle$ to
 \parit{Proof.}
 If $\dim L\ge 2$, then the space $\dim \RR^4/L\le 2$.
 By \ref{triangle-inq}, these 5 projections lie in a general position; that is, no three of these projections lie on one line. 
-Therefore, $\dim \RR^4/L$ is the plane.
+Therefore, $\RR^4/L=2$ is the plane.
 
-Any 5 points in a general position include 4 vertices of a convex quadrangle.
+Any 5 points in a general position on the plane include 4 vertices of a convex quadrangle.
 The latter contradicts \ref{cat0-proj}.
 \qeds
 
 \section{Convex spacelike surfaces}
 
+In this section we mostly review results of Anatolii Milka \cite{milka}.
 Let $W$ be a quadratic form on $\RR^4$.
 Suppose that  $W$ has exactly one negative eigenvalue.
 
 \begin{wrapfigure}{r}{55mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-20}
 \end{wrapfigure}
@@ -308,14 +315,12 @@ A subset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any
 Let $K$ be a convex body in $\RR^4$;
 denote by $\Sigma$ the surface of $K$. 
 We say that $p\in \Sigma$ lies on the upper side of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a spacelike hyperplane in $\RR^4$ that supports $\Sigma$ at $p$ from above;
-equivalently if $p+C^+$ does not intersect~$K$.
+equivalently if the Minkowski sum $\{p\}+C^+$ does not intersect~$K$.
 
 Similarly, we define the lower side of $\Sigma$ denoted by $\Sigma^-$.
 Note that $\Sigma^+$ and $\Sigma^-$ might have common points.
 The subsets $\Sigma^+$ and $\Sigma^-$ are spacelike;
 in particular the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic (pseudo)metric on $\Sigma^+$ and $\Sigma^-$. 
-
-The following lemma is only slightly more general than one theorem of Anatolii Milka \cite[Theorem~3]{milka}.
 
 \begin{thm}{Lemma}\label{lem:sides}
 Let $\Sigma$ be the surface of a convex set $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
@@ -329,13 +334,13 @@ lies on $\Sigma^\pm$, then the $[pq]$ is a minimizing geodesic in $\Sigma^\pm$; 
 
 \parit{Proof.}
 We can assume that $W$ is nondegenerate; that is, after linear change of coordinates it is the standard form on $\RR^{3,1}$.
-If not, then there is a $W$-preserving projection of the whole picture to a  nondegenerate subspace; it remains to note that this subspace is isometric a subspace of $\RR^{3,1}$.
+If not, then there is a $W$-preserving projection of the whole picture to a  nondegenerate subspace; apply this projection and note that this subspace is isometric a subspace of $\RR^{3,1}$.
 
 Suppose that $S$ is a smooth hypersurface in $\RR^{3,1}$ with convex upper part.
 By Gauss formula, $S$ has nonpositive sectional curvature.
 
 By Liebermnan's lemma \cite[Theorem~3]{milka}, we get the following: 
-If a part $Q$ of $S$ that lies under a spacelike hyperplane $\Pi$ is compact, then $Q$ is convex in $S$;
+If a strictly spacelike hyperplane $\Pi$ cuts from $S$ a compact set $Q$ that lies under $\Pi$, then $Q$ is convex in $S$;
 that is, if a geodesic in $S$ has ends $Q$, then it lies in $Q$ completely.
 Note that $Q$ is homeomorphic to a disc.
 Therefore by Cartan--Hadamard theorem we get that $Q$ is $\CAT(0)$.
@@ -345,18 +350,19 @@ it has a convex spacelike boundary $\partial K^-$.
 Choose a strictly spacelike hyperplane $\Pi$ that lies above $K$.
 Denote by $\Lambda^-$ the subset of $\partial K^-$ below $\Pi$.
 Let us equip $\Lambda^-$ with induced intrinsic pseudometric.
-Note that metric space that corresponds to $\Lambda^-$ is isometric to $\Sigma^-$.
+Note that metric space that corresponds to $\Lambda^-$ is isometric to~$\Sigma^-$.
 Indeed $\Sigma^-$ is a subset of $\Lambda^-$.
 The remaining points of $\Lambda^-$ lie on light rays that start from $\Sigma^-$.
-Each light ray has vanishing length; and it can be identified with its starting point in $\Sigma$. %??? This map $\Lambda^-\to \Sigma^-$ is idenitcal on $\Sigma^-$ and it does not increase lengths of curves, therefore it describes the needed isometry.
+Each light ray has vanishing length; and it can be identified with its starting point in $\Sigma$. This map $\Lambda^-\to \Sigma^-$ is idenitcal on $\Sigma^-$ and it does not increase lengths of curves, therefore it describes the needed isometry.
 
 \begin{wrapfigure}{r}{61mm}
-\vskip-4mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-25}
 \end{wrapfigure}
 
-Further note that $\Lambda^-$ admits an approximation by smooth discs $Q_n$ of the type described above.
+Further note that $\partial K^-$ can be approximated by smooth convex strictly spacelike hypersurfaces. 
+Therefore $\Lambda^-$ admits an approximation by smooth discs $Q_n$ of the type described above.
 Since $Q_n$ is $\CAT(0)$ for each $n$;
 their Gromov--Hausdorff limit $\Sigma^-$ is $\CAT(0)$ as well.
 
@@ -442,7 +448,7 @@ The $\CBB(0)$ comparison is equivalent to the $3$-tree comparison (for the tripo
 It turns out that any length $\CBB(0)$ spaces satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertices \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
 (The 4-tree comparison (the second tree on the diagram) is equivalent to the so-called $(4{+}1)$-point comparison in terminology of \cite{alexander-kapovitch-petrunin-2011}.)
 
-We expect that this comparison provides a necessary and sufficient condition; moreover, we expect an affirmative answer to the following stronger question.
+We expect that this comparison provides a necessary and sufficient condition for 5-point sets. Moreover, we expect an affirmative answer to the following stronger question.
 
 
 \begin{thm}{Question}

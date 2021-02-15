@@ -44,6 +44,29 @@ draw z.b1--z.d1;
 dOt z.a,z.b,z.c,z.d,z.a1,z.b1,z.c1,z.d1;
 endfig;
 
+beginfig(15) 
+save u;
+u:=1.4cm;
+
+z.a1=(2,0)*u;
+z.b1=(3,0)*u;
+z.c1=(2.95,1.05)*u;
+z.d1=(2.1,.9)*u;
+z.m=whatever[z.a1,z.c1]=whatever[z.b1,z.d1];
+
+draw z.a1--z.b1--z.c1--z.d1--cycle;
+draw z.a1--z.c1;
+draw z.b1--z.d1;
+
+dOt z.a1,z.b1,z.c1,z.d1,z.m;
+
+label.llft (btex $v_1$ etex,  z.a1);
+label.lrt (btex $v_2$ etex,  z.b1);
+label.urt (btex $v_3$ etex,  z.c1);
+label.ulft (btex $v_4$ etex,  z.d1);
+label.rt (btex $m$ etex,  z.m);
+endfig;
+
 beginfig(20) 
 save u,p;
 path p[];

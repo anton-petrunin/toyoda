@@ -134,7 +134,7 @@ whitelabel (btex $K$ etex, (.6,0)*u);
 whitelabel (btex $K^-$ etex, (0,.2)*u);
 whitelabel.top (btex $\Pi$ etex, .5[z.r,z.l]+z.shift);
 label.bot (btex $\Sigma^-$ etex, point x0/2 of p0);
-label.bot (btex $\Lambda^-$ etex, point .5 of p1 +(2,0));
+label.bot (btex $D$ etex, point .5 of p1 +(2,0));
 endfig;
 
 beginfig(30) 

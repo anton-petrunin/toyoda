@@ -297,8 +297,6 @@ The latter contradicts \ref{cat0-proj}.
 
 \section{Convex spacelike surfaces}
 
-In this section we mostly review results of Anatolii Milka \cite{milka}.
-
 \begin{wrapfigure}{r}{55mm}
 \vskip-4mm
 \centering
@@ -315,33 +313,35 @@ A subset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any
 Let $K$ be a convex body in $\RR^4$;
 denote by $\Sigma$ the surface of $K$. 
 We say that $p\in \Sigma$ lies on the upper side of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a spacelike hyperplane in $\RR^4$ that supports $\Sigma$ at $p$ from above;
-equivalently if the Minkowski sum $\{p\}+C^+$ does not intersect~$K$.
+more precisely if the Minkowski sum $\{p\}+C^+$ does not intersect~$K$.
 
 Similarly, we define the lower side of $\Sigma$ denoted by $\Sigma^-$.
 Note that $\Sigma^+$ and $\Sigma^-$ might have common points.
 The subsets $\Sigma^+$ and $\Sigma^-$ are spacelike;
-in particular the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic (pseudo)metric on $\Sigma^+$ and $\Sigma^-$. 
+in particular the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic (pseudo)metrics on $\Sigma^+$ and $\Sigma^-$. 
 
 \begin{thm}{Lemma}\label{lem:sides}
 Let $\Sigma$ be the surface of a convex set $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
 Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with the induced intrinsic metric are a $\CAT(0)$ length spaces.
 
 Moreover, if a \emph{line segment} $[pq]$ in $\RR^4$ 
-lies on $\Sigma^\pm$, then the $[pq]$ is a minimizing geodesic in $\Sigma^\pm$; that is,
+lies on $\Sigma^\pm$, then $[pq]$ is a minimizing geodesic in $\Sigma^\pm$; that is,
 \[|p-q|_{\Sigma^\pm}^2=W(p-q).\]
 
 \end{thm}
 
-\parit{Proof.}
+This lemma is essentially stated by Anatolii Milka \cite[Theorem~4]{milka}; we give a sketch of alternative proof based on smooth approximation.
+
+\parit{Sketch.}
 We can assume that $W$ is nondegenerate; that is, after linear change of coordinates it is the standard form on $\RR^{3,1}$.
-If not, then there is a $W$-preserving projection of the whole picture to a $W$-nondegenerate subspace; apply this projection and note that this subspace is isometric a subspace of $\RR^{3,1}$.
+If not, then there is a $W$-preserving projection of $\RR^4$ to a $W$-nondegenerate subspace; apply this projection and note that this subspace is isometric a subspace of $\RR^{3,1}$.
 
 Choose a strictly spacelike hyperplane $\Pi$.
 Assume $D$ is a smooth convex spacelike disc in $\RR^{3,1}$
 that lies under $\Pi$ and has its boundary on $\Pi$.
 By Gauss formula, $D$ has nonpositive sectional curvature.
 Furhter, by Liebermnan's lemma \cite[Theorem~3]{milka}, $D$ has convex boundary.
-Therefore Cartan--Hadamard theorem implies that that $D$ is $\CAT(0)$.
+Therefore Cartan--Hadamard theorem \cite{alexander-kapovitch-petrunin-2021} implies that that $D$ is $\CAT(0)$.
 
 Now suppose $D_n$ is a sequence of smooth discs of the described type that converges to a (possibly nonsmooth) disc $D$.
 Note that the metric on $D_n$ converges to a pseudometric on $D$ that induced by $W$.
@@ -351,7 +351,7 @@ The disc $D$ might contain lightlike segments which have zero length.
 Note that every maximal lightlike segment in $D$ starts at its interior point and goes to boundary.
 Consider the map $\iota\:D\to D$ that sends each maximal lightlike segment to its starting point.
 Convexity of $D$ implies that $\iota$ is length-nonincreasing.
-It follows that the $D'$ is isometric to the image of $\iota$ with the metric induced by~$W$.
+Since $|x-\iota(x)|_D=0$, we get that the $D'$ is isometric to the image of $\iota$ with the metric induced by~$W$.
 
 \begin{wrapfigure}{r}{61mm}
 \vskip-0mm

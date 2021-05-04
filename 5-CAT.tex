@@ -34,7 +34,7 @@
 \date{}
 \maketitle
 \begin{abstract}
-We give another proof of Toyoda's theorem that describes 5-point subpaces in $\CAT(0)$ length spaces.
+We give another proof of Toyoda's theorem that describes 5-point subspaces in $\CAT(0)$ length spaces.
 \end{abstract}
 
 \nofootnote{The first author was partially supported by RFBR grant   20-01-00070, 
@@ -43,7 +43,7 @@ the second author was partially supported by NSF grant DMS-2005279.}
 \section{Introduction}
 
 The $\CAT(0)$ comparison is a certain inequality in terms of the 6 distances between 4 points in a metric space.
-The following descriptions, the so-called \emph{(2+2)-comparison}, is one of the most standard,
+The following descriptions, the so-called \emph{(2+2)-comparison}, is the most standard,
 we refer to \cite{alexander-kapovitch-petrunin-2019,alexander-kapovitch-petrunin-2021} for other definitions and their equivalences.
 
 Given a quadruple of points $p,q,x,y$ in a metric space $X$,
@@ -70,7 +70,7 @@ then we say that \emph{$X$ satisfies $\CAT(0)$ comparison}.
 
 It is not hard to check that if a quadruple of points satisfies $\CAT(0)$ comparison for all relabeling,
 then it admits a distance-preserving inclusion into a length $\CAT(0)$ space.
-The following theorem generalizes this statement to 5 point metric spaces.
+The following theorem generalizes this statement to 5-point metric spaces.
 
 \begin{thm}{Toyoda's theorem}
 Let $P$ be a 5 point metric space that satisfies $\CAT(0)$ comparison.
@@ -95,14 +95,16 @@ this comparison holds for any length $\CAT(0)$ space, but may not hold for a spa
 {\sloppy
 
 The $(4{+}2)$-comparison is not a sufficient condition for $6$-point spaces.
-More precisely, there are 6-point metric spaces that satisfy $(4{+}2)$ and $(2{+}2)$-comparisons, but do not admit a distance-preserving embedding into a length $\CAT(0)$ space.
+More precisely, there are 6-point metric spaces that satisfy $(4{+}2)$ and $(2{+}2)$-comparisons but do not admit a distance-preserving embedding into a length $\CAT(0)$ space.
 An example was constructed by the first author; it is described in \cite{alexander-kapovitch-petrunin-2011} right after 7.2.
 See the final section for related questions.
 
 }
 
 \parbf{Acknowledgment.}
-We want to thank Stephanie Alexander, Yuri Burago and the anonymous referee for help.
+We want to thank Stephanie Alexander,
+Yuri Burago,
+and the anonymous referee for help.
 
 \section{5-point arrays in 3-space}
 
@@ -113,11 +115,11 @@ A $5$ point array  $x_1,\dots,x_5\in \RR^3$ defines an affine map from a 4-simpl
 Fix an orientation of the 4-simplex and consider the induced orientations on its 5 facets.
 Each facet may be mapped in an orientation-preserving, degenerate, or orientation-reversing way.
 For each array consider the triple of integers $(n_+, n_0,n_-)$,
-where $n_+$, $n_0$ and $n_-$ denote the number of orientation-preserving, degenerate, or orientation-reversing facets respectively.
+where $n_+$, $n_0$, and $n_-$ denote the number of orientation-preserving, degenerate, or orientation-reversing facets respectively.
 
 Clearly $n_++n_0+n_-=5$ and since all 5 points cannot lie in one plane, we have that $n_+\ge 1$, $n_-\ge 1$, and $n_0\le1$.
 Therefore, the value $m=n_- - n_+$ can take an integer value between $-3$ and $3$;
-in this case we say that an array belongs to $\mathcal{A}_m$.
+in this case, we say that an array belongs to $\mathcal{A}_m$.
 
 It defines a subdivision of  $\mathcal{A}$ into 7 subsets $\mathcal{A}_{-3},\dots, \mathcal{A}_{3}$ with combinatorial configuration as on the diagram;
 quadruples in one plane are marked in gray and the triple $(n_+, n_0,n_-)$ is written below.
@@ -147,7 +149,7 @@ Every two quadrilaterals in the array have 3 common points that define a plane.
 If the remaining two points lie on opposite sides from the plane,
 then the corresponding facets have the same orientation;
 if they lie on one side, then the orientations are opposite.
-Therefore, the 7 subsets $\mathcal{A}_{-3},\dots \mathcal{A}_{3}$ can be described the following way.
+Therefore, the 7 subsets $\mathcal{A}_{-3},\dots \mathcal{A}_{3}$ can be described in the following way:
 
 $\mathcal{A}_{-3}$ --- a tetrahedron with preserved orientation and one point inside.
 
@@ -202,7 +204,7 @@ For an $n$-point array, it means that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in
 In particular, we get the following:
 
 \begin{thm}{Observation}\label{triangle-inq}
-Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated to a point array $\bm{x}\z=(x_1,\dots,x_n)$.
+Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated with a point array $\bm{x}\z=(x_1,\dots,x_n)$.
 Suppose that $L$ is a subspace of $\RR^{n-1}$ such that
 $W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
 Then the projections of any 3 vertices of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
@@ -238,7 +240,7 @@ the combinatorics of the picture does not depend on the choice of $w$.
 If $\CAT(0)$ comparison holds in $X$, then the diagram on the right cannot appear. 
 \end{thm}
 
-In fact the converse holds as well, but we will not need it.
+(The converse holds as well, but we will not need it.)
 
 }
 
@@ -287,7 +289,7 @@ Moreover, if $\dim L= 1$, then the projections of the vertices of $\triangle$ to
 \end{thm}
 
 \parit{Proof.}
-If $\dim L\ge 2$, then the space $\dim \RR^4/L\le 2$.
+If $\dim L\ge 2$, then $\dim (\RR^4/L)\le 2$.
 By \ref{triangle-inq}, these 5 projections lie in a general position; that is, no three of these projections lie on one line. 
 Therefore, $\RR^4/L=2$ is the plane.
 
@@ -308,21 +310,21 @@ Suppose that  $W$ has exactly one negative eigenvalue.
 Choose future and past cones $C^+$ and $C^-$ for $W$;
 that is, $C^+$ and $C^-$ are connected components of the set
 $\set{v\in\RR^4}{W(v)< 0}$.
-A subset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any distinct $x,y\in S$.
+A subset $S$ in $\RR^4$ will be called \emph{spacelike} if $W(x-y)\ge 0$ for any $x,y\in S$.
 
 Let $K$ be a convex body in $\RR^4$;
 denote by $\Sigma$ the surface of $K$. 
-We say that $p\in \Sigma$ lies on the upper side of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a spacelike hyperplane in $\RR^4$ that supports $\Sigma$ at $p$ from above;
+A point $p$ lies on the \emph{upper side} of $\Sigma$ (briefly $p\in\Sigma^+$) if there is a spacelike hyperplane in $\RR^4$ that supports $\Sigma$ at $p$ from above;
 more precisely if the Minkowski sum $\{p\}+C^+$ does not intersect~$K$.
 
-Similarly, we define the lower side of $\Sigma$ denoted by $\Sigma^-$.
+Similarly, we define the \emph{lower side} of $\Sigma$ denoted by $\Sigma^-$.
 Note that $\Sigma^+$ and $\Sigma^-$ might have common points.
 The subsets $\Sigma^+$ and $\Sigma^-$ are spacelike;
-in particular the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic (pseudo)metrics on $\Sigma^+$ and $\Sigma^-$. 
+in particular, the length of any Lipschitz curve in these subsets can be defined and it leads to induced intrinsic (pseudo)metrics on $\Sigma^+$ and $\Sigma^-$. 
 
 \begin{thm}{Lemma}\label{lem:sides}
 Let $\Sigma$ be the surface of a convex set $K$ in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
-Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with the induced intrinsic metric are a $\CAT(0)$ length spaces.
+Then the upper and lower sides $\Sigma^+$ and $\Sigma^-$ of $\Sigma$ equipped with the induced intrinsic metric are $\CAT(0)$ length spaces.
 
 Moreover, if a \emph{line segment} $[pq]$ in $\RR^4$ 
 lies on $\Sigma^\pm$, then $[pq]$ is a minimizing geodesic in $\Sigma^\pm$; that is,
@@ -333,24 +335,28 @@ lies on $\Sigma^\pm$, then $[pq]$ is a minimizing geodesic in $\Sigma^\pm$; that
 This lemma is essentially stated by Anatolii Milka \cite[Theorem~4]{milka}; we give a sketch of alternative proof based on smooth approximation.
 
 \parit{Sketch.}
-We can assume that $W$ is nondegenerate; that is, after linear change of coordinates it is the standard form on $\RR^{3,1}$.
+We can assume that $W$ is nondegenerate; that is, after a linear change of coordinates it is the standard form on $\RR^{3,1}$.
 If not, then there is a $W$-preserving projection of $\RR^4$ to a $W$-nondegenerate subspace; apply this projection and note that this subspace is isometric a subspace of $\RR^{3,1}$.
 
 Choose a strictly spacelike hyperplane $\Pi$.
-Assume $D$ is a smooth convex spacelike disc in $\RR^{3,1}$
-that lies under $\Pi$ and has its boundary on $\Pi$.
+Assume $D$ is a smooth spacelike disc in $\RR^{3,1}$
+that lies under $\Pi$, has its boundary on $\Pi$.
+Suppose that $D$ is convex; that is, $\Pi$ and $D$ cut a convex subset in $\RR^{3,1}$.
 By Gauss formula, $D$ has nonpositive sectional curvature.
-Furhter, by Liebermnan's lemma \cite[Theorem~3]{milka}, $D$ has convex boundary.
+
+Recall that Liberman's lemma \cite[Theorem~3]{milka} implies that time coordinate is convex on any geodesic in $D$.
+We may assume that time is vanishing on $\Pi$;
+therefore, by the lemma, $D$ has a convex boundary.
 Therefore Cartan--Hadamard theorem \cite{alexander-kapovitch-petrunin-2021} implies that that $D$ is $\CAT(0)$.
 
 Now suppose $D_n$ is a sequence of smooth discs of the described type that converges to a (possibly nonsmooth) disc $D$.
-Note that the metric on $D_n$ converges to a pseudometric on $D$ that induced by $W$.
+Note that the metric on $D_n$ converges to a pseudometric on $D$ that is induced by $W$.
 It follows that the metric space $D'$ that corresponds to $D$ is $\CAT(0)$.
 
 The disc $D$ might contain lightlike segments which have zero length.
-Note that every maximal lightlike segment in $D$ starts at its interior point and goes to boundary.
+Note that every maximal lightlike segment in $D$ starts at its interior point and goes to the boundary.
 Consider the map $\iota\:D\to D$ that sends each maximal lightlike segment to its starting point.
-Convexity of $D$ implies that $\iota$ is length-nonincreasing.
+Note that the sublemma below implies that $\iota$ is length-nonincreasing.
 Since $|x-\iota(x)|_D=0$, we get that the $D'$ is isometric to the image of $\iota$ with the metric induced by~$W$.
 
 \begin{wrapfigure}{r}{61mm}
@@ -359,7 +365,7 @@ Since $|x-\iota(x)|_D=0$, we get that the $D'$ is isometric to the image of $\io
 \includegraphics{mppics/pic-25}
 \end{wrapfigure}
 
-Now consider the Minkowski sum $K^-=K+C^+$;
+Consider the Minkowski sum $K^-=K+C^+$;
 it has a convex spacelike boundary $\partial K^-$.
 Choose a strictly spacelike hyperplane $\Pi$ that lies above $K$.
 Denote by $D$ the subset of $\partial K^-$ below $\Pi$.
@@ -369,12 +375,44 @@ It follows that $\Sigma^-$ is $\CAT(0)$.
 
 Now suppose a line segment $[pq]$ in $\RR^4$ 
 lies on $\Sigma^-$.
-Choose a supporting hyperplane $\Pi$ at the midpoint of $[pq]$. 
-Let us apply Liberman's lemma \cite[Theorem~3]{milka} to a cylindrical surface in a timelike direction that is normal to $\Pi$.
-By the lemma every shortest path in $\Sigma^-$ between $p$ and $q$ has to lie on $\Pi$;
+Choose a supporting hyperplane $\Pi$ at the midpoint of $[pq]$.
+Choose time coordinate that vanish on $\Pi$;
+by Liberman's lemma, every shortest path in $\Sigma^-$ between $p$ and $q$ has to lie on $\Pi$;
 that is, the intersection $\Sigma^-\cap \Pi$ is a convex subset of $\Sigma^-$.
 Therefore $[pq]$ is convex in $\Sigma^-$ which implies the second statement.
 \qeds
+
+
+\begin{thm}{Sublemma}
+Let $u$ and $v$ be two lightlike vectors in $\RR^{3,1}$.
+Suppose that the union of two half-lines $s\mapsto p+s\cdot u$ and $t\mapsto q+t\cdot v$ for $s,t\ge 0$ is a spacelike set.
+Then the function 
+$(s,t)\mapsto |(p+s\cdot u)-(q+t\cdot v)|$
+is nondecreasing in both arguments,
+where $|w|\df\sqrt{\langle w,w\rangle}$ for a spacelike vector~$w$.
+\end{thm}
+
+\parit{Proof.}
+Since $u$ and $v$ are timelike, $\langle u,u\rangle=\langle v,v\rangle=0$.
+Since the union of two half-lines is spacelike, $(p+s\cdot u)-(q+t\cdot v)$ is spacelike for any $s,t\ge 0$.
+It follows that
+\begin{align*}
+0&\le |(p+s\cdot u)-(q+t\cdot v)|^2=
+\\
+&=|p-q|^2-2\cdot s \cdot\langle u,q-p\rangle-2\cdot t\cdot\langle v,p-q\rangle- 2\cdot s\cdot t\cdot \langle u,v\rangle
+\end{align*}
+for any $s,t\ge0$.
+Therefore
+\begin{align*}
+\langle u,q-p\rangle&\le 0,
+& 
+\langle v,p-q\rangle&\le 0
+&
+\langle u,v\rangle&\le 0.
+\end{align*}
+Whence the result.
+\qeds
+
 
 Assume $v$ is a nonzero vector in $\RR^4$ and $p\in\Sigma$.
 We say that $p$ lies on the \emph{upper side of $\Sigma$ with respect to $v$} (briefly $p\in \Sigma^+(v)$) if $p+t\cdot v\notin K$ for any $t>0$.
@@ -391,7 +429,7 @@ that is,
 
 \parit{Proof of Toyoda's theorem.}
 Let $\{x_1,\dots,x_5\}$ be the points in $P$.
-Choose a 5-simplex $\triangle$ in $\RR^4$; denote by $W$ the form associated to the point array $(x_1,\z\dots,x_5)$.
+Choose a 5-simplex $\triangle$ in $\RR^4$; denote by $W$ the form associated with the point array $(x_1,\z\dots,x_5)$.
 
 If $W\ge0$, then $P$ admits a distance preserving embedding into Euclidean 4-space, so one can take the convex hull of its image as $X$.
 
@@ -410,7 +448,7 @@ By \ref{lem:sides}, $\Sigma^-$ with induced (pseudo)metric is a length $\CAT(0)$
 Since all edges of $\triangle$ lie in $\Sigma^-$, the inclusion $P\hookrightarrow \Sigma^-$ is distance preserving.
 Whence we can take $X=\Sigma^-$.
 
-Finally observe that in each case $X$ is a subcomplex of $\triangle$ that includes all edges and has a model metric on each simplex.
+Finally, observe that in each case $X$ is a subcomplex of $\triangle$ that includes all edges and has a model metric on each simplex.
 \qeds
 
 \section{Remarks}
@@ -448,14 +486,14 @@ The $\CBB(0)$ comparison is equivalent to the $3$-tree comparison (for the tripo
 \centering
 \includegraphics{mppics/pic-40}
 \end{figure}
-It turns out that any length $\CBB(0)$ spaces satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertices \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
-(The 4-tree comparison (the second tree on the diagram) is equivalent to the so-called $(4{+}1)$-point comparison in terminology of \cite{alexander-kapovitch-petrunin-2011}.)
+It turns out that any length $\CBB(0)$ space satisfies the comparison for the other trees on the diagram; it is formed by an infinite family of star-shaped trees and two trees with 6 vertices \cite{alexander-kapovitch-petrunin-2011,lebedeva-petrunin-zolotov}.
+(The 4-tree comparison (the second tree on the diagram) is equivalent to the so-called $(4{+}1)$-point comparison in the terminology of \cite{alexander-kapovitch-petrunin-2011}.)
 
 We expect that this comparison provides a necessary and sufficient condition for 5-point sets. Moreover, we expect an affirmative answer to the following stronger question.
 
 
 \begin{thm}{Question}
-Suppose a 5-point metric space $P$ satisfies $4$-tree comparison.
+Suppose a 5-point metric space $P$ satisfies the $4$-tree comparison.
 Is it true that $P$ admits a distance preserving embedding into a product of circles?
 \end{thm}
 

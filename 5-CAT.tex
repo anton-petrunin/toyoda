@@ -338,19 +338,17 @@ This lemma is essentially stated by Anatolii Milka \cite[Theorem~4]{milka}; we g
 We can assume that $W$ is nondegenerate; that is, after a linear change of coordinates it is the standard form on $\RR^{3,1}$.
 If not, then there is a $W$-preserving projection of $\RR^4$ to a $W$-nondegenerate subspace; apply this projection and note that this subspace is isometric a subspace of $\RR^{3,1}$.
 
-Choose a strictly spacelike hyperplane $\Pi$.
-Assume $D$ is a smooth spacelike disc in $\RR^{3,1}$
-that lies under $\Pi$, has its boundary on $\Pi$.
-Suppose that $D$ is convex; that is, $\Pi$ and $D$ cut a convex subset in $\RR^{3,1}$.
-By Gauss formula, $D$ has nonpositive sectional curvature.
+Assume $S$ is a smooth strictly spacelike hypersurface in $\RR^{3,1}$ with convex epigraph.
+By Gauss formula, $S$ has nonpositive sectional curvature.
 
-Recall that Liberman's lemma \cite[Theorem~3]{milka} implies that time coordinate is convex on any geodesic in $D$.
-We may assume that time is vanishing on $\Pi$;
-therefore, by the lemma, $D$ has a convex boundary.
+Suppose a strictly spacelike hyperplane $\Pi$ cuts from $S$ a disc $D$.
+Recall that Liberman's lemma \cite[Theorem~3]{milka} implies that time coordinate is convex on any geodesic in $S$.
+We may assume that time is vanishing on~$\Pi$;
+therefore, by the lemma, $D$ has a convex set in $S$.
 Therefore Cartan--Hadamard theorem \cite{alexander-kapovitch-petrunin-2021} implies that that $D$ is $\CAT(0)$.
 
 Now suppose $D_n$ is a sequence of smooth discs of the described type that converges to a (possibly nonsmooth) disc $D$.
-Note that the metric on $D_n$ converges to a pseudometric on $D$ that is induced by $W$.
+Note that the metric on $D_n$ converges to the induced pseudometric on $D$.
 It follows that the metric space $D'$ that corresponds to $D$ is $\CAT(0)$.
 
 The disc $D$ might contain lightlike segments which have zero length.
@@ -393,7 +391,7 @@ where $|w|\df\sqrt{\langle w,w\rangle}$ for a spacelike vector~$w$.
 \end{thm}
 
 \parit{Proof.}
-Since $u$ and $v$ are timelike, $\langle u,u\rangle=\langle v,v\rangle=0$.
+Since $u$ and $v$ are lightlike, $\langle u,u\rangle=\langle v,v\rangle=0$.
 Since the union of two half-lines is spacelike, $(p+s\cdot u)-(q+t\cdot v)$ is spacelike for any $s,t\ge 0$.
 It follows that
 \begin{align*}

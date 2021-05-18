@@ -37,12 +37,9 @@
 We give another proof of Toyoda's theorem that describes 5-point subspaces in $\CAT(0)$ length spaces.
 \end{abstract}
 
-\nofootnote{The first author was partially supported by RFBR grant   20-01-00070, 
-the second author was partially supported by NSF grant DMS-2005279.}
-
 \section{Introduction}
 
-The $\CAT(0)$ comparison is a certain inequality in terms of the 6 distances between 4 points in a metric space.
+The $\CAT(0)$ comparison is a certain inequality for 6 distances between 4 points in a metric space.
 The following descriptions, the so-called \emph{(2+2)-comparison}, is the most standard,
 we refer to \cite{alexander-kapovitch-petrunin-2019,alexander-kapovitch-petrunin-2021} for other definitions and their equivalences.
 
@@ -65,7 +62,7 @@ the quadruple $p,q,x,y$ \emph{satisfies $\CAT(0)$ comparison};
 here $|p-q|_X$ denotes the distance from $p$ to $q$ in $X$.
 
 If $\CAT(0)$ comparison holds for any quadruple (and any of its relabeling) in a metric space $X$,
-then we say that \emph{$X$ satisfies $\CAT(0)$ comparison}.
+then we say that \emph{$X$ is $\CAT(0)$}.
 
 
 It is not hard to check that if a quadruple of points satisfies $\CAT(0)$ comparison for all relabeling,
@@ -73,7 +70,7 @@ then it admits a distance-preserving inclusion into a length $\CAT(0)$ space.
 The following theorem generalizes this statement to 5-point metric spaces.
 
 \begin{thm}{Toyoda's theorem}
-Let $P$ be a 5 point metric space that satisfies $\CAT(0)$ comparison.
+Let $P$ be a 5-point metric space that satisfies $\CAT(0)$ comparison.
 Then $P$ admits a distance-preserving inclusion into a length $\CAT(0)$ space $X$.
 
 Moreover,
@@ -106,9 +103,12 @@ We want to thank Stephanie Alexander,
 Yuri Burago,
 and the anonymous referee for help.
 
+The first author was partially supported by RFBR grant   20-01-00070, 
+the second author was partially supported by NSF grant DMS-2005279.
+
 \section{5-point arrays in 3-space}
 
-Denote by $\mathcal{A}$ the space of all $5$ point arrays in $\RR^3$ that is nondegenerate in the following sense: (1) all 5 points do not lie on one plane and (2) no three points lie on one line.
+% Denote by $\mathcal{A}$ the space of all $5$ point arrays in $\RR^3$ that is nondegenerate in the following sense: (1) all 5 points do not lie on one plane and (2) no three points lie on one line.
 Note that $\mathcal{A}$ is connected.
 
 A $5$ point array  $x_1,\dots,x_5\in \RR^3$ defines an affine map from a 4-simplex to~$\RR^3$.
@@ -200,7 +200,7 @@ for any $v\in \RR^{n-1}$.
 
 In particular, the condition $W_{\bm{x}}\ge 0$ for a triple $\bm{x}=(x_1,x_2,x_3)$ means that 
 all three triangle inequalities for the distances between $x_1$, $x_2$, and $x_3$ hold.
-For an $n$-point array, it means that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple $x_i,x_j,x_k$.
+For an $n$-point array, it implies that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple $x_i,x_j,x_k$.
 In particular, we get the following:
 
 \begin{thm}{Observation}\label{triangle-inq}
@@ -266,7 +266,7 @@ Whence (2+2)-point comparison does not hold.
 \qeds
 
 
-The claim implies the following statement.
+The claim implies the following:
 
 
 \begin{thm}{Observation}\label{cat0-proj}
@@ -346,7 +346,7 @@ Suppose a strictly spacelike hyperplane $\Pi$ cuts from $S$ a disc $D$.
 Recall that Liberman's lemma \cite[Theorem~3]{milka} implies that time coordinate is convex on any geodesic in $S$.
 We may assume that time is vanishing on~$\Pi$;
 therefore, by the lemma, $D$ has a convex set in $S$.
-Therefore Cartan--Hadamard theorem \cite{alexander-kapovitch-petrunin-2021} implies that that $D$ is $\CAT(0)$.
+Therefore the Cartan--Hadamard theorem \cite{alexander-kapovitch-petrunin-2021} implies that that $D$ is $\CAT(0)$.
 
 Now suppose $D_n$ is a sequence of smooth discs of the described type that converges to a (possibly nonsmooth) disc $D$.
 Note that the metric on $D_n$ converges to the induced pseudometric on $D$.
@@ -356,7 +356,7 @@ The disc $D$ might contain lightlike segments which have zero length.
 Note that every maximal lightlike segment in $D$ starts at its interior point and goes to the boundary.
 Consider the map $\iota\:D\to D$ that sends each maximal lightlike segment to its starting point.
 Note that the sublemma below implies that $\iota$ is length-nonincreasing.
-Since $|x-\iota(x)|_D=0$, we get that the $D'$ is isometric to the image of $\iota$ with the metric induced by~$W$.
+Since $|x-\iota(x)|_D=0$, we get that the $D'$ is isometric to the image of $\iota$ with the induced metric.
 
 \begin{wrapfigure}{r}{61mm}
 \vskip-0mm
@@ -419,7 +419,7 @@ Correspondingly, $p$ lies on the \emph{lower side of $\Sigma$ with respect to $v
 
 \begin{thm}{Observation}\label{obs:Sigma(v)}
 Let $K$ be a compact convex set in $\RR^4$ and $C^\pm$ be the future and past cones for a quadratic form $W$.
-Then the upper (lower) side of the boundary surface $\Sigma$ of $K$ can be described as the intersection of the upper (respectively the lower) sides of $\Sigma$ with respect to all vectors $v\in C^+$;
+Then the upper (lower) side of the boundary surface $\Sigma$ of $K$ can be described as the intersection of the upper (respectively lower) sides of $\Sigma$ with respect to all vectors $v\in C^+$;
 that is,
 \[\Sigma^\pm=\bigcap_{v\in C^+}\Sigma^\pm(v).\]
 \end{thm}

@@ -9,6 +9,10 @@ filecolor=black,
 menucolor=black,
 urlcolor=black%,
 ]{hyperref}
+\usepackage[normalem]{ulem}%дабы зачёркивать
+\usepackage{cancel}%дабы зачёркивать
+\usepackage{array}%для таблиц
+\usepackage{longtable}%для таблиц
 
 \usepackage{epsfig,lpic,wrapfig}
 \usepackage{bm}%makes better bold fornt in math
@@ -136,12 +140,14 @@ isbn=false]{biblatex}
 
 \def\diam{\mathop{\rm diam}\nolimits}
 \def\dim{\mathop{\rm dim}\nolimits}
-\def\dist{\mathop{\rm pull}\nolimits}
 \def\length{\mathop{\rm length}\nolimits}
 \def\pack{\mathrm{pack}}
 \def\Tor{\text{\rm Tor\,}}
 \def\id{\mathop{\rm id}\nolimits}
 \def\Im{\mathop{\rm Im}\nolimits}
+
+\newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
+\newcommand*{\angk}[3]{\tilde\measuredangle(#1\,{}^{#2}_{#3}\hspace{-0.2ex})}
 
 
 \newcommand*{\z}[1]{#1\nobreak\discretionary{}%

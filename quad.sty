@@ -95,6 +95,7 @@ isbn=false]{biblatex}
 \def\LL{\mathbb{L}}
 \def\MM{\mathbb{M}}% 
 \def\SS{\mathbb S}
+\def\LLS{\mathrm{LLS}}
 \def\NN{\mathbb{N}}%  
 \def\QQ{\mathbb{Q}}% 
 \def\RR{\mathbb{R}}%  
@@ -154,6 +155,13 @@ isbn=false]{biblatex}
             {\hbox{$\mathsurround=0pt #1$}}{}}
 \let\oldcdot\cdot
 \def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
+
+\newcommand{\asterism}{\smash{%
+\raisebox{-.5ex}{%
+\setlength{\tabcolsep}{.5pt}%
+\begin{tabular}{@{}cc@{}}%
+\multicolumn2c*\\[-1.7ex]*&*%
+\end{tabular}}}}
 
 \hyphenation{qua-si-geo-de-sic qua-si-geo-de-sics Alex-an-drov half-space geo-de-sic re-pa-ra-met-ri-za-tion}
 

@@ -1021,6 +1021,43 @@ draw s7;
 
 endfig;
 
+beginfig(255) 
+save u,p;
+path p[];
+u:=1cm;
+picture s[];
+
+z.x=origin;
+z.v1=(1,0)*u;
+z.v2=-1.2*z.v1;
+z.w1=(.2,1)*u;
+z.w2=-.9*z.w1;
+z.s=.5[z.w2,.5*z.v1];
+z.m=.5[z.v2,z.s];
+z.l=z.m+(z.s-z.v2) zscaled (0,1.4);
+z.r=z.m+(z.s-z.v2) zscaled (0,-.7);
+z.w21 =z.w1 reflectedabout(z.r, z.l);
+z.w22 =z.w2 reflectedabout(z.r, z.l);
+
+draw z.v1--z.v2;
+draw z.w1--z.w2;
+draw z.w1--z.s--z.w2 dashed evenly;
+draw z.l--z.r;
+draw z.w21--z.v2--z.w22;
+
+dOt z.x, z.v1, z.v2, z.w1, z.w2, z.s, z.w21, z.w22;
+
+label.ulft(btex $\tilde x$ etex, z.x);
+label.rt(btex $\tilde v_1$ etex, z.v1);
+label.lft(btex $\tilde v_2$ etex, z.v2);
+label.urt(btex $\tilde w_1$ etex, z.w1);
+label.bot(btex $\tilde w_2$ etex, z.w2);
+label.top(btex $\tilde w_{21}$ etex, z.w21);
+label.bot(btex $\tilde w_{22}$ etex, z.w22);
+label.rt(btex $\tilde s$ etex, z.s);
+label.llft(btex $\ell$ etex, z.r);
+endfig;
+
 beginfig(308) 
 save u,p;
 path p[];
@@ -1275,6 +1312,47 @@ label.lrt(btex $e$ etex, z.e16);
 );
 
 draw s16;
+endfig;
+
+beginfig(401) 
+save u,p;
+path p[];
+u:=1cm;
+picture s[];
+
+z1=(0,0)*u;
+z2=(1,0)*u;
+z3=(1,1)*u;
+z4=(0,1)*u;
+z.shift=(2.5,0)*u;
+
+s0=image(
+draw z1--z2--z3--z4--cycle;
+draw z1--z3;
+draw z2--z4;
+dOt z1,z2,z3,z4;
+);
+
+s1=image(
+draw z1--z2--z3--z4--cycle;
+draw z1--z3;
+dOt z1,z2,z3,z4;
+);
+
+s2=image(
+draw z1--z2--z3--z4--cycle;
+dOt z1,z2,z3,z4;
+);
+
+s3=image(
+draw z1--z2--z3--cycle;
+dOt z1,z2,z3,z4;
+);
+
+draw s0;
+draw s1 shifted (1*z.shift);
+draw s2 shifted (2*z.shift);
+draw s3 shifted (3*z.shift);
 endfig;
 
 

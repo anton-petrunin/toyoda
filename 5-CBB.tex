@@ -43,40 +43,128 @@ We give a nesseary and sufficient condition on a five-point metric space that ad
 
 \section{Introduction}
 
-Let $A$ be an Alexandrov space with nonnegative curvature.
-Consider an $(n+1)$-point array $p,x_1,\dots x_n$ in $A$.
-Set $a_{ij}=|p-x_i|^2+|p-x_j|^2-|x_i-x_j|^2$.
-Here we denote by $|p-q|$ the distance between points of a metric space.
-Recall that the Lang--Schroeder--Sturm inequality, states that
-\[\sum_{i,j}a_{i,j}\cdot \lambda_i\cdot\lambda_j\ge 0\]
-for any nonnegative values $\lambda_1,\dots,\lambda_n$.
+Toponogov theorem provides an if-and-only-if condition on a metric on four-point space that adimits an isometric embedding into a nonnegatively curved Riemannian manifold.
+In this note we give an analogous condition for the five-point space.
+The only-if part of the result is well known, but if part is new.
 
-Suppose $F$ is a finite metric space; that is a finite set with a metric.
-Note that Lang--Schroeder--Sturm inequalities for all relabeling of points in $F$
+Consider an $(n+1)$-point array $(p,x_1,\dots x_n)$ in a metric space $X$ with nonnegative curvature.
+We say that the array satisfies Lang--Schroeder--Sturm inequality (briefly,  $\LLS(n)$)
+if 
+\[\sum_{i,j}a_{i,j}\cdot \lambda_i\cdot\lambda_j\ge 0\]
+for any nonnegative values $\lambda_1,\dots,\lambda_n$;
+here $a_{ij}=|p-x_i|_X^2+|p-x_j|_X^2-|x_i-x_j|_A^2$
+and we denote by $|p-q|_X$ the distance between points in $X$.
+
+Recall that any point array in a nonnegatively curved Alexandrov space (in particular in any complete nonnegatively curved Riemannian manifold) meets the Lang--Schroeder--Sturm inequality.
+In particular, 
+given a finite metric space $F$ the
+Lang--Schroeder--Sturm inequalities for all relabeling of points in $F$
 give a necessary condition for existence of isometric embedding of $F$ into an Alexandrov space with nonnegative curvature.
 In this note we show that this condition is sufficient if $F$ has at most 5 points.
 
 \begin{thm}{Theorem}\label{thm:main}
-A five-point metric space $F$ admits an isometric embedding into an Alexandrov space with nonnegative curvature
+A five-point metric space $F$ admits an isometric embedding into a complete nonnegatively curved Riemannian manifold
 if and only if all Lang--Schroeder--Sturm inequalities hold in $F$.
 \end{thm}
 
+Since Lang--Schroeder--Sturm inequalities provides a necessary condition,
+to prove the theorem we need to construct a complete nonnegatively curved Riemannian manifold that contains an isometric copy of any given 5-point space that meets all Lang--Schroeder--Sturm inequalities.
+We first construct an Alexandrov space with this property and then smooth it slightly keeping the required property.
+
 For 6-point metric spaces the statement does not hold.
 An example discussed in the appendix, where we also list a possible for 6-point case.
-Spaces with 7 points and more look out of reach.
+Spaces with 7 and more points look out of reach for us at the moment.
+
+\section{LLS(\textit{n}) and (\textit{n}+1)-comparison}
+
+The (\textit{n}+1)-comparison is another condition that holds for any $(n+1)$-point array in a nonnegatively Alexandrov space \cite{alexander2019alexandrov}.
+It says that given a point array $p,x_1,\dots,x_n$ in an Alexandrov space $A$ with nonnegative curvature
+there is an array $\tilde p,\tilde x_1,\dots,\tilde x_n$ in a Hilbert space such that 
+\[
+|\tilde p-\tilde x_j|_{\HH}=|p-x_i|_{A}
+\quad
+\text{and}
+\quad
+|\tilde x_i-\tilde x_j|_{\HH}\ge |x_i-x_j|_{A}.
+\]
+for all $i$ and $j$.
+
+For general metric spaces, the (\textit{n}+1)-comparison implies the $\LLS(n)$,
+and for $n\ge 5$ the converse does not hold \cite[Section 8]{lebedeva-petrunin-zolotov}.
+In this section we will show that these two conditions are equivalent for $n\le 4$.
+
+\begin{thm}{Claim}\label{clm:(4+1)=LSS(4)}
+For any 5-point array $p,x_1,\dots,x_4$, the
+$\LLS(4)$-inequality is equivalent to $(4+1)$-comparison.
+\end{thm}
+
+Applying the claim, we get the following reformulation of the main theorem.
+
+\begin{thm}{Reformulation}\label{thm:main-(4+1)}
+A five-point metric space $F$ admits an isometric embedding into an Alexandrov space with nonnegative curvature
+if and only if it satisfies (4+1)-comparison for all relabelings.
+\end{thm}
+
+The following proof is nearly identical to the proof of \cite[Proposition 4.1]{lebedeva-petrunin-zolotov}.
+
+\parit{Proof of \ref{clm:(4+1)=LSS(4)}.}
+Suppose $p,x_1,\dots,x_4$ satisfies $\LLS(4)$;
+we need to show that it also meets the (4+1)-comparison.
+Choose a smooth function $\phi\:\RR\to \RR$ such that $\phi(x)=0$ is $x\ge0$ and $\phi(x)>0$, $\phi'(x)<0$ if $x<0$.
+Consider a configuration of points $\tilde p,\tilde x_1,\dots,\tilde x_4\in \HH$ such that 
+\[
+|\tilde p-\tilde x_j|_{\HH}=|p-x_i|_{A}.
+\]
+and
+\[
+s=\sum_{i<j}\phi(|\tilde x_i-\tilde x_j|_{\HH}- |x_i-x_j|_{A}
+\]
+takes its minimal value.
+
+Note that $s\ge0$;
+if $s=0$, then we get the required configuration.
+
+Suppose $s>0$.
+Consider the graph $\Gamma$ with vertices 4 vertices labeled by $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4$ such that 
+$(x_i,x_j)$ is an edge if and only if $|\tilde x_i-\tilde x_j|_{\HH}<|x_i-x_j|_{A}$.
+By triangle inequality, $\Gamma$ contains no end-vertices.
+Therefore it is isomorphic to one of the following graphs.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-401}
+\end{figure}
+
+Note that any point $\tilde x_i$ cannot lie in an open half-space with all its
+adjacent points.
+Indeed, if it would be the case, then we could slightly move this
+vertex increasing the distances to all its adjacent vertexes and keeping the conditions on the other distances.
+
+Further, we will assume that $\tilde p=0$.
+
+In the 6-edge case, $0$ lies in the convex hull of $\{\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\}$.
+In particular, we can write $0$ as a sum $\lambda_1\cdot \tilde x_1+\dots+\lambda_4\cdot\tilde x_4$ with $\lambda_i\ge0$.
+The latter contradicts $\LLS(4)$.
+
+Similarly, in the 5- and 3-edge cases, we can assume that $\tilde x_1\tilde x_2\tilde x_3$ is a 3-cycle of $\Gamma$.
+In this case we can write $0$ as a sum $\lambda_1\cdot \tilde x_1+\lambda_2\cdot\tilde x_2+\lambda_3\cdot\tilde x_3$ with $\lambda_i\ge0$ and arrive at a contradiction.
+
+Finally the 4-edge graph (that is, the 4-cycle) cannot occur.
+Indeed, in this case $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4$ have to lie in one plane so that the direction of $\tilde x_1$ is opposite to $\tilde x_3$,
+and the direction of $\tilde x_2$ is opposite to $\tilde x_4$.
+We can think that this is the horizontal in $\RR^3$.
+Then rotating the pair $\tilde x_1$, $\tilde x_3$ slightly up and 
+the pair $\tilde x_2$, $\tilde x_4$  slightly down, decreases~$s$ --- a contradiction.
+\qeds
 
 \section{Associated form}
 
-In this section we recall some facts about the so-called \emph{associated} form introduced in \cite{petrunin-2017};
-it is a quadratic form 
-$W_{\bm{x}}$ on $\RR^{n-1}$ associated
-to a given $n$-point array $\bm{x}\z=(x_1,\dots,x_n)$ in a metric space $X$.
+Let us remind a construction from \cite{petrunin-2017}.
+Let $\bm{x}=(x_1,\dots,x_n)$ be a point array in a metric space.
 
-\parbf{Construction.}
 Choose a simplex $\triangle$ in $\RR^{n-1}$; for example, we can take the standard simplex with the first $(n-1)$ of its vertices $v_1,\dots,v_n$ form the standard basis on $\RR^{n-1}$,
  and $v_n=0$.
 
-Recall that $|a-b|_X$ denotes the distance between points $a$ and $b$ in the metric space $X$.
 Consider a quadratic form $W_{\bm{x}}$ on $\RR^{n-1}$ that is defined by
 \[W_{\bm{x}}(v_i-v_j)=|x_i-x_j|^2_X\] 
 for all $i$ and $j$.
@@ -93,15 +181,7 @@ for any $v\in \RR^{n-1}$.
 
 In particular, the condition $W_{\bm{x}}\ge 0$ for a triple $\bm{x}=(x_1,x_2,x_3)$ is equivalent to 
 the three triangle inequalities for the distances between $x_1$, $x_2$, and $x_3$.
-For an $n$-point array, it implies that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple $v_i,v_j,v_k$.
-In particular, we get the following:
-
-\begin{thm}{Observation}\label{triangle-inq}
-Let $W_{\bm{x}}$ be a form on $\RR^{n-1}$ associated with a point array $\bm{x}\z=(x_1,\dots,x_n)$.
-Suppose that $L$ is a subspace of $\RR^{n-1}$ such that
-$W_{\bm{x}}(v)< 0$ for any nonzero vector $v\in L$.
-Then the projections of any 3 vertices of $\triangle$ to the quotient space $\RR^{n-1}/L$ are not collinear.
-\end{thm}
+For an $n$-point array, it implies that $W_{\bm{x}}(v)\ge 0$ for any vector $v$ in a plane spanned by a triple of vertices of $\triangle$.
 
 \parbf{Lang--Schroeder--Sturm inequalities.}
 Consider an $n$-point array $\bm{x}$.
@@ -111,140 +191,179 @@ Consider the projection along $L_w$ from $\RR^{n-1}$ to the quotient space $\RR^
 The following claim is a reformulation Sturm--Lang--Shroeder inequalities for all relabeling of $\bm{x}$:
 
 \begin{thm}{Claim}\label{clm:W(w)<0}
-Let $\bm{x}$ be an $n$-point array in a complete length $\CBB(0)$ space.
+Let $\bm{x}=(x_1,\dots,x_n)$ be an $n$-point array in an Alexandrov space with nonnegative curvature.
 Suppose that $W_{\bm{x}}(w)<0$ for some nonzero vector $w\in\RR^{n-1}$.
-Then each projection of each $v_i$ to the quotient space $\RR^{n-1}/L_w$ is an extremal point of the projection of~$\triangle$.
+Then projection of each vertex of $\triangle$ to the quotient space $\RR^{n-1}/L_w$ does not lie in the projection of its opposite facet.
 \end{thm}
 
-If $W_{\bm{x}}(w)\le0$, then the same construction can be applied.
-In this case the projection of some vertex might lie in the convex hull of the remaining projections,
-but we have the following rigidity statement:
+If $W_{\bm{x}}(w)\le0$, then the same construction can be applied, but the projection of a vertex, say $v_1$, of $\triangle$ can lie in the interior of the projection of its opposite facet;
+in this case we say that the array $\bm{x}$ is \emph{tense}.
+The point $x_1$ in $\bm{x}$ that corresponds to $v_1$ is called \emph{marked point of} of the tense array.
+For tense arrays we have the following rigidity statement:
 
 \begin{thm}{Claim}\label{clm:W(w)==0}
-Let $\bm{x}$ be an $n$-point array in a complete length $\CBB(0)$ space.
-Suppose that $W_{\bm{x}}(w)= 0$ for some vector $w\in\RR^{n-1}$.
-If the projection of $v_i$ in $\RR^{n-1}/L_w$ lies in the interior of projection of the simplex formed by $\set{v_j}{j\in S}$,
-then the subset $\set{x_j}{j\in S\cup \{j\}}$ is isometric to a subset of Euclidean space.
-Moreover the point $x_i$ corresponds to a point in the convex hull of the remaining points in the subset.
+Any tense array of an Alexandrov space $A$ with nonnegative curvature is isometric to a point array of a Euclidean space.
+Moreover the marked point of the tense array corresponds to a point in the relative interior of convex hull of the points in the Euclidean array.
 \end{thm}
 
 \parit{Proof.}
-By \ref{clm:W(w)<0}, we have that $W_{\bm{x}}(v)\ge 0$ for any $v$ in the convex combination of $v_j-v_i$ for $j\in S$.
-Since $W_{\bm{x}}(w)=0$, we get that $W_{\bm{x}}(v)\ge 0$ for any $v$ in the subspace spanned by $v_j-v_i$ for $j\in S$.
-It remains to apply \ref{clm:W>=0} for the array formed by $x_i$ and $\set{x_j}{j\in S}$.
+Given a point array $\bm{x}=(x_1,\dots,x_n)$ in $A$, denote by $v_1,\dots v_n$ the corresponding vertices of $\triangle$.
+
+Suppose $\bm{x}=(x_1,\dots,x_n)$ is a tense array with marked point $x_1$;
+that is, there is a vector $w$ is in the set $K_1$ of all linear combinations of $v_j-v_1$ with positive weights such that $W_{\bm{x}}(w)\le 0$. 
+
+By \ref{clm:W(w)<0}, we have that $W_{\bm{x}}(v)\ge 0$ for any $v$ in the convex combination of $v_j-v_1$.
+In particular $W_{\bm{x}}(w)=0$.
+Since $K_1$ is open and $w\in K_1$, we get that $W_{\bm{x}}\ge 0$.
+It remains to apply \ref{clm:W>=0}.
 \qeds
 
-If $i$ and $S$ are as in the claim,
-then the subset $T=\set{x_j}{j\in S\cup \{j\}}$ will be called \emph{tense set} of $X$ and the point $x_i$ will be called \emph{marked point of the tense set}; note that the marked point is uniquely defined by the set $T$.
-
-\section{Extremal metrics}
+\section{Extremal metrics}\label{sec:ext}
 
 Denote by $\mathcal{A}_5$ the space of metrics on a 5-point set set $F=\{a,b,c,d,e\}$ that admits an embedding into an Alexandrov space with nonnegative curvature.
 The associated quadratic forms for spaces in $\mathcal{A}_5$ form a convex cone in the space of all quadratic forms on $\RR^4$.
 The latter follows since nonnegative curvature in the sense of Alexandrov survives after rescaling and passing to a product space.
 
 Denote by $\mathcal{B}_5$ the space of metrics on $F$ that satisfies all Lang--Schroeder--Sturm inequalities for all relabelings.
-As well as for $\mathcal{B}_5$, the associated forms for spaces in $\mathcal{A}_5$ form a convex cone in the space of all quadratic forms on $\RR^4$.
+As well as for $\mathcal{A}_5$, the associated forms for spaces in $\mathcal{B}_5$ form a convex cone in the space of all quadratic forms on $\RR^4$.
 
-Since the associated quadratic form describes its metric completely, we may identify $\mathcal{A}_5$ and $\mathcal{B}_5$ with the set in the space of $\RR^{10}$ --- the space of quadratic forms on $\RR^4$.
+Since the associated quadratic form describes its metric completely, we may identify $\mathcal{A}_5$ and $\mathcal{B}_5$ with $\RR^{10}$ --- the space of quadratic forms on $\RR^4$.
 This way we can think that $\mathcal{A}_5$ and $\mathcal{B}_5$ are convex cones in $\RR^{10}$.
 
-The set $\mathcal{B}_5$ is a cone so it does not have extremal points except the origin (the origin corresponds to degenerate metric with all zero distances).
+The set $\mathcal{B}_5$ is a cone so it does not have extremal points except the origin.
+The origin corresponds to degenerate metric with all zero distances.
 But $\mathcal{B}_5$ is a cone over a convex compact set $\mathcal{B}_5'$ in the sphere $\mathbb{S}^9\subset \RR^{10}$.
-The extremal points of $\mathcal{B}_5'$ correspond to extremal half-lines of $\mathcal{B}_5$.
-If a metric $\rho$ on an extremal half-line can lie in the interior of a line segment between metrics $\rho'$ and $\rho''$ in $\mathcal{B}_5$, then both metrics $\rho'$ and $\rho''$ are proportional to $\rho$.
-Such metrics (and the corresponding metric spaces) will be called \emph{extremal}.
-Note that the following proposition implies the theorem.
+The extremal points of $\mathcal{B}_5'$ correspond to extremal half-lines of $\mathcal{B}_5$;
+metrics on extremal half-lines will be called \emph{extremal}.
+If an extremal metric $\rho$ lies in the interior of a line segment between metrics $\rho'$ and $\rho''$ in $\mathcal{B}_5$, then both metrics $\rho'$ and $\rho''$ are proportional to $\rho$.
 
 Since Lang--Schroeder--Sturm inequalities are necessary for existance of isometric embedding into nonnegatively curved Alexandrov space,
 we have that 
 \[\mathcal{A}_5\subset\mathcal{B}_5.\]
-In order to prove the theorem we need to show that the opposite inclusion holds as well.
+To prove the theorem we need to show that the opposite inclusion holds as well.
 Since $\mathcal{B}_5$ is the convex hull of its extremal metrics, it is sufficient to prove the following:
 
 \begin{thm}{Proposition}\label{prop:main}
-Given an extremal space $F$ in $\mathcal{B}_5$ there is an Alexandrov space that contains an isometric copy of $F$.
+Given an extremal space $F$ in $\mathcal{B}_5$, there is a complete nonnegatively curved Riemannian manifold that contains an isometric copy of $F$.
 \end{thm}
 
-Note that any extremal space  $F$ contain a tense set.
+\parit{Proof.}
+Note that any extremal space  $F$ contains a tense set.
 If not then arbitrary slight change of metric keeps it in $\mathcal{B}_5$;
 the latter is impossible for an extremal metric.
 
-The proof of proposition will be broken into cases:
+The remaining part of the proof is broken into cases:
 \begin{itemize}
-\item $F$ contains a 5-point  tense set; it follows from \ref{clm:W(w)==0}.
-\item $F$ contains a 4-point  tense set; proved in Section~\ref{sec:4-tense}.
-\item $F$ contains only 3-point  tense sets; proved in Section~\ref{sec:3-tense}.
+\item $F$ contains a 5-point  tense set; it follows from \ref{clm:W(w)==0}. In this case the needed Riemannian manifold is a Euclidean space.
+\item $F$ contains a 4-point  tense set; it follows from in Proposition~\ref{prop:4-tense}.
+\item $F$ contains only 3-point  tense sets; it follows from in Proposition~\ref{prop:3-tense}.
+\qeds
 \end{itemize}
 
 \section{Four-point tense set}\label{sec:4-tense}
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:4-tense}
 Suppose that a 5-point metric space $F$ satisfies all Lang--Schroeder--Sturm inequalities and contains a 4-point tense set.
-Then $F$ is isometric to a subset of doubling of a convex polyhedral set in $\RR^3$;
-in particular, $F$ admits an isometric embedding into a nonnegatively curved Alexandrov space.
+Then $F$ is isometric to a subset of complet nonnegatively curved Riemannian manifold. 
 \end{thm}
 
-\parit{Proof.}
-Let us label the points in $F$ by $p$, $q$, $x_1$, $x_2$, and $x_3$ so that the set $\{p,x_1,x_2,x_3\}$ is tense with marked point $p$.
+In the following proof we first construct a nonnegatively curved Alexandrov space $W$ with isometric copy of $F$ and then smooth it.
+The space $W$ will be a doubling of a convex polyhedral set in $\RR^3$.
 
-By \ref{clm:W(w)==0}, we can choose an array $(\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3)$ in $\RR^3$ that is isometric to the array $(p$, $x_1$, $x_2$, $x_3)$ in $F$.
-Let us construct points $\tilde q$, $\tilde q_1$, $\tilde q_2$, $\tilde q_3$, $\tilde s\in\RR^3$ such that
+\parit{Proof.}
+Let us label the points in $F$ by $p$, $q$, $x_1$, $x_2$, and $x_3$ so that the array $(p,x_1,x_2,x_3)$ is tense with marked point $p$.
+
+By \ref{clm:W(w)==0}, we can choose an array $(\tilde p, \tilde x_1, \tilde x_2, \tilde x_3)$ in $\RR^2$ that is isometric to  $(p, x_1, x_2, x_3)$.
+Consider $\RR^2$ as a plane in $\RR^3$.
+
+Note that the (4+1)-comparison implies the existance of point $\tilde q\in\RR^3$ such that
 \begin{align*}
-|\tilde p-\tilde q|&=|p-q|,
+&&
+|\tilde x_i-\tilde q|_{\RR^3}&\ge|x_i-q|_F,
 &
-|\tilde x_i-\tilde q|&\ge|x_i-q|,
-\\
-|\tilde x_i-\tilde q_i|&=|x_i-q|,
+|\tilde p-\tilde q|_{\RR^3}&=|p-q|_F
+\intertext{for any $i$. 
+Further, note that there are points $\tilde q_1$, $\tilde q_2$, $\tilde q_3$ in the plane that contains $\tilde p, \tilde x_1, \tilde x_2$, and $\tilde x_3$ such that}
+|\tilde p-\tilde q_i|_{\RR^3}&\ge |p-q|_F,
 &
-|\tilde x_j-\tilde q_i|&\ge|x_j-q|,
+|\tilde x_j-\tilde q_i|_{\RR^3}&\ge|x_j-q|_F,
 &
-|\tilde p-\tilde q_i|&\ge |p-q|.
-\\
-|\tilde p-\tilde s|&\le|p-q|,
-&
-|\tilde x_i-\tilde s|&\le|x_i-q|.
+|\tilde x_i-\tilde q_i|_{\RR^3}&=|x_i-q|_F,
 \end{align*}
 for all $i\ne j$.
-???
+The existence of such point follow from the following inequalities and equalities
+\begin{align*}
+\angk{x_i}{q}{x_j}+\angk{x_i}{q}{x_k}+\angk{x_i}{x_j}{x_k}&\le 2\cdot\pi,
+&
+\angk{x_i}{q}{x_j}&=\measuredangle\hinge{\tilde x_i}{\tilde q}{\tilde x_j},
+\\
+\angk{x_i}{q}{p}+\angk{x_i}{q}{x_j}+\angk{x_i}{p}{x_j}&\le 2\cdot\pi,
+&
+\angk{x_i}{q}{p}&=\measuredangle\hinge{\tilde x_i}{\tilde q}{\tilde p}.
+\end{align*}
+for any permutation $(i,j,k)$ of $(1,2,3)$.
+
+Now let us show that there is a point $\tilde s\in\RR^2$ such that
+\begin{align*}
+|\tilde p-\tilde s|_{\RR^3}&\le|p-q|_F,
+&
+|\tilde x_i-\tilde s|_{\RR^3}&\le|x_i-q|_F.
+\end{align*}
+for all $i$.
+In other words, we need to show that intersection of the following 4 closed balls have nonempty intersection: 
+$\bar B[\tilde p,|p-q|_F]$ and
+$\bar B[\tilde x_i,|x_i-q|_F]$ for all $i$.
+Indeed, by the overlap lemma \cite{alexander2019alexandrov}, any 3 of these balls have nonempty intersection;
+it remains to apply Helly's theorem.
 
 The four perpendicular bisectors to 
 $[\tilde s, \tilde q]$, 
 $[\tilde s, \tilde q_1]$, 
 $[\tilde s, \tilde q_2]$, 
-$[\tilde s, \tilde q_3]$ cut from $\RR^3$ a closed convex set $V$ that contains $\tilde s$.
+$[\tilde s, \tilde q_3]$ cut from $\RR^3$ a closed convex set $V$ that contains $\tilde s$;
+it might be a one-sided infinite triangular prism or, if $\tilde q$ lies in the plane of the triangle, a two-sided infinte quadrangular prism.
 Note that $V$ contains the points $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ as well.
+
 Consider the doubling $W$ of $V$ with respect to its boundary;
 denote by $\iota_1$ and $\iota_2$ the two isometric embedding $V\to W$.
-It remains to show that the array $(\iota_1(\tilde p)$, $\iota_1(\tilde x_1)$, $\iota_1(\tilde x_2)$, $\iota_1(\tilde x_3)$,  $\iota_2(\tilde s))$ in $W$ is isometric to the array $(p$, $q$, $x_1$, $x_2$, $x_3)$ n $F$.
-???
+By construction, the array $\hat p=(\iota_1(\tilde p)$, $\hat x_1=\iota_1(\tilde x_1)$, $\hat x_2=\iota_1(\tilde x_2)$, $\hat x_3=\iota_1(\tilde x_3)$,  $\hat s=\iota_2(\tilde s))$ in $W$ is isometric to the array $(p, q, x_1, x_2, x_3)$ in $F$.
+
+Finally, we need to show that the obtained space can be smoothed into a Riemannian manifold that still has an isometric copy of $F$.
+Indeed, all the minimizing geodesics between the 5-point subspace do not visit singular set of $W$ therefore slight change of metric in a neighborhood of the singular set will not create a problem.
+We may stat with the subset $V'\subset V$ that lies on the distance $\delta>0$,
+think of $V'$ lying in $\RR^4$, pass to its $\eps$-neighborhood.
+The boundary of the obtained neighborhood is a convex hypersurface $W'$ in $\RR^4$.
+For appropriately chousen small $\eps$ and $\delta$, it meets all our conditions except it is only $C^{1,1}$-smooth.
+It is straightforward to smooth it so that the metric changes only near edges of $V$.
+In this case so the set $F$ remains to be isometrically embedded.
 \qeds
 
 
 \section{Three-point tense sets}\label{sec:3-tense}
 
+\begin{thm}{Proposition}\label{prop:3-tense}
+Suppose that an extremal 5-point metric space $F$ contains only 3-point tense sets.
+Then $F$ is isometric to a subset in a nonnegatively curved Riemannian manifold.
+Moreover we can assume that $L$ is homeomorphic to a circle or the plane.
+\end{thm}
+
+A three-point tense set $\{a,b,c\}$ with marked point $b$ will be briefly denoted by $abc$.
+Observe that $F$ has tense set $abc$ if and only if 
+\[|a-b|_F+|b-c|_F\z=|a-c|_F.\]
+
 \begin{wrapfigure}{r}{20mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-200}
 \end{wrapfigure}
 
-A three-point tense set $\{a,b,c\}$ with marked point $b$ will be briefly denoted by $abc$.
-Observe that $F$ has tense set $abc$ if and only if we have equality in the triangle inequality $|a-b|+|a-c|\z=|b-c|$.
+On the diagrams, we will mark three-point tense sets by connecting its points by a smooth curve so that the marked point is in the middle.
+For example the given diagram describes a metric on $\{a,b,c,d,e\}$ with five tense sets $abc$, $bcd$, $cda$, $dae$, $aec$.
 
-On the diagrams, three-point tense sets will be marked by a smooth curve with marked point in the middle.
-For example the diagram describes a metric on $\{a,b,c,d,e\}$ with five tense sets $abc$, $bcd$, $cda$, $dae$, $aec$.
-
-\begin{thm}{Proposition}\label{prop:3-tense}
-Suppose that an extremal 5-point metric space $F$ contains only 3-point tense sets.
-Then $F$ is isometric to a subset in a nonnegatively curved Alexandrov space $L$.
-Moreover we can assume that $L$ is homeomorphic to a circle or disc.
-\end{thm}
-
-The proof of the proposition relies on the following lemma:
+The proof of the proposition relies on the following classification:
 
 \begin{thm}{Key lemma}\label{lem:key}
-Let $F$ be an extremal 5-point metric space; suppose that it has no tense subsets with 4 or 5 elements.
+Let $F$ be an extremal 5-point metric space; suppose that it has no tense subsets with 4 and 5 points.
 Then $F$ has one of three configurations of tense sets shown on the diagram.
 
 In other words, the points in $F$ can be labeled by $\{a,b,c,d,e\}$ so that it has
@@ -266,23 +385,25 @@ one of the following three tense-set configurations:
 
 \end{thm}
 
-Let us first show that the lemma implies the remaining case in \ref{prop:main}.
+In the following proof we use only small part of the classification in Lemma~\ref{lem:key},
+but the proof of this \emph{small part} takes nearly as long as the complete classification.
 
 \begin{wrapfigure}{r}{20mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-207}
 \end{wrapfigure}
 
 \parit{Proof of \ref{prop:3-tense} modulo \ref{lem:key}.}
 Suppose that $F$ has tense configuration as on the diagram.
-In other words, we can can label points in $F$  by $\{x_1,x_2,x_3,x_4,x_5\}$ so that
-\[|x_{i}-x_{i-1}|+|x_{i+1}-x_{i}|=|x_{i+1}-x_{i-1}|\]
+In other words, we can label points in $F$  by $\{x_1,x_2,x_3,x_4,x_5\}$ so that
+\[|x_{i}-x_{i-1}|_F+|x_{i+1}-x_{i}|_F=|x_{i+1}-x_{i-1}|_F\]
 for any $i\pmod 5$.
-In this case $F$ is isometric to a 5-point subset in the circle of length $|x_2-x_1|+\dots+|x_5-x_4|+|x_1-x_5|$.
+In this case $F$ is isometric to a 5-point subset in the circle of length 
+$\ell=|x_1-x_2|_F+\dots+|x_4-x_5|_F+|x_5-x_1|_F$.
 
 By the key lemma it remains to consider the case of metric that has two tense triples with common marked point.
-In this case, we can relabel $F$ so that these two tense triples are $v_1xv_2$ and $w_1xw_2$.
+In this case, we can relabel $F$ by $x,v_1,v_2,w_1,w_2$ so that $F$ has tense triples $v_1xv_2$ and $w_1xw_2$.
 
 \begin{wrapfigure}{r}{25mm}
 \vskip-4mm
@@ -290,54 +411,154 @@ In this case, we can relabel $F$ so that these two tense triples are $v_1xv_2$ a
 \includegraphics{mppics/pic-209}
 \end{wrapfigure}
 
-The required Alexandrov space $L$ is homeomorphic to the disc;
-it admits a triangluation into four triangles with vertices $\hat x$, $\hat v_1$, $\hat v_2$, $\hat w_1$, $\hat w_2$ as shown on the diagram.
+First we construct an Alexandrov space $L$ --- a disc with a triangluation into four triangles with vertices $\hat x$, $\hat v_1$, $\hat v_2$, $\hat w_1$, $\hat w_2$ as shown on the diagram.
 Each of four triangles has flat metric with at most one singular point;
-their sides are the same as in the model triangle and angles are at least as large as the corresponding model angle.
+in other words each triangle is a solid geodesic triangle in a cone.
+The sides of the triangles are the same as in their model triangles.
 
 Note that the metric on the obtained disc is completely determined by the 12 angles of triangles.
-It remains to choose these angles in such a way that the map $F\to L$ defined by $x\mapsto \hat x$, $v_i\mapsto \hat v_i$, $w_i\mapsto \hat w_i$ is distance preserving.
-The latter holds if we have the have the following inequalities on angles
+It remains to choose these angles in such a way that the map $\iota\:F\to L$ defined by $x\mapsto \hat x$, $v_i\mapsto \hat v_i$, $w_i\mapsto \hat w_i$ is distance-preserving.
+Note that by constuction $\iota$ is distance-nonexpanding, therefore we only need to show that it is distance-noncontracting.
+
+This part is divided into two steps.
+
+\parit{Step 1.} In this step we describe three groups of conditions on these 12 angles, and show that together they guarantee that $L$ is has nonnegative curvature in the sense of Alexandrov and $\iota$ is distance-preserving.
+
+First we need that the 12 angles of the triangles are at least as large as the corresponding model angles;
+that is,
 \[
 \measuredangle \hinge {\hat x}{\hat v_i}{\hat w_j}\ge \angk{x}{v_i}{w_j}, 
 \quad
-\measuredangle \hinge {\hat v_i}{\hat x}{\hat w_j}\ge \angk{x}{v_i}{w_j},
+\measuredangle \hinge {\hat v_i}{\hat x}{\hat w_j}\ge \angk{v_i}{x}{w_j},
 \quad
-\measuredangle \hinge {\hat w_j}{\hat x}{\hat v_i}\ge \angk{x}{v_i}{w_j},
+\measuredangle \hinge {\hat w_j}{\hat x}{\hat v_i}\ge \angk{w_j}{x}{v_i},\leqno({*})
 \]
-for all $i$ and $j$ and the following more complicated inequalities.
-For a path from three edges in the triangulation connecting $v_1$ to $v_2$ (or $w_1$ to $w_2$), say $v_1w_1xv_2$.
-Consider the polygonal line in the plane $\tilde v_1\tilde w_1\tilde x\tilde v_2$ with the same angles and sides such that $\tilde v_1$ and $\tilde v_2$ lie on the opposite sides from the line $\tilde w_1\tilde x$.
-Set $\tilde Z(v_1w_1xv_2)\df |\tilde v_1-\tilde v_2|$.
-Then we should have eight inequalities
-\begin{align*}
-|v_1- v_2|&\le \tilde Z(v_1w_1xv_2),
+for all $i$ and $j$.
+Note that this condition implies that side of each edge of the triangulation is a convex set in $L$.
+In particular, it implies tha $\iota$ preserves the distances between all pairs $(x,v_i)$, $(x,w_j)$, and $(v_i,w_j)$ for all $i$ and $j$.
+Moreover, it implies that any minimizing geodesic in $L$ may cross an edge $xv_i$ or $xw_j$ at most once.
+
+Further choose a three-edge path in the triangulation connecting $v_1$ to $v_2$ (or $w_1$ to $w_2$), say $v_1w_1xv_2$.
+Consider the polygonal line in the plane $\tilde v_1\tilde w_1\tilde x\tilde v_2$ with the same angles and sides as in $L$ such that $\tilde v_1$ and $\tilde v_2$ lie on the opposite sides from the line $\tilde w_1\tilde x$.
+Set 
+\[\tilde Z(v_1w_1xv_2)\df |\tilde v_1-\tilde v_2|.\]
+The next group of conditions has eight inequalities:
+\[
+\begin{aligned}
+|v_1- v_2|&\le \tilde Z(v_1w_ixv_2),
 &
-|v_1- v_2|&\le \tilde Z(v_1xw_1v_2),
+|v_1- v_2|&\le \tilde Z(v_1xw_iv_2),
 \\
-|v_1- v_2|&\le \tilde Z(v_1w_2xv_2),
+|w_1- w_2|&\le \tilde Z(w_1v_ixw_2),
 &
-|v_1- v_2|&\le \tilde Z(v_1xw_2v_2),
-\\
-|w_1- w_2|&\le \tilde Z(w_1v_1xw_2),
-&
-|w_1- w_2|&\le \tilde Z(w_1xv_1w_2),
-\\
-|w_1- w_2|&\le \tilde Z(w_1v_2xw_2),
-&
-|w_1- w_2|&\le \tilde Z(w_1xv_2w_2).
-\end{align*}
-In addition, to keep the disc convex, we need
+|w_1- w_2|&\le \tilde Z(w_1xv_iw_2).
+\end{aligned}
+\leqno({*}{*})
+\]
+for any $i$.
+This condition implies that $\iota$ preserves the distance between two remaining pairs $(v_1,v_2)$ and $(w_1,w_2)$.
+Indeed, suppose that a minimizing geodesic $\gamma$ from $\hat v_1$ to $\hat v_2$ is shorter than $|v_1-v_2|_F$.
+Since two edges $\hat v_1\hat x$ and $\hat x\hat v_2$ have total length $|v_1-v_2|_F$,
+we can assume that $\gamma$ runs in a pair of two adjacent triangles.
+We can assume that it runs in $[v_1xw_1]$ and $[v_2xw_1]$.
+From above $\gamma$ cross the edge $xw_1$ once.
+Denote by $z_1$ and $z_2$ the singular points in the triangles $[v_1xw_1]$ and $[v_2xw_1]$.
+We have 4 options, either 
+\begin{itemize}
+\item Both points $z_1$ and $z_2$ lie on the left side from $\gamma$. In this case the statement follows from two inequalities in $({*})$; namely
+\[\measuredangle \hinge {\hat x}{\hat v_i}{\hat w_1}\ge \angk{x}{v_i}{w_1}\]
+for both choices of $i$.
+\item Both points $z_1$ and $z_2$ lie on the right side from $\gamma$. In this case the statement follows from two inequalities in $({*})$; namely
+\[\measuredangle \hinge {\hat w_1}{\hat v_i}{\hat x}\ge \angk{w_1}{v_i}{x}\]
+for both choices of $i$.
+\item Points $z_1$ lies on the left side from $\gamma$, 
+and $z_2$ lies on its right side. In this case the statement follows from two inequalities in $({*}{*})$; namely
+\[|v_1- v_2|\le \tilde Z(v_1xw_1v_2).\]
+\item Points $z_1$ lies on the right side from $\gamma$, 
+and $z_2$ lies on its left side. In this case the statement follows from two inequalities in $({*}{*})$; namely
+\[|v_1- v_2|\le \tilde Z(v_1w_1xv_2).\]
+\end{itemize}
+
+We need one more group of conditions:
 \[
 \measuredangle \hinge {\hat v_i}{\hat x}{\hat w_1}
 +\measuredangle \hinge {\hat v_i}{\hat x}{\hat w_2}
-\le pi,
+\le \pi,
 \quad
 \measuredangle \hinge {\hat w_i}{\hat x}{\hat v_1}
 +\measuredangle \hinge {\hat w_i}{\hat x}{\hat v_2}
-\le pi.
+\le \pi.
+\leqno(\asterism)
 \]
 for any $i$.
+These inequalities in $(\asterism)$ imply that $L$ has convex boundary, and therefore, it is an Alexandrov space with nonnegative curvature.
+
+\parit{Step 2.}
+In this step we show that one can choose the 12 angles so that they meet all the conditions $({*})$, $({*}{*})$, and $(\asterism)$.
+This part is done by means of elementary geometry.
+
+Applying (4+1) comparison for the array $x$, $v_1$, $v_2$, $w_1$, $w_2$ we get points $\tilde x$, $\tilde v_1$, $\tilde v_2$, $\tilde w_1$, $\tilde w_2$ such that 
+\begin{align*}
+|\tilde x-\tilde v_i|_{\HH}&=|x-v_i|_{A},
+&
+|\tilde x-\tilde w_i|_{\HH}&=|x-w_i|_{A},
+&
+|\tilde v_i-\tilde w_j|_{\HH}&\ge |v_i-w_j|_{A},
+\\
+|\tilde v_1-\tilde v_2|_{\HH}&\ge |v_1-v_2|_{A},
+&
+|\tilde w_1-\tilde w_2|_{\HH}&\ge |w_1-w_2|_{A}.
+\end{align*}
+The triangle inequality implies equality in the last two inequalities;
+that is, each of points $(\tilde v_1,\tilde x,\tilde v_2)$ and $(\tilde w_1,\tilde x,\tilde w_2)$ lies on one line.
+In particular, the whole configuration lies in $\RR^2$.
+
+Set 
+\[\measuredangle \hinge {\hat x}{\hat v_i}{\hat w_j}
+=
+\measuredangle \hinge {\tilde x}{\tilde v_i}{\tilde w_j}\]
+for all $i$ and $j$.
+Evidently this choice meets four conditions in $({*})$.
+We still need to choose the remaining 8 angles $\measuredangle \hinge {\hat v_i}{\hat w_j}{\hat x}$ and $\measuredangle \hinge {\hat w_j}{\hat v_i}{\hat x}$ for all $i$ and $j$.
+To do this we will extend the configuration $\tilde x,\tilde v_1,\tilde v_2,\tilde w_1,\tilde w_2$ by 8 more points 
+$\tilde v_{ij}$, $\tilde w_{ij}$ so that we can set 
+\[
+\measuredangle \hinge {\hat v_i}{\hat w_j}{\hat x}=\measuredangle \hinge {\tilde v_i}{\tilde w_{ij}}{\tilde x},
+\qquad
+\measuredangle \hinge {\hat w_j}{\hat v_i}{\hat x}=\measuredangle \hinge {\tilde w_j}{\tilde v_{ji}}{\tilde x}.
+\]
+We assume that $|\tilde v_i-\tilde w_{ij}|_{\RR^2}=|v_i-w_j|$ and $|\tilde w_i-\tilde v_{ij}|_{\RR^2}=|w_i-v_j|$ for all $i$ and~$j$.
+The conditions $({*})$, and $({*}{*})$ will follow if we could choose the points so that
+\begin{align*}
+|\tilde x-\tilde v_{ij}|&\ge | x-v_j|,
+&
+|\tilde x-\tilde w_{ij}|&\ge | x-w_j|,
+\\
+|\tilde v_{j'}-\tilde v_{ij}|&\ge | v_{j'}-v_j|,
+&
+|\tilde w_{j'}-\tilde w_{ij}|&\ge |w_{j'}-w_j|,
+\end{align*}
+here we assume that $j'\ne j$, so $2'=1$ and $1'=2$.
+
+\begin{wrapfigure}{r}{35mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-255}
+\end{wrapfigure}
+
+The needed points $\tilde w_{21}$ and $\tilde w_{22}$ can be chosen to be reflections of $\tilde w_{1}$ and $\tilde w_{2}$ respectively across a line $\ell$ that we are about to describe.
+Suppose $\triangle \tilde s\tilde w_1 \tilde w_2$ is a model triangle for $\triangle v_2w_1w_2$ such that $\tilde s$ lies on the opposite side from $\tilde v_1$ with respect to the line $\tilde w_1\tilde w_2$.
+Then $\ell$ is the perpendicular bisector of $[\tilde v_1 \tilde s]$.
+Since $|\tilde w_i-\tilde v_1|\ge | w_i- v_1|=|\tilde w_i-\tilde s|$ the points $\tilde w_1$ and $\tilde w_2$ lie on the opposite side from $\tilde v_1$ with respect to $\ell$.
+Whence the conditions on $\tilde w_{21}$ and $\tilde w_{22}$ follow.
+In addition, by construction we get $(\asterism)$ at $\tilde v_2$.
+
+Similarly we construct the remaining 6 points.
+
+\parit{Final step.} It remains to show modify $L$ into a a plane with smooth Riemannian metric.
+First note that $L$ is a convex subset of a plane with at most 4 singular points.
+Further the geodesics between the 5-point subset in $L$ do not visit these singular points.
+Therefore slight smoothing around singularities does not crates a problem.
 \qeds
 
 
@@ -350,25 +571,26 @@ The latter contradicts that $F$ is extreme.
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-203}
+\label{page:COPY}
 \end{wrapfigure}
 
 Suppose that two tense triples sharing two points.
 All possible 4 configurations are shown on the diagram; they will be refereed as $C$, $O$, $P$, and $Y$ respectively.
 Observe that in the configurations $P$ and $Y$, the set $\{a,b,c,d\}$ with marked point $b$ must be tense.
-Therefore $P$ and $Y$ cannot appear in $F$ since it has no 4-point tense sets.
+If $P$ or $Y$ appear in $F$, then $F$ has a 4-point tense set.
+That is, $P$ and $Y$ cannot appear.
 
 Each tense triple gives at most two linear restrictions on the quadratic form.
 The space of quadratic forms on $\RR^4$ is 10-dimensional.
 Therefore, in order to be on an extremal ray, the quadratic form has to have at least 9 linear restrictions.
 Hence $F$ contains at least 5 tense triples.
 
-The remaining part of the proof is brute force search of all possible configurations;
-it is sketched on the following diagram.
+The remaining part of the proof is brute force search of all possible configurations.
+This search is roughly sketched on the following diagram that needs some explantion.
 \begin{figure}[ht!]
 \centering
 \includegraphics{mppics/pic-210}
 \end{figure}
-
 We start with a configuration with one triple marked by solid line.
 Chose a pair not in any triple of configuration;
 connect it by a dashed line and search for an extra triple with this pair inside.
@@ -387,20 +609,17 @@ such that each pair belongs to one of tense triples (those that have no dashed l
 So we are left with three cases \ref{abcdead}, \ref{abcda+aec+bed}, and \ref{abcdab+aec+bed} marked in bold;
 it proves the lemma.
 
-The table describes procedures at each node on the diagram;
-it use shortcut notation which we need to explain.
+The following table describes procedures at each node on the diagram.
+It uses the following notations.
 If a candidate triple, say $abd$ violates $Y$ rule with an existing triple, say $abc$, then we write \xcancel{$abd$}$Yabc$.
 Similarly, if a candidate triple, say $adb$ violates $P$ rule with an existing triple, say $abc$, then we write \xcancel{$adb$}$Pabc$.
 Further, assume a candidate, say $dbe$, does not violates the rules and so it can be added.
 Suppose that after adding this triple we get a new configuration, say \ref{abc+dbe};
 in this case we write $dbe{\to}$\ref{abc+dbe}.
-In the cases \ref{a(bcd)e+bcd}, \ref{abcdead}, \ref{abcda+aec+bed}, and \ref{abcdab+aec+bed} we check all triples up to symmetry.
-
-The used symmetries are marked in the third column.
 Note that the new configuration is relabeled arbitrarily.
+In the cases \ref{a(bcd)e+bcd}, \ref{abcdead}, \ref{abcda+aec+bed}, and \ref{abcdab+aec+bed} we check all triples up to symmetry.
+The used symmetries are marked in the third column.
 
-
-\medskip
 
 \newcounter{foo}
 \setcounter{foo}{0}
@@ -777,6 +996,9 @@ $D_4$
 \hline
 \end{longtable}
 \qeds
+
+
+
 
 
 

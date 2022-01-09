@@ -1491,5 +1491,31 @@ draw s2 shifted (2*z.shift);
 draw s3 shifted (3*z.shift);
 endfig;
 
+beginfig(501)
+save u,p;
+path p[];
+u:=.5cm;
+picture s[];
+
+s1= image(draw circle(origin,u);
+dOt (0,1)*u, (0,1)*u rotated 90, (0,1)*u rotated -90, (0,1)*u rotated 180;
+);
+
+draw s1;
+
+s2=image(
+z.a2=(0,-1)*u;
+z.b2=(-.8,.6)*u;
+z.c2=(0,1)*u;
+z.d2=(.8,.6)*u;
+draw z.a2{-8,5}..z.b2..z.c2..z.d2..{-8,-5}z.a2;
+dOt z.a2,z.b2,z.c2,z.d2;
+);
+
+draw s2 shifted ((3,0)*u);
+
+
+endfig;
+
 
 end

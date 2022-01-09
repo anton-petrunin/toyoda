@@ -527,8 +527,8 @@ draw z.v2{(z.w2-z.v2) rotated -25}..z.w2;
 dOt z.x,z.v1,z.v2,z.w1,z.w2;
 
 label.lrt(btex $\hat x$ etex, z.x);
-label.rt(btex $\hat v_1$ etex, z.v1);
-label.lft(btex $\hat v_2$ etex, z.v2);
+label.rt(btex $\hat v_2$ etex, z.v1);
+label.lft(btex $\hat v_1$ etex, z.v2);
 label.top(btex $\hat w_1$ etex, z.w1);
 label.bot(btex $\hat w_2$ etex, z.w2);
 
@@ -1312,6 +1312,142 @@ label.lrt(btex $e$ etex, z.e16);
 );
 
 draw s16;
+endfig;
+
+beginfig(351)
+save u,p;
+path p[];
+u:=1cm;
+picture s[];
+
+z.x=origin;
+z.v1=(1,0)*u;
+z.v2=-1.1*z.v1;
+z.w1=(.1,1)*u;
+z.w2=-1.1*z.w1;
+z.z1=(-.3,.3)*u;
+z.z2=(.3,.3)*u;
+
+draw z.v1--z.v2;
+draw z.w1--z.x;
+draw z.v1{(z.w1-z.v1) rotated -25}..z.w1;
+%draw z.v1{(z.w2-z.v1) rotated 25}..z.w2;
+draw z.v2{(z.w1-z.v2) rotated 25}..z.w1;
+%draw z.v2{(z.w2-z.v2) rotated -25}..z.w2;
+draw z.v2{1,.4}...{1,-.4}z.v1 penbold;
+
+dOt z.x,z.v1,z.v2,z.w1,z.z1,z.z2;
+
+label.bot(btex $\hat x$ etex, z.x);
+label.rt(btex $\hat v_2$ etex, z.v1);
+label.lft(btex $\hat v_1$ etex, z.v2);
+label.top(btex $\hat w_1$ etex, z.w1);
+whitelabel.top(btex $\hat z_1$ etex, z.z1);
+whitelabel.top(btex $\hat z_2$ etex, z.z2);
+
+
+endfig;
+
+beginfig(352)
+save u,p;
+path p[];
+u:=1cm;
+picture s[];
+
+z.x=origin;
+z.v1=(1,0)*u;
+z.v2=-1.1*z.v1;
+z.w1=(.1,1)*u;
+z.w2=-1.1*z.w1;
+z.z1=(-.3,.3)*u;
+z.z2=(.3,.3)*u;
+
+draw z.v1--z.v2;
+draw z.w1--z.x;
+draw z.v1{(z.w1-z.v1) rotated -25}..z.w1;
+%draw z.v1{(z.w2-z.v1) rotated 25}..z.w2;
+draw z.v2{(z.w1-z.v2) rotated 25}..z.w1;
+%draw z.v2{(z.w2-z.v2) rotated -25}..z.w2;
+draw z.v2{1,1.2}...(.7[z.x,z.w1])...{1,-1.2}z.v1 penbold;
+
+dOt z.x,z.v1,z.v2,z.w1,z.z1,z.z2;
+
+label.bot(btex $\hat x$ etex, z.x);
+label.rt(btex $\hat v_2$ etex, z.v1);
+label.lft(btex $\hat v_1$ etex, z.v2);
+label.top(btex $\hat w_1$ etex, z.w1);
+whitelabel.top(btex $\hat z_1$ etex, z.z1);
+whitelabel.top(btex $\hat z_2$ etex, z.z2);
+
+
+endfig;
+
+beginfig(353)
+save u,p;
+path p[];
+u:=1cm;
+picture s[];
+
+z.x=origin;
+z.v1=(1,0)*u;
+z.v2=-1.1*z.v1;
+z.w1=(.1,1)*u;
+z.w2=-1.1*z.w1;
+z.z1=(-.3,.3)*u;
+z.z2=(.3,.3)*u;
+
+draw z.v1--z.v2;
+draw z.w1--z.x;
+draw z.v1{(z.w1-z.v1) rotated -25}..z.w1;
+%draw z.v1{(z.w2-z.v1) rotated 25}..z.w2;
+draw z.v2{(z.w1-z.v2) rotated 25}..z.w1;
+%draw z.v2{(z.w2-z.v2) rotated -25}..z.w2;
+draw z.v2{1,.4}..{1,3}(.4[z.x,z.w1]){1,3}..{1,-1.2}z.v1 penbold;
+
+dOt z.x,z.v1,z.v2,z.w1,z.z1,z.z2;
+
+label.bot(btex $\hat x$ etex, z.x);
+label.rt(btex $\hat v_2$ etex, z.v1);
+label.lft(btex $\hat v_1$ etex, z.v2);
+label.top(btex $\hat w_1$ etex, z.w1);
+whitelabel.top(btex $\hat z_1$ etex, z.z1);
+whitelabel.top(btex $\hat z_2$ etex, z.z2);
+
+
+endfig;
+
+beginfig(354)
+save u,p;
+path p[];
+u:=1cm;
+picture s[];
+
+z.x=origin;
+z.v1=(1,0)*u;
+z.v2=-1.1*z.v1;
+z.w1=(.1,1)*u;
+z.w2=-1.1*z.w1;
+z.z1=(-.3,.3)*u;
+z.z2=(.3,.3)*u;
+
+draw z.v1--z.v2;
+draw z.w1--z.x;
+draw z.v1{(z.w1-z.v1) rotated -25}..z.w1;
+%draw z.v1{(z.w2-z.v1) rotated 25}..z.w2;
+draw z.v2{(z.w1-z.v2) rotated 25}..z.w1;
+%draw z.v2{(z.w2-z.v2) rotated -25}..z.w2;
+draw z.v2{1,1.2}..{1,-3}(.4[z.x,z.w1]){1,-3}..{1,-.4}z.v1 penbold;
+
+dOt z.x,z.v1,z.v2,z.w1,z.z1,z.z2;
+
+label.bot(btex $\hat x$ etex, z.x);
+label.rt(btex $\hat v_2$ etex, z.v1);
+label.lft(btex $\hat v_1$ etex, z.v2);
+label.top(btex $\hat w_1$ etex, z.w1);
+whitelabel.top(btex $\hat z_1$ etex, z.z1);
+whitelabel.top(btex $\hat z_2$ etex, z.z2);
+
+
 endfig;
 
 beginfig(401) 

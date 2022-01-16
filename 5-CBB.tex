@@ -38,8 +38,8 @@ pdfauthor={Nina Lebedeva and Anton Petrunin}}
 We give an if-and-only-if condition on a five-point metric spaces that admit embeddings into nonnegatively curved Riemannian manifolds.
 \end{abstract}
 
-\nofootnote{\textbf{Keywords:} CBB(0), finite metric space, comparison inequality, Alexandrov comparison, Lang--Schroeder--Sturm inequality.}
-\nofootnote{\textbf{MSC:} 53C23, 30L15, 51F99.}
+%\let\thefootnote\relax\footnote{\textbf{Keywords:} CBB(0), finite metric space, comparison inequality, Alexandrov comparison, Lang--Schroeder--Sturm inequality.}
+%\let\thefootnote\relax\footnote{\textbf{MSC:} 53C23, 30L15, 51F99.}
 
 \section{Introduction}
 
@@ -85,6 +85,8 @@ Question 6.1 in \cite{lebedeva-petrunin} might contain an answer.
 Our proof uses brute force search that was originally done on a computer.
 We want to thank Arseniy Akopyan and Alexander Gil who helped us with programming.
 We present a hand-made proof that was found later.
+Our paper is inspired by an unpublished note of Vladimir Zolotov and the first author;
+the results from this note are discussed briefly in the last section.
 
 
 \section{LSS(\textit{n}) and (\textit{n}+1)-comparison}
@@ -345,7 +347,8 @@ it might be a one-sided infinite triangular prism or, if $\tilde q$ lies in the 
 Note that $V$ contains the points $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ as well.
 
 Consider the doubling $W$ of $V$ with respect to its boundary;
-denote by $\iota_1$ and $\iota_2$ the two isometric embeddings $V\to W$.
+it is an Alexandrov space with nonnegative curvature \cite[5.2]{perelman:spaces2}.
+Denote by $\iota_1$ and $\iota_2$ the two isometric embeddings $V\to W$.
 By construction, the array $\hat p=(\iota_1(\tilde p)$, $\hat x_1=\iota_1(\tilde x_1)$, $\hat x_2=\iota_1(\tilde x_2)$, $\hat x_3=\iota_1(\tilde x_3)$,  $\hat s=\iota_2(\tilde s))$ in $W$ is isometric to the array $(p, q, x_1, x_2, x_3)$ in $F$.
 
 Finally, we need to show that the obtained space can be smoothed into a Riemannian manifold that still has an isometric copy of $F$.
@@ -489,7 +492,7 @@ Further, choose a three-edge path in the triangulation connecting $v_1$ to $v_2$
 Consider the polygonal line in the plane $\tilde v_1\tilde w_1\tilde x\tilde v_2$ with the same angles and sides as in $L$ such that $\tilde v_1$ and $\tilde v_2$ lie on the opposite sides from the line $\tilde w_1\tilde x$.
 Set 
 \[\tilde Z(v_1w_1xv_2)\df |\tilde v_1-\tilde v_2|.\]
-The next group of conditions has eight inequalities:
+The next group of conditions has eight zigzag comparisons:
 \[
 \begin{aligned}
 |v_1- v_2|&\le \tilde Z(v_1w_ixv_2),
@@ -1123,7 +1126,7 @@ $D_4$
 
 \section{Final remarks}
 
-\begin{wrapfigure}{r}{35mm}
+\begin{wrapfigure}{r}{30mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-501}
@@ -1138,7 +1141,7 @@ admits an embedding into a product of a circle and the Euclidean space.
 Similarly any 4-point space satisfying the nonpositive-curvature comparison admits an embedding into a product of a tripod and the Euclidean space.
 
 These two results are analogous to Wald's theorem mentioned above;
-they were obtained in an unpublished note by the first author and Vladimir Zolotov.
+they were obtained in an unpublished note by Vladimir Zolotov and the first author.
 
 Most of our arguments can be applied to arbitrary curvature bound;
 Section~\ref{sec:ext} is the only place where we essentially use that the bound is zero.

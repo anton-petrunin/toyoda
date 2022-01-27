@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{quad}
 
-\hypersetup{pdftitle={5-point comparison},
+\hypersetup{pdftitle={5-point Toponogov theorem},
 pdfauthor={Nina Lebedeva and Anton Petrunin}}
 
 \newcommand{\Addresses}{{\bigskip\footnotesize
@@ -29,7 +29,7 @@ pdfauthor={Nina Lebedeva and Anton Petrunin}}
 %\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
 
 
-\title{5-point comparison}
+\title{5-point Toponogov theorem}
 \author{Nina Lebedeva and Anton Petrunin}
 
 \date{}
@@ -357,6 +357,12 @@ In this case, there is a complement, say $U$, of a neighborhood of the singular 
 the 5-point set together with all the geodesics between them.
 After that we construct a smooth Riemannian manifold with nonnegative curvature that contains an isometric copy of $U$.
 
+\begin{wrapfigure}{r}{30mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-510}
+\end{wrapfigure}
+
 \parit{Step 1.}
 Consider the four ellipsoids $P$, $X_1$, $X_2$, $X_3$ with the major axise $|q-p|$, $|q-x_1|$, $|q-x_2|$,$|q-x_3|$, first focus at $\tilde s$, and the second focus at $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ respectively.
 The construction of the facets of $V$ implies that for each ellipsoid we can find a tangent plane that contains all the ellipsoids on one side --- these planes are the perpendicular bisectors to $[\tilde s\tilde q]$ and $[\tilde s\tilde q_i]$.
@@ -373,17 +379,19 @@ So we can assume that three or two ellipsoids are degenerate.
 Suppose all three $X_1$, $X_2$, $X_3$ are degenerate, then we can choose a planes $x_i$-planes tangent to $P$; it solves our problem.
 
 Suppose exactly two ellipsoins, say $X_1$, $X_2$,  are degenerate.
-If the sets of $p$-planes and $x_3$-planes are infinite, then it is easy to make such choice.
-Otherwise, either $P$ or $X_3$ lies in the convex hull of the rest of ellipsid.
+If the sets of $p$-planes and $x_3$-planes are infinite, then it is easy to make the required choice of planes.
+Otherwise, either $P$ or $X_3$ lies in the convex hull of the remaining three ellipsoids.
 Suppose it is $P$, draw a $p$-plane, note that it is also a $x_3$ plane.
-Then adding $x_1$- and/or $x_2$-plane if necessary solves the problem.
+Then add $x_1$- and/or $x_2$-plane if needed;
+it solves the problem.
+
 The case when $X_3$ lies in the convex hull of the rest is identical.
 
 \parit{Step 2.}
-Start with the subset $V'\subset V$ that lies on the distance $\pi\cdot\delta$.
+Start with the subset $V'\subset V$ that lies on the distance $\pi\cdot\delta$ from its boundary.
 Think of $V'$ lying in $\RR^4$, pass to its $2\cdot \delta$-neighborhood.
 The boundary of the obtained neighborhood is a convex hypersurface $W'$ in $\RR^4$.
-For small $\delta>0$, it meets all the required conditions, except it is only $C^{1,1}$.
+For small $\delta>0$, it meets all the required conditions, except it is only $C^{1,1}$-smooth.
 It is straightforward to smooth $W'$ so that the metric changes only near the edges of $V$.
 In this case, the set $F$ remains to be isometrically embedded in the obtained hypersurface.
 \qeds
@@ -1124,10 +1132,14 @@ $D_4$
 \end{longtable}
 \qeds
 
+\pagebreak
+
 \section{Final remarks}
 
+{
+
 \begin{wrapfigure}{r}{30mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-501}
 \end{wrapfigure}
@@ -1135,13 +1147,24 @@ $D_4$
 The 4-point case is much easier;
 the classification as in \ref{lem:key} gives only two cases on the diagram.
 Both admit an embedding into a circle.
-It can be used to show that any 4-point space satisfying the nonnegative-curvature comparison
-admits an embedding into a product of a circle and the Euclidean space.
+It can be used to prove the following statement.
 
-Similarly any 4-point space satisfying the nonpositive-curvature comparison admits an embedding into a product of a tripod and the Euclidean space.
+}
+
+\begin{thm}{Theorem}
+Any 4-point space satisfying the nonnegative-curvature comparison
+admits an embedding into a product of a circle and the Euclidean space.
+\end{thm}
+
+The following statement can be proved in a similar manner.
+
+\begin{thm}{Theorem} Any 4-point space satisfying the nonpositive-curvature comparison admits an embedding into a product of a tripod and the Euclidean space.
+\end{thm}
 
 These two results are analogous to Wald's theorem mentioned above;
 they were obtained in an unpublished note by Vladimir Zolotov and the first author.
+
+\medskip
 
 Most of our arguments can be applied to arbitrary curvature bound;
 Section~\ref{sec:ext} is the only place where we essentially use that the bound is zero.
@@ -1150,10 +1173,11 @@ It might be interesting to classify 5-point subsets in other classes of spaces;
 for example, in products of circles, or complete flat manifolds.
 It is not hard to see that the second and third types of spaces in \ref{lem:key} do not admit an embedding into a product of circles, so the answer, in this case, should be different.
 We are not aware of 5-point spaces that admit an isometric embedding into a complete nonnegatively curved Riemannian manifold, but not in a flat manifold.
-Interesting classes of spaces for nonpositive curvature would be product of trees and Euclidean buildings.
+Analogous questions can be asked about products of trees and Euclidean buildings;
+these are specially nice classes of spaces with nonpositive curvature.
 
-Our argument can be applied to attack Question~6.3 in \cite{lebedeva-petrunin}, except we could no longer use $\LSS(5)$.
-For 6 points, the case of extremal metrics only with 3-point tense sets seems to be easier. 
+Our argument can be applied to attack the 6-point case \cite[Question~6.3]{lebedeva-petrunin}, except we could no longer use $\LSS(5)$.
+The case of extremal metrics only with 3-point tense sets seems to be easier. 
 The 5-point tense set can be solved following our argument in \ref{prop:4-tense}.
 At the moment we do not see a way to do the 6- and 4-point tense sets.
 

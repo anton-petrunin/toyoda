@@ -1513,9 +1513,49 @@ dOt z.a2,z.b2,z.c2,z.d2;
 );
 
 draw s2 shifted ((3,0)*u);
-
-
 endfig;
 
+beginfig(510)
+save u,p,h;
+path p[];
+u:=1cm;
+h=.25*u;
+
+z.s=origin;
+z.x1=(.3,1)*u;
+z.x2=(1,-.6)*u;
+z.x3=(-1.2,-.7)*u;
+z.p=(-.2,-.3)*u;
+
+p0=ellipseFFP(z.s, z.p, z.s + (unitvector(z.p-z.s) zscaled (0,1))*h*2);
+p1=ellipseFFP(z.s, z.x1, z.s + (unitvector(z.x1-z.s) zscaled (0,1))*h);
+p2=ellipseFFP(z.s, z.x2, z.s + (unitvector(z.x2-z.s) zscaled (0,1))*h);
+p3=ellipseFFP(z.s, z.x3, z.s + (unitvector(z.x3-z.s) zscaled (0,1))*h);
+
+z.l1=point directiontime (-1,0) of p1 of p1;
+z.ll=z.l1+(-2,0)*u;
+z.lr=z.l1+(1,0)*u;
+z.q1=z.l1+unitvector(z.l1-z.x1)*abs(z.l1-z.s);
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+draw z.ll--z.lr;
+
+dOt z.s,z.p,z.x1,z.x2,z.x3,z.q1;
+
+whitelabel.lft(btex $\tilde p$ etex, z.p+(-1,0));
+whitelabel.rt(btex $\tilde s$ etex, z.s+(1,0));
+label.top(btex $x_1$-plane etex, .5[z.ll,z.lr]);
+label.rt(btex $\tilde q_1$ etex, z.q1);
+label.bot(btex $\tilde x_1$ etex, z.x1);
+label.ulft(btex $\tilde x_2$ etex, z.x2);
+label.urt(btex $\tilde x_3$ etex, z.x3);
+label.bot(btex $P$ etex, point .5 of p0);
+label.rt(btex $X_1$ etex, point 3 of p1);
+label.bot(btex $X_2$ etex, point 3.5 of p2);
+label.bot(btex $X_3$ etex, point .5 of p3);
+endfig;
 
 end

@@ -294,36 +294,48 @@ Consider $\RR^2$ as a plane in $\RR^3$.
 By \ref{clm:(4+1)=LSS(4)}, we can apply the (4+1)-comparison.
 It implies the existence of point $\tilde q\in\RR^3$ such that
 \[
-|\tilde x_i-\tilde q|_{\RR^3}\ge|x_i-q|_F,
-\quad
 |\tilde p-\tilde q|_{\RR^3}=|p-q|_F
+\quad\text{and}\quad
+|\tilde x_i-\tilde q|_{\RR^3}\ge|x_i-q|_F
 \]
 for any $i$. 
-Further, note that there are points $\tilde q_1$, $\tilde q_2$, $\tilde q_3$ in the plane that contains $\\tilde p, \tilde x_1, \tilde x_2$, and $\tilde x_3$ such that we have the following four conditions
+
+Further, let us show that there are points $\tilde q_1$, $\tilde q_2$, $\tilde q_3$ in the plane thru $\tilde p$, $\tilde x_1$, $\tilde x_2$, and $\tilde x_3$ such that we have the following four conditions
 \[|\tilde p-\tilde q_i|_{\RR^3}\ge |p-q|_F,
 \quad
 |\tilde x_j-\tilde q_i|_{\RR^3}\ge|x_j-q|_F,
 \quad
 |\tilde x_i-\tilde q_i|_{\RR^3}=|x_i-q|_F,
 \leqno({*})\]
-for all $i\ne j$.
+for all $i$ and $j$.
 
-The existence of $\tilde q_i$ follow from the following three inequalities
-\[
-\begin{aligned}
-\angk{x_i}{q}{x_j}+\angk{x_i}{q}{x_k}+\angk{x_i}{x_j}{x_k}&\le 2\cdot\pi,
-\\
-\angk{x_i}{q}{p}+\angk{x_i}{q}{x_j}+\angk{x_i}{p}{x_j}&\le 2\cdot\pi,
-\end{aligned}
-\]
-and three identities
-\[\angk{x_i}{x_j}{x_k}=\measuredangle\hinge{\tilde x_i}{\tilde x_j}{\tilde x_k},
+Denote by $\Gamma_1$ the intersection of the circle with the vertical angle of $\ang{\tilde x_2}{\tilde x_1}{\tilde x_3}$.
+Let us show that $\tilde q_1$ can be chosen on $\Gamma_1$.
+The point $\tilde q_1$ has to satisfy additional three conditions:
+\[\measuredangle\hinge{\tilde x_1}{\tilde x_2}{\tilde q_1}\ge \angk{x_1}{x_2}{q},
 \qquad
-\angk{x_i}{x_j}{p}=\measuredangle\hinge{\tilde x_i}{\tilde x_j}{\tilde p}
-\]
-for any permutation $(i,j,k)$ of $(1,2,3)$.
-Namely, they imply the existence of a point $\tilde q_i$ that satisfies the equality in $({*})$ and any two inequalities,
-and 1-dimensional Helly's theorem provides existance of a point satisfying all 4 conditions.
+\measuredangle\hinge{\tilde x_1}{\tilde x_3}{\tilde q_1}\ge \angk{x_1}{x_3}{q},
+\qquad
+\measuredangle\hinge{\tilde x_1}{\tilde p}{\tilde q_1}\ge \angk{x_1}{p}{q}.\]
+Each condition describes a subarc of the of $\Gamma_1$, say $\breve{X}_{1,2}$, $\breve{X}_{1,3}$, and $\breve{P}_{1}$.
+
+By the construction and comparison we have 
+\begin{align*}
+\angk{x_1}{q}{x_2}+\angk{x_1}{q}{x_3}&+\angk{x_1}{x_2}{x_3}\le 2\cdot\pi,
+\\
+\angk{x_1}{q}{p}+\angk{x_1}{q}{x_2}&+\angk{x_1}{p}{x_2}\le 2\cdot\pi,
+\\
+\angk{x_1}{x_2}{x_3}=\measuredangle\hinge{\tilde x_1}{\tilde x_2}{\tilde x_3},
+\qquad
+\angk{x_1}{x_2}{p}&=\measuredangle\hinge{\tilde x_1}{\tilde x_2}{\tilde p},
+\qquad
+\angk{x_1}{x_3}{p}=\measuredangle\hinge{\tilde x_1}{\tilde x_3}{\tilde p}.
+\end{align*}
+These inequalities and identities imply that each pair of arcs $\breve{X}_{1,2}$, $\breve{X}_{1,3}$, and $\breve{P}_{1}$ have nonempty intersection.
+By 1-dimensional Helly's theorem, all three arcs intersect;
+so we can choose $\tilde q_1$ in this intersection.
+
+The same way we can construct $\tilde q_2$ and $\tilde q_3$
 
 Now let us show that there is a point $\tilde s\in\RR^2$ such that
 \begin{align*}
@@ -337,6 +349,7 @@ $\bar B[\tilde p,|p-q|_F]$ and
 $\bar B[\tilde x_i,|x_i-q|_F]$ for all $i$.
 Indeed, by the overlap lemma \cite{alexander2019alexandrov}, any 3 of these balls have a nonempty intersection;
 it remains to apply Helly's theorem.
+Note that we can assume that $\tilde s$ lies in the convex hull of $\tilde x_1$, $\tilde x_2$, and $\tilde x_3$.
 
 The four perpendicular bisectors to 
 $[\tilde s, \tilde q]$, 
@@ -344,12 +357,14 @@ $[\tilde s, \tilde q_1]$,
 $[\tilde s, \tilde q_2]$, 
 $[\tilde s, \tilde q_3]$ cut from $\RR^3$ a closed convex set $V$ that contains $\tilde s$;
 it might be a one-sided infinite triangular prism or, if $\tilde q$ lies in the plane of the triangle, a two-sided infinite quadrangular prism.
-Note that $V$ contains the points $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ as well.
+Note that $V$ contains the points $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$.
 
 Consider the doubling $W$ of $V$ with respect to its boundary;
 it is an Alexandrov space with nonnegative curvature \cite[5.2]{perelman:spaces2}.
 Denote by $\iota_1$ and $\iota_2$ the two isometric embeddings $V\to W$.
 By construction, the array $\hat p=(\iota_1(\tilde p)$, $\hat x_1=\iota_1(\tilde x_1)$, $\hat x_2=\iota_1(\tilde x_2)$, $\hat x_3=\iota_1(\tilde x_3)$,  $\hat s=\iota_2(\tilde s))$ in $W$ is isometric to the array $(p, q, x_1, x_2, x_3)$ in $F$.
+
+\medskip
 
 Finally, we need to show that the obtained space can be smoothed into a Riemannian manifold that still has an isometric copy of $F$.
 This part is divided into two steps; first, we show that the construction above can be made so that the points $\tilde s$, $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ do not lie on the edges $V$.
@@ -364,26 +379,30 @@ After that we construct a smooth Riemannian manifold with nonnegative curvature 
 \end{wrapfigure}
 
 \parit{Step 1.}
-Consider the four ellipsoids $P$, $X_1$, $X_2$, $X_3$ with the major axise $|q-p|$, $|q-x_1|$, $|q-x_2|$,$|q-x_3|$, first focus at $\tilde s$, and the second focus at $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ respectively.
-The construction of the facets of $V$ implies that for each ellipsoid we can find a tangent plane that contains all the ellipsoids on one side --- these planes are the perpendicular bisectors to $[\tilde s\tilde q]$ and $[\tilde s\tilde q_i]$.
-Note that any choice of such planes does the trick;
-these planes will be called $p$-plane and $x_i$-planes respectively.
+Consider the four ellipsoids $P$, $X_1$, $X_2$, $X_3$ with the major axes $|q-p|$, $|q-x_1|$, $|q-x_2|$,$|q-x_3|$, first focus at $\tilde s$, and the second focus at $\tilde p$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ respectively.
+The construction of the facets of $V$ implies that for each ellipsoid has a tangent plane that contains all the ellipsoids on one side --- these planes are the perpendicular bisectors to $[\tilde s\tilde q]$ and $[\tilde s\tilde q_i]$ for all $i$.
+Note that any choice of such planes does the trick --- they can be used instead of perpendicular bisectors discussed above.
+These planes will be called \emph{$p$-plane} and \emph{$x_i$-planes} respectively.
 We need to choose them so that no pair of these planes pass thru $\tilde p$, $\tilde x_1$, $\tilde x_2$, or $\tilde x_3$.
 The latter is only possible if the corresponding ellipsoid degenerates to a line segment.
 
-We can assume that $P$ is not degenerate; otherwise, the array $\tilde p$, $\tilde q$, $\tilde x_i$ is isometric to $F$;
+We can assume that $P$ is not degenerate; otherwise, the array $\tilde p$, $\tilde q$, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$ is isometric to $F$;
 in this case, $F$ is isometric to a subset of the Euclidean space.
-Further, if only one ellipsoid, say $X_1$ is degenerate, then we can move $\tilde s$ slightly making this ellipsoid degenerate and keeping the rest of its properties.
+Further, if only one ellipsoid, say $X_1$ is degenerate, then we can move $\tilde s$ slightly making this ellipsoid nondegenerate and keeping the rest of its properties.
 So we can assume that three or two ellipsoids are degenerate.
 
 Suppose all three $X_1$, $X_2$, $X_3$ are degenerate, then we can choose a planes $x_i$-planes tangent to $P$; it solves our problem.
 
-Suppose exactly two ellipsoins, say $X_1$, $X_2$,  are degenerate.
+Suppose exactly two ellipsoins, say $X_1$, $X_2$, are degenerate.
+In this case we can assume that $\tilde s\in[\tilde x_1,\tilde x_2]$;
+if not we can slightly move $\tilde s$ toward to $\tilde x_1$ and $\tilde x_2$ making $X_1$ and $X_2$ nondegenerate and keeping the rest properties of $\tilde s$.
+Note that in this case $x_1$-plane cannot be $x_2$-plane and the other way around.
+
 If the sets of $p$-planes and $x_3$-planes are infinite, then it is easy to make the required choice of planes.
 Otherwise, either $P$ or $X_3$ lies in the convex hull of the remaining three ellipsoids.
-Suppose it is $P$, draw a $p$-plane, note that it is also a $x_3$ plane.
-Then add $x_1$- and/or $x_2$-plane if needed;
-it solves the problem.
+Suppose it is $P$, draw a $p$-plane, note that it is also an $x_3$-plane.
+Then add $x_1$- and/or $x_2$-plane if needed.
+Since $x_1$-plane cannot be $x_2$-plane and the other way around, we will not get two planes passing thru $x_1$ or $x_2$.
 
 The case when $X_3$ lies in the convex hull of the rest is identical.
 
@@ -392,8 +411,8 @@ Start with the subset $V'\subset V$ that lies on the distance $\pi\cdot\delta$ f
 Think of $V'$ lying in $\RR^4$, pass to its $2\cdot \delta$-neighborhood.
 The boundary of the obtained neighborhood is a convex hypersurface $W'$ in $\RR^4$.
 For small $\delta>0$, it meets all the required conditions, except it is only $C^{1,1}$-smooth.
-It is straightforward to smooth $W'$ so that the metric changes only near the edges of $V$.
-In this case, the set $F$ remains to be isometrically embedded in the obtained hypersurface.
+It is straightforward to smooth $W'$ so that the metric changes only near the edges of~$V$.
+In this case, the set $F$ remains isometrically embedded in the obtained hypersurface.
 \qeds
 
 
@@ -464,7 +483,7 @@ By the key lemma, it remains to consider the case of metric that has two tense t
 In this case, we can relabel $F$ by $x,v_1,v_2,w_1,w_2$ so that $F$ has tense triples $v_1xv_2$ and $w_1xw_2$.
 
 \begin{wrapfigure}{r}{25mm}
-\vskip-4mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-209}
 \end{wrapfigure}
@@ -521,6 +540,8 @@ we can assume that $\gamma$ runs in a pair of two adjacent triangles, say $[\hat
 From above $\gamma$ cross the edge $\hat x\hat w_1$ once.
 Denote by $\hat z_1$ and $\hat z_2$ the singular points in the triangles $[\hat v_1\hat x\hat w_1]$ and $[\hat v_2\hat x\hat w_1]$.
 We have the following 4 options: 
+
+\pagebreak
 
 \begin{longtable}{|c|l|}
  \hline
@@ -702,8 +723,8 @@ Since $F$ is extreme, any pair of points of $F$ must lie in a tense set.
 If not, then all $\LSS(4)$ inequalities will remain to hold true after a slight change of the distance between the pair.
 The latter contradicts that $F$ is extreme.
 
-\begin{wrapfigure}{l}{60mm}
-\vskip-0mm
+\begin{wrapfigure}[5]{l}{60mm}
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-203}
 \label{page:COPY}
@@ -1131,8 +1152,6 @@ $D_4$
 \hline
 \end{longtable}
 \qeds
-
-\pagebreak
 
 \section{Final remarks}
 

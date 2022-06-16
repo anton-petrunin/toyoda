@@ -1558,4 +1558,103 @@ label.bot(btex $X_2$ etex, point 3.5 of p2);
 label.bot(btex $X_3$ etex, point .5 of p3);
 endfig;
 
+beginfig(520)
+save u,p,h;
+path p[];
+u:=1cm;
+h=.25*u;
+
+z.s=origin;
+z.x1=(.3,1)*u;
+z.x2=(1,-.6)*u;
+z.x3=(-1.2,-.7)*u;
+z.p=(-.2,-.3)*u;
+
+p0=ellipseFFP(z.s, z.p, z.s + (unitvector(z.p-z.s) zscaled (0,1))*h*2);
+p1=ellipseFFP(z.s, z.x1, z.s );
+p2=ellipseFFP(z.s, z.x2, z.s );
+p3=ellipseFFP(z.s, z.x3, z.s );
+
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+
+dOt z.s,z.p,z.x1,z.x2,z.x3;
+
+label.rt(btex $\tilde p$ etex, z.p+(-1,0));
+label.ulft(btex $\tilde s$ etex, z.s+(1,0));
+label.rt(btex $\tilde x_1$ etex, z.x1);
+label.bot(btex $\tilde x_2$ etex, z.x2);
+label.bot(btex $\tilde x_3$ etex, z.x3);
+endfig;
+
+beginfig(530)
+save u,p,h;
+path p[];
+u:=1cm;
+h=.25*u;
+
+
+z.x1=(.3,1)*u;
+z.x2=(1,-.6)*u;
+z.x3=(-1.2,-.7)*u;
+z.p=(-.2,-.3)*u;
+z.s=.6[z.x1,z.x2];
+
+p0=ellipseFFP(z.s, z.p, z.s + (unitvector(z.p-z.s) zscaled (0,1))*h*2);
+p1=ellipseFFP(z.s, z.x1, z.s);
+p2=ellipseFFP(z.s, z.x2, z.s);
+p3=ellipseFFP(z.s, z.x3, z.s+ (unitvector(z.x3-z.s) zscaled (0,1))*h);
+
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+
+dOt z.s,z.p,z.x1,z.x2,z.x3;
+
+label.rt(btex $\tilde p$ etex, z.p+(-1,0));
+label.lft(btex $\tilde s$ etex, z.s+(1,0));
+label.rt(btex $\tilde x_1$ etex, z.x1);
+label.bot(btex $\tilde x_2$ etex, z.x2);
+label.rt(btex $\tilde x_3$ etex, z.x3);
+endfig;
+
+beginfig(540)
+save u,p,h;
+path p[];
+u:=1cm;
+h=.25*u;
+
+
+z.x1=(.3,1)*u;
+z.x2=(1,-.6)*u;
+z.x3=(-1.2,-.7)*u;
+z.p=(-.2,-.3)*u;
+z.s=.6[z.x1,z.x2];
+z.t=(1,.2)*u;
+
+p0=ellipseFFT(z.s, z.p, z.x1, z.t);
+p1=ellipseFFP(z.s, z.x1, z.s);
+p2=ellipseFFP(z.s, z.x2, z.s);
+p3=ellipseFFT(z.s, z.x3, z.x1, z.t);
+
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+
+dOt z.s,z.p,z.x1,z.x2,z.x3;
+
+label.rt(btex $\tilde p$ etex, z.p+(-1,0));
+label.lft(btex $\tilde s$ etex, z.s+(1,0));
+label.rt(btex $\tilde x_1$ etex, z.x1);
+label.bot(btex $\tilde x_2$ etex, z.x2);
+label.rt(btex $\tilde x_3$ etex, z.x3);
+endfig;
+
 end
